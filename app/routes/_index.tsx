@@ -127,7 +127,7 @@ export default function Index() {
             <img
               src="/Web-Development.jpg"
               alt="Web-Development"
-              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-500 ${
+              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
                 carouselItem === 1
                   ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
                   : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
@@ -143,7 +143,7 @@ export default function Index() {
             <img
               src="/App-Development.jpg"
               alt="App-Development"
-              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-500 ${
+              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
                 carouselItem === 2
                   ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
                   : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
@@ -153,7 +153,7 @@ export default function Index() {
             <img
               src="/UI-UX-design.png"
               alt="UI-UX-design"
-              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-500 ${
+              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
                 carouselItem === 3
                   ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
                   : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
@@ -163,7 +163,7 @@ export default function Index() {
             <img
               src="/Panel-Development.png"
               alt="Panel-Development"
-              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-500 ${
+              className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
                 carouselItem === 4
                   ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
                   : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
@@ -175,7 +175,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section className="2"></section>
+      <section className="2 mb-8"></section>
     </main>
   );
 }
