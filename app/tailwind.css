@@ -25,5 +25,5 @@ body {
   @apply text-[#0E3172] font-bold text-[2vw] lg:text-sm
 }
 .msg p {
-  @apply text-[1.4vw] md:text-[1.1vw]
+  @apply text-[1.8vw] md:text-[1.1vw]
 }

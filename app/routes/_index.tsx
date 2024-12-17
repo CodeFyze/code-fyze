@@ -56,7 +56,7 @@ export default function Index() {
               </p>
             </div>
             {/* Image */}
-            <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-y-4 relative">
+            <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-y-2 relative">
               <img
                 src="/human-with-laptop.png"
                 alt="human-with-laptop"
