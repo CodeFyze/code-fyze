@@ -41,14 +41,14 @@ export default function Index() {
           <img
             src="/white-background.png"
             alt="white-background"
-            className="w-full h-full block object-contain"
+            className="h-screen md:w-full md:h-full block object-cover md:object-contain"
           />
-          <div className="w-full h-full flex flex-col justify-center items-center absolute top-0 left-0 overflow-hidden max-md:gap-[5vw] gap-[18vw] md:gap-30 xl:gap-[15vw]">
-            <div className="heading flex flex-col items-center w-4/6 lg:w-2/5 sm:gap-2">
-              <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[4vw] md:text-2xl lg:text-4xl">
+          <div className="w-full h-full flex flex-col justify-center items-center absolute top-0 left-0 overflow-hidden max-md:gap-[7vw] gap-[18vw] md:gap-30 xl:gap-[15vw]">
+            <div className="heading flex flex-col items-center w-10/12 md:w-4/6 lg:w-2/5 sm:gap-2">
+              <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-2xl lg:text-4xl">
                 Our Development Process
               </p>
-              <p className="font-medium text-center text-[2vw] md:text-base lg:text-lg">
+              <p className="font-medium text-center text-[3vw] md:text-base lg:text-lg">
                 At <span className="font-extrabold">Code Fyze</span>, we follow
                 a streamlined process from planning and design to development
                 and deployment. Each step is tailored to deliver innovative
@@ -56,7 +56,7 @@ export default function Index() {
               </p>
             </div>
             {/* Image */}
-            <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-y-2 relative">
+            <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-y-5 relative">
               <img
                 src="/human-with-laptop.png"
                 alt="human-with-laptop"

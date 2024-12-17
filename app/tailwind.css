@@ -22,8 +22,8 @@ body {
   @apply bg-[#CCE1F7] w-[80%] md:w-[50%] absolute rounded shadow p-1 sm:p-2 max-md:static
 }
 .msg h1 {
-  @apply text-[#0E3172] font-bold text-[2vw] lg:text-sm
+  @apply text-[#0E3172] font-bold max-md:text-[3vw] md:text-[2vw] lg:text-sm
 }
 .msg p {
-  @apply text-[1.8vw] md:text-[1.1vw]
+  @apply text-[2.4vw] md:text-[1.1vw]
 }
