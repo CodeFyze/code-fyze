@@ -43,7 +43,7 @@ export default function Index() {
             alt="white-background"
             className="w-full h-full block object-contain"
           />
-          <div className="w-full h-full flex flex-col justify-center items-center absolute top-0 left-0 overflow-hidden gap-[18vw] md:gap-30 xl:gap-[15vw]">
+          <div className="w-full h-full flex flex-col justify-center items-center absolute top-0 left-0 overflow-hidden max-md:gap-[5vw] gap-[18vw] md:gap-30 xl:gap-[15vw]">
             <div className="heading flex flex-col items-center w-4/6 lg:w-2/5 sm:gap-2">
               <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[4vw] md:text-2xl lg:text-4xl">
                 Our Development Process
@@ -56,14 +56,14 @@ export default function Index() {
               </p>
             </div>
             {/* Image */}
-            <div className="relative">
+            <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-y-4 relative">
               <img
                 src="/human-with-laptop.png"
                 alt="human-with-laptop"
-                className="w-[55vw] h-full block object-contain"
+                className="w-[55vw] h-full max-md:hidden block object-contain"
               />
               {/* Message Boxes */}
-              <div className="msg absolute -top-[13vw] -left-[15vw] md:-top-[10vw] lg:-top-[8vw] bg-white p-1 sm:p-2 rounded shadow">
+              <div className="msg -top-[13vw] -left-[15vw] md:-top-[10vw] lg:-top-[8vw]">
                 <h1>Project Planning</h1>
                 <p>
                   We collaborate closely with our client to understand their
@@ -73,7 +73,7 @@ export default function Index() {
                   development.
                 </p>
               </div>
-              <div className="msg absolute -top-[6vw] -right-[18vw] sm:-top-[9vw] md:-top-[7vw] lg:-top-[5vw] bg-white p-1 sm:p-2 rounded shadow">
+              <div className="msg -top-[6vw] -right-[18vw] sm:-top-[9vw] md:-top-[7vw] lg:-top-[5vw]">
                 <h1>Testing and Deployment</h1>
                 <p>
                   We rigorously test and deploy the developed software, ensuring
@@ -81,18 +81,18 @@ export default function Index() {
                   by our client and their end-users.
                 </p>
               </div>
-              <div className="msg absolute bottom-[16vw] -left-[19vw] bg-white p-1 sm:p-2 rounded shadow">
+              <div className="msg bottom-[16vw] -left-[19vw]">
                 <h1>Development</h1>
                 <p>
                   Our skilled developers bring the designs to life, writing
-                  clean and <span className="font-bold">efficient code</span>{" "}
+                  clean and <span className="font-bold">efficient code</span>
                   while following industry standards and best practices.
                 </p>
               </div>
-              <div className="msg absolute bottom-[9vw] -right-[19vw] bg-white p-1 sm:p-2 rounded shadow">
+              <div className="msg bottom-[9vw] -right-[19vw]">
                 <h1>Desinging</h1>
                 <p>
-                  Our experienced team of designers create intuitive and{" "}
+                  Our experienced team of designers create intuitive and
                   <span className="font-bold">use-friendly interfaces</span>,
                   ensuring a seamless user experience while adhering to the
                   client&apos;s brand guidelines.
