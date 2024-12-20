@@ -7,12 +7,15 @@ import CircleButton from "./CircleButton";
 
 export default function Hero() {
   return (
-    <div
-      className="flex flex-col-reverse gap-y-5 my-6 lg:flex-row items-center justify-center w-full overflow-hidden px-[10vw]">
+    <div className="flex flex-col-reverse gap-y-5 my-6 lg:flex-row items-center justify-center w-full overflow-hidden px-[10vw]">
       <div className="flex flex-col items-start h-4/6 space-y-4 lg:w-3/5">
         <h1 className="text-5xl max-lg:text-center md:text-5xl font-bold text-gray-800">
           We provide reliable solutions and support
         </h1>
+        <div
+          className="flex w-full h-full aspect-[16/10] md:hidden justify-center items-center bg-contain bg-no-repeat bg-center"
+          style={{ backgroundImage: "url('hero-sec-pic.png')" }}
+        ></div>
         <p className="text-lg max-lg:text-center w-full md:text-xl text-[#7D8D9A]">
           To manage your business{" "}
           <span className="text-[#0E3172]">data with precision</span>
@@ -28,8 +31,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-full h-full aspect-video flex justify-center items-center bg-contain bg-no-repeat bg-center" style={{ backgroundImage: "url('hero-sec-pic.png')" }}>
-      </div>
+      <div
+        className="hidden w-full h-full aspect-video md:flex justify-center items-center bg-contain bg-no-repeat bg-center"
+        style={{ backgroundImage: "url('hero-sec-pic.png')" }}
+      ></div>
     </div>
   );
 }

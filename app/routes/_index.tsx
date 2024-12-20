@@ -39,14 +39,14 @@ export default function Index() {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col items-center justify-center w-screen gap-4">
+      <main className="flex flex-col items-center justify-center w-screen">
         {/* Hero Section */}
         <Hero />
 
         {/* 1st Component */}
-        <section className="w-full h-max space-y-2 my-6">
+        <section className="w-full h-max space-y-2">
           {/* Text Header */}
-          <header className="flex justify-center my-6">
+          <header className="flex justify-center my-10">
             <div className="heading flex flex-col items-center w-10/12 sm:gap-2">
               <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-3xl">
                 Technologies We Used
@@ -104,7 +104,7 @@ export default function Index() {
         </section>
 
         {/* 2nd Component */}
-        <section className="w-full space-y-2 mb-[38vw] sm:mb-6">
+        <section className="w-full space-y-2 max-sm:mb-[44vw] my-11">
           {/* Text Header */}
           <header className="flex justify-center mb-2">
             <div className="heading flex flex-col items-center w-4/6 lg:w-2/5 sm:gap-2">
@@ -189,8 +189,8 @@ export default function Index() {
         {/* 3rd Component */}
         <section className="w-full">
           <div className="w-full h-max bg-whiteBg bg-cover bg-center py-8">
-            <div className="w-full h-full flex flex-col justify-center items-center max-md:gap-[7vw] gap-[18vw] md:gap-30 xl:gap-[15vw]">
-              <div className="heading flex flex-col items-center w-10/12 md:w-4/6 lg:w-2/5 sm:gap-2">
+            <div className="w-full h-full flex flex-col justify-center items-center max-md:gap-[7vw] gap-[18vw] md:gap-28 xl:gap-[10vw]">
+              <div className="heading flex flex-col items-center w-10/12 md:w-4/6 lg:w-6/12 sm:gap-2">
                 <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-2xl lg:text-4xl">
                   Our Development Process
                 </p>
@@ -250,7 +250,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className="2 mb-8"></section>
+        {/* <section className="2 mb-8"></section> */}
       </main>
     </>
   );
