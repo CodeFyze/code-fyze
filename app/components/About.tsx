@@ -1,6 +1,8 @@
+import CircleButton from "./CircleButton";
+
 export default function About() {
   return (
-    <div className="flex flex-col md:flex-row w-4/5 md:w-full px-11 lg:px-24 my-11">
+    <div className="flex flex-col md:flex-row w-[90%] md:w-full px-11 lg:px-24 my-11 relative">
       <div className="w-full md:w-2/5 bg-womanWithLaptop bg-contain bg-center h-full aspect-[2/3] bg-no-repeat"></div>
       <div className="w-full md:w-3/5 flex flex-col h-auto justify-evenly gap-y-8">
         <h1 className="font-bold text-4xl md:text-start lg:text-6xl text-[#0E3172]">
@@ -22,6 +24,9 @@ export default function About() {
           expectations.
         </p>
       </div>
+      <span className="-rotate-45 aspect-square w-[5vw] lg:w-[3vw] absolute -bottom-10 lg:bottom-0 right-20">
+        <CircleButton className="w-full h-full" />
+      </span>
     </div>
   );
 }
