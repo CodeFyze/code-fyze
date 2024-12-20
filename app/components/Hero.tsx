@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div
       className="flex flex-col-reverse gap-y-5 my-6 lg:flex-row items-center justify-center w-full overflow-hidden px-[10vw]">
-      <div className="flex flex-col items-start h-4/6 space-y-4 lg:w-3/5 z-10">
+      <div className="flex flex-col items-start h-4/6 space-y-4 lg:w-3/5">
         <h1 className="text-5xl max-lg:text-center md:text-5xl font-bold text-gray-800">
           We provide reliable solutions and support
         </h1>
