@@ -27,6 +27,7 @@ export default {
         "blueBg": "url('/blue-background.png')",
         "whiteBg": "url('/white-background.png')",
         "humanWithoutArrows": "url('/human-with-laptop-without-arrows.png')",
+        "womanWithLaptop": "url('/women-with-laptop.png')",
   		},
   		screens: {
   			xs: '20rem'
