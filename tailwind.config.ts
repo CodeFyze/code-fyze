@@ -1,8 +1,14 @@
 import type { Config } from "tailwindcss";
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
 
 export default {
-  content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
+  content: {
+    files: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
+    extract
+  },
   theme: {
+    screens, // Tailwind's default screens, in `rem`
+    fontSize, // Tailwind's default font sizes, in `rem` (including line heights)
     extend: {
       fontFamily: {
         sans: [
@@ -16,7 +22,17 @@ export default {
           "Noto Color Emoji",
         ],
       },
+      // add background
+      backgroundImage: {
+        "blueBg": "url('/blue-background.png')",
+        "whiteBg": "url('/white-background.png')",
+      },
+      screens: {
+        xs: '20rem'
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    fluid
+  ]
 } satisfies Config;
