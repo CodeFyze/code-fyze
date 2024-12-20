@@ -77,7 +77,7 @@ export default function Index() {
                 {cards.map((card, index) => (
                   <div
                     key={index}
-                    className="p-4 border rounded-xl shadow-lg bg-white space-y-2"
+                    className="p-4 border rounded-xl shadow-lg bg-white space-y-2 hover:scale-105 transition-transform duration-300"
                   >
                     <div className="w-full flex justify-center">
                       <img
