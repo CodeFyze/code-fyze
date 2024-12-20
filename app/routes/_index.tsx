@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { useEffect, useState } from "react";
 import CircleButton from "~/components/CircleButton";
 import Hero from "~/components/Hero";
+import Innovation from "~/components/Innovation";
 import Navbar from "~/components/Navbar";
 import cards from "~/constants/technologies";
 
@@ -42,6 +43,9 @@ export default function Index() {
       <main className="flex flex-col items-center justify-center w-screen">
         {/* Hero Section */}
         <Hero />
+
+        {/* Innovation Section */}
+        <Innovation />
 
         {/* 1st Component */}
         <section className="w-full h-max space-y-2">
