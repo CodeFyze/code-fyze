@@ -38,10 +38,10 @@ export default function Navbar() {
         <img src="/logo.png" alt="Logo" className="w-40" />
       </div>
       <div className="hidden text-sm lg:text-base md:flex space-x-6 text-gray-700">
-        <a href="#about-us" className="hover:text-yellow-600">About US</a>
-        <a href="#services" className="hover:text-yellow-600">Services</a>
-        <a href="#portfolio" className="hover:text-yellow-600">Portfolio</a>
-        <a href="#technologies" className="hover:text-yellow-600">Technologies</a>
+        <a href="/#about-us" className="hover:text-yellow-600">About US</a>
+        <a href="/#services" className="hover:text-yellow-600">Services</a>
+        <a href="/portfolio" className="hover:text-yellow-600">Portfolio</a>
+        <a href="/#technologies" className="hover:text-yellow-600">Technologies</a>
        
       </div>
       <div className="hidden md:flex space-x-4 items-center">
@@ -70,10 +70,10 @@ export default function Navbar() {
       </div>
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full h-max bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10" ref={menuRef}>
-          <a href="#about-us" className="hover:text-yellow-600" onClick={handleLinkClick}>About US</a>
-        <a href="#services" className="hover:text-yellow-600" onClick={handleLinkClick}>Services</a>
-        <a href="#portfolio" className="hover:text-yellow-600" onClick={handleLinkClick}>Portfolio</a>
-        <a href="#technologies" className="hover:text-yellow-600" onClick={handleLinkClick}>Technologies</a>
+          <a href="/#about-us" className="hover:text-yellow-600" onClick={handleLinkClick}>About US</a>
+        <a href="/#services" className="hover:text-yellow-600" onClick={handleLinkClick}>Services</a>
+        <a href="/portfolio" className="hover:text-yellow-600" onClick={handleLinkClick}>Portfolio</a>
+        <a href="/#technologies" className="hover:text-yellow-600" onClick={handleLinkClick}>Technologies</a>
         </div>
       )}
     </nav>
