@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,9 +12,9 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -38,14 +39,33 @@ export default function Navbar() {
         <img src="/logo.png" alt="Logo" className="w-40" />
       </div>
       <div className="hidden text-sm lg:text-base md:flex space-x-6 text-gray-700">
-        <a href="/#about-us" className="hover:text-yellow-600">About US</a>
-        <a href="/#services" className="hover:text-yellow-600">Services</a>
-        <a href="/portfolio" className="hover:text-yellow-600">Portfolio</a>
-        <a href="/#technologies" className="hover:text-yellow-600">Technologies</a>
-       
+        <span className="hover:text-yellow-600">
+          <DropdownMenu>
+            <DropdownMenuTrigger>About US</DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>About US</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </span>
+        <a href="/#services" className="hover:text-yellow-600">
+          Services
+        </a>
+        <a href="/portfolio" className="hover:text-yellow-600">
+          Portfolio
+        </a>
+        <a href="/#technologies" className="hover:text-yellow-600">
+          Technologies
+        </a>
       </div>
       <div className="hidden md:flex space-x-4 items-center">
-        <button className="bg-[#3B3B3B] text-white px-4 py-2 rounded-full">Free Consultation</button>
+        <button className="bg-[#3B3B3B] text-white px-4 py-2 rounded-full">
+          Free Consultation
+        </button>
       </div>
       <div className="md:hidden flex items-center">
         <button
@@ -69,13 +89,40 @@ export default function Navbar() {
         </button>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full h-max bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10" ref={menuRef}>
-          <a href="/#about-us" className="hover:text-yellow-600" onClick={handleLinkClick}>About US</a>
-        <a href="/#services" className="hover:text-yellow-600" onClick={handleLinkClick}>Services</a>
-        <a href="/portfolio" className="hover:text-yellow-600" onClick={handleLinkClick}>Portfolio</a>
-        <a href="/#technologies" className="hover:text-yellow-600" onClick={handleLinkClick}>Technologies</a>
+        <div
+          className="md:hidden absolute top-16 left-0 w-full h-max bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10"
+          ref={menuRef}
+        >
+          <a
+            href="/#about-us"
+            className="hover:text-yellow-600"
+            onClick={handleLinkClick}
+          >
+            About US
+          </a>
+          <a
+            href="/#services"
+            className="hover:text-yellow-600"
+            onClick={handleLinkClick}
+          >
+            Services
+          </a>
+          <a
+            href="/portfolio"
+            className="hover:text-yellow-600"
+            onClick={handleLinkClick}
+          >
+            Portfolio
+          </a>
+          <a
+            href="/#technologies"
+            className="hover:text-yellow-600"
+            onClick={handleLinkClick}
+          >
+            Technologies
+          </a>
         </div>
       )}
     </nav>
   );
-};
+}
