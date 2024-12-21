@@ -2,9 +2,9 @@ import CircleButton from "./CircleButton";
 
 export default function About() {
   return (
-    <div className="flex flex-col md:flex-row w-[95%] md:w-full px-11 lg:px-24 my-11 relative">
+    <div className="flex flex-col md:flex-row w-[95%] md:w-full px-11 lg:px-24 my-11 relative" id="about-us">
       <div className="w-full md:w-2/5 bg-womanWithLaptop bg-contain bg-center h-full aspect-[2/3] bg-no-repeat"></div>
-      <div className="w-full md:w-3/5 flex flex-col h-auto justify-evenly gap-y-8" id="about-us">
+      <div className="w-full md:w-3/5 flex flex-col h-auto justify-evenly gap-y-8">
         <h1 className="font-bold text-4xl md:text-start lg:text-6xl text-[#0E3172]">
           About Us
         </h1>
