@@ -5,6 +5,7 @@ import CaseStudies from "~/components/CaseStudies";
 import CircleButton from "~/components/CircleButton";
 import Contact from "~/components/Contact";
 import DevelopmentProcess from "~/components/DevelopmentProcess";
+import Footer from "~/components/Footer";
 import Hero from "~/components/Hero";
 import Innovation from "~/components/Innovation";
 import Navbar from "~/components/Navbar";
@@ -49,6 +50,9 @@ export default function Index() {
 
         {/* <section className="2 mb-8"></section> */}
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
