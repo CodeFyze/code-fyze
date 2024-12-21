@@ -1,7 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setMobileMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -20,10 +38,10 @@ export default function Navbar() {
         <img src="/logo.png" alt="Logo" className="w-40" />
       </div>
       <div className="hidden text-sm lg:text-base md:flex space-x-6 text-gray-700">
-        <a href="#" className="hover:text-yellow-600">About US</a>
-        <a href="#" className="hover:text-yellow-600">Services</a>
-        <a href="#" className="hover:text-yellow-600">Portfolio</a>
-        <a href="#" className="hover:text-yellow-600">Technologies</a>
+        <a href="#about-us" className="hover:text-yellow-600">About US</a>
+        <a href="#services" className="hover:text-yellow-600">Services</a>
+        <a href="#portfolio" className="hover:text-yellow-600">Portfolio</a>
+        <a href="#technologies" className="hover:text-yellow-600">Technologies</a>
        
       </div>
       <div className="hidden md:flex space-x-4 items-center">
@@ -51,12 +69,11 @@ export default function Navbar() {
         </button>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full h-max bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10">
-          <a href="#" className="hover:text-yellow-600">About US</a>
-        <a href="#" className="hover:text-yellow-600">Services</a>
-        <a href="#" className="hover:text-yellow-600">Portfolio</a>
-        <a href="#" className="hover:text-yellow-600">Technologies</a>
-          <button className="bg-yellow-500 text-white px-4 py-2 rounded w-3/4">Instructor Login</button>
+        <div className="md:hidden absolute top-16 left-0 w-full h-max bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10" ref={menuRef}>
+          <a href="#about-us" className="hover:text-yellow-600" onClick={handleLinkClick}>About US</a>
+        <a href="#services" className="hover:text-yellow-600" onClick={handleLinkClick}>Services</a>
+        <a href="#portfolio" className="hover:text-yellow-600" onClick={handleLinkClick}>Portfolio</a>
+        <a href="#technologies" className="hover:text-yellow-600" onClick={handleLinkClick}>Technologies</a>
         </div>
       )}
     </nav>

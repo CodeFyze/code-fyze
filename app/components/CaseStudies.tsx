@@ -29,7 +29,7 @@ export default function CaseStudies() {
     <section className="w-full space-y-2 max-sm:mb-[44vw] my-11">
       {/* Text Header */}
       <header className="flex justify-center mb-2">
-        <div className="heading flex flex-col items-center w-4/6 lg:w-2/5 sm:gap-2">
+        <div className="heading flex flex-col items-center w-4/6 lg:w-2/5 sm:gap-2" id="portfolio">
           <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-2xl">
             Our Case Studies
           </p>
