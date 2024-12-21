@@ -8,6 +8,7 @@ import Hero from "~/components/Hero";
 import Innovation from "~/components/Innovation";
 import Navbar from "~/components/Navbar";
 import Technologies from "~/components/Technologies";
+import TopServices from "~/components/TopServices";
 
 export const meta: MetaFunction = () => {
   return [
@@ -29,6 +30,9 @@ export default function Index() {
 
         {/* Innovation Section */}
         <About />
+
+        {/* Top Services Section */}
+        <TopServices />
 
         {/* Technologies Section */}
         <Technologies />

@@ -1,6 +1,6 @@
 export default function Innovation() {
   return (
-    <div className="flex w-screen h-full px-10 lg:px-[10vw] lg:py-11 mt-11">
+    <div className="flex w-screen h-full px-10 lg:px-[10vw] lg:py-11 mt-11 bg-cover bg-blueBg">
       <div className="flex flex-col gap-y-7 items-center justify-around md:flex-row w-full text-white bg-black/30 transparent backdrop-blur-xl py-11 px-11 lg:px-24 rounded-md border-slate-200 border-[3px]">
         <div className="w-full md:w-[40%] text-center">
           <h1 className="font-bold text-xl md:text-2xl md:text-start lg:text-3xl">
