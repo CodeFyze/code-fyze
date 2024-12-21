@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import About from "~/components/About";
 import CaseStudies from "~/components/CaseStudies";
 import CircleButton from "~/components/CircleButton";
+import Contact from "~/components/Contact";
 import DevelopmentProcess from "~/components/DevelopmentProcess";
 import Hero from "~/components/Hero";
 import Innovation from "~/components/Innovation";
@@ -42,6 +43,9 @@ export default function Index() {
 
         {/* Development Process Component */}
         <DevelopmentProcess />
+
+        {/* Contact Component */}
+        <Contact />
 
         {/* <section className="2 mb-8"></section> */}
       </main>

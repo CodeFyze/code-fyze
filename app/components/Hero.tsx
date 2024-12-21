@@ -1,8 +1,3 @@
-// import { MdArrowOutward } from "react-icons/md";
-// import { FaTelegram, FaFacebook, FaDiscord, FaInstagram } from "react-icons/fa";
-// import { BsArrowRight } from "react-icons/bs";
-// import { AiOutlinePlus } from "react-icons/ai";
-
 import CircleButton from "./CircleButton";
 import { CodeFyzeMarquee } from "./CodeFyzeMarquee";
 
@@ -15,10 +10,10 @@ export default function Hero() {
             We provide reliable solutions and support
           </h1>
           <div
-            className="flex w-full h-full aspect-[16/10] md:hidden justify-center items-center bg-contain bg-no-repeat bg-center"
+            className="flex w-full h-full aspect-[16/10] lg:hidden justify-center items-center bg-contain bg-no-repeat bg-center"
             style={{ backgroundImage: "url('hero-sec-pic.png')" }}
           ></div>
-          <p className="text-lg max-lg:text-center w-full md:text-xl text-[#7D8D9A]">
+          <p className="text-lg max-lg:text-center w-full md:text-xl text-[#7D8D9A] font-bold">
             To manage your business{" "}
             <span className="text-[#0E3172]">data with precision</span>
           </p>
@@ -34,7 +29,7 @@ export default function Hero() {
         </div>
 
         <div
-          className="hidden w-full h-full aspect-video md:flex justify-center items-center bg-contain bg-no-repeat bg-center"
+          className="hidden w-full h-full aspect-video lg:flex justify-center items-center bg-contain bg-no-repeat bg-center"
           style={{ backgroundImage: "url('hero-sec-pic.png')" }}
         ></div>
       </div>
