@@ -2,7 +2,7 @@ import topServices from "~/constants/topservices";
 
 export default function TopServices() {
   return (
-    <div className="flex w-screen h-full px-10 lg:px-[3vw] py-11 mt-11 bg-blueBg bg-cover">
+    <div className="flex w-screen h-full px-10 lg:px-[3vw] py-11 mt-11 bg-blueBg bg-cover bg-center">
       <div className="flex flex-col gap-y-7 items-center justify-around w-full text-white bg-black/30 transparent backdrop-blur-xl py-16 px-11 lg:px-2 rounded-md border-slate-200 border-[3px]">
         <div className="[&>*]:text-center">
           <h1 className="font-bold text-2xl md:text-3xl md:text-start lg:text-3xl">
