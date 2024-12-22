@@ -3,7 +3,7 @@ import { CodeFyzeMarquee } from "./CodeFyzeMarquee";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col w-full h-full">
+    <div className="flex flex-col w-full h-full bg-[url('/hero-sec-bg.png')] bg-cover bg-center">
       <div className="flex flex-col-reverse gap-y-5 mb-6 lg:flex-row items-center justify-center w-full overflow-hidden md:px-[10vw] lg:pl-[10vw] lg:pr-0 lg:items-end">
         <div className="flex flex-col items-center space-y-4 h-4/6 lg:w-[40%] lg:items-start lg:mb-[6vw]">
           <h1 className="~/lg:~text-lg/7xl lg:text-4xl xl:text-[3.5vw] xl:leading-none max-md:px-[10vw] max-lg:text-center font-bold text-gray-800">
