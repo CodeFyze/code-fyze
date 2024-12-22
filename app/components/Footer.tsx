@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col justify-end items-end text-end xl:w-[45vw] space-y-10">
-            <div className="w-full flex flex-col max-lg:space-y-5 lg:flex-row items-center justify-between text-lg xl:text-2xl font-bold">
+            <div className="w-full flex flex-col max-lg:space-y-5 lg:flex-row items-center justify-between text-lg lg:max-xl:text-base font-bold">
               <a href="/#about-us" className="hover:text-yellow-600">
                 About US
               </a>
