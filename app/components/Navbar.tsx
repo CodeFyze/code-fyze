@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
+import Services from "~/constants/services";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -7,6 +8,15 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  // Mobile Nav About us and services submenu
+  const [aboutUsOpen, setAboutUsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const toggleAboutUs = () => {
+    setAboutUsOpen(!aboutUsOpen);
+  };
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
+  };
   const handleClickOutside = (event: MouseEvent) => {
     if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
       setMobileMenuOpen(false);
@@ -117,15 +127,82 @@ export default function Navbar() {
       </div>
       {mobileMenuOpen && (
         <div
-          className="md:hidden absolute top-16 left-0 w-full h-screen bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10"
+          className="md:hidden absolute top-14 left-0 w-full min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[10vw] space-y-4 py-4 text-gray-700 z-20 pb-20 overflow-y-scroll h-full"
           ref={menuRef}
         >
-          <span className="hover:scale-105 transition-transform ease-in-out">
+          {/* <span className="hover:scale-105 transition-transform ease-in-out">
             <Dropdown title="About US" variant="about" />
           </span>
           <span className="hover:scale-105 transition-transform ease-in-out">
             <Dropdown title="Services" variant="services" />
-          </span>
+          </span> */}
+          <div>
+            <p
+              className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out flex gap-x-1"
+              onClick={toggleAboutUs}
+            >
+              About US
+              <span className="w-4 flex aspect-square">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                </svg>
+              </span>
+            </p>
+            <div
+              className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
+                aboutUsOpen ? "max-h-40" : "max-h-0"
+              }`}
+            >
+              <div className="px-4 flex flex-col items-center space-y-2 mt-2">
+                <span>About Us 1</span>
+                <span>About Us 2</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p
+              className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out flex gap-x-1"
+              onClick={toggleServices}
+            >
+              Services
+              <span className="w-4 flex aspect-square">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                </svg>
+              </span>
+            </p>
+            <div
+              className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
+                servicesOpen ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              {Services.map((service, index) => (
+                <div
+                  key={index}
+                  className="p-4 space-y-1 flex flex-col items-start focus:bg-transparent"
+                >
+                  <h2 className="text-sm font-semibold">
+                    {service.title}
+                  </h2>
+                  <ul className="list-disc list-inside">
+                    {service.technologies.map((tech, techIndex) => (
+                      <li key={techIndex} className="text-[#7D8D9A] text-xs">
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
           <a
             href="/portfolio"
             className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
