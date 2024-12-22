@@ -31,7 +31,7 @@ export default function Index() {
         {/* Innovation Section */}
         <Innovation />
 
-        <div className="bg-aboutUsBg bg-cover bg-no-repeat">
+        <div className="bg-aboutUsBg bg-cover bg-top bg-no-repeat">
           {/* Innovation Section */}
           <About />
           {/* Top Services Section */}

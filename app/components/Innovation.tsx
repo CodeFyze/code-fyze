@@ -1,12 +1,12 @@
 export default function Innovation() {
   return (
     <div className="flex w-screen h-full px-10 lg:px-[10vw] py-11 md:py-36 lg:py-[15vw] lg:pb-[18vw] mt-11 bg-contain bg-no-repeat bg-innovationBgVertical max-sm:bg-left sm:bg-innovationBg sm:bg-cover bg-center">
-      <div className="flex flex-col gap-y-7 items-center justify-around md:flex-row w-full text-white bg-black/30 transparent backdrop-blur-xl py-11 px-11 lg:px-24 rounded-md border-slate-200 border-[3px]">
+      <div className="flex flex-col gap-y-7 items-center justify-around md:flex-row xl:justify-center w-full text-white bg-black/30 transparent backdrop-blur-xl py-11 px-11 lg:px-24 rounded-md border-slate-200 border-[3px]">
         <div className="w-full md:w-[40%] text-center">
-          <h1 className="font-bold text-xl md:text-2xl md:text-start lg:text-3xl">
+          <h1 className="font-bold text-xl md:text-2xl md:text-start lg:text-2xl">
             Innovation at Work
           </h1>
-          <p className="font-medium text-sm md:text-base md:text-start">
+          <p className="font-medium text-sm md:text-lg md:text-start md:w-60">
             Innovative technology to transform your operations and drive growth.
           </p>
         </div>
