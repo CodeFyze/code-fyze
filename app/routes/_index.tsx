@@ -37,20 +37,19 @@ export default function Index() {
           {/* Top Services Section */}
           <TopServices />
         </div>
-        {/* Technologies Section */}
-        <Technologies />
+        <div className="lg:relative lg:-top-24 xl:-top-48">
+          {/* Technologies Section */}
+          <Technologies />
 
-        {/* Case Studies Component */}
-        <CaseStudies />
+          {/* Case Studies Component */}
+          <CaseStudies />
 
-        {/* Development Process Component */}
-        <DevelopmentProcess />
+          {/* Development Process Component */}
+          <DevelopmentProcess />
 
-        {/* Contact Component */}
-        <Contact />
-
-        {/* <section className="2 mb-8"></section> */}
-
+          {/* Contact Component */}
+          <Contact />
+        </div>
         <FAQ page="home" />
       </main>
       <footer>

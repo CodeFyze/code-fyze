@@ -2,7 +2,7 @@ import services from "~/constants/services";
 
 export default function TopServices() {
   return (
-    <div className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:py-72 max-md:mt-11 bg-cover bg-no-repeat bg-topServicesBgVertical md:bg-topServicesBg md:bg-contain xl:bg-cover bg-center" id="services">
+    <div className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:py-72 max-md:mt-11 bg-cover bg-no-repeat bg-topServicesBgVertical md:bg-topServicesBg md:bg-contain xl:bg-cover bg-center relative lg:-top-24 xl:-top-48" id="services">
       <div className="flex flex-col gap-y-7 items-center justify-around w-full text-white bg-black/30 transparent backdrop-blur-xl py-16 px-5 lg:px-2 rounded-md border-slate-200 border-[3px]">
         <div className="[&>*]:text-center">
           <h1 className="font-bold text-2xl md:text-3xl md:text-start lg:text-3xl">
