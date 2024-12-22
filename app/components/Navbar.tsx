@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
+import Dropdown from "./Dropdown";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleClickOutside = (event: MouseEvent) => {
     if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -12,6 +14,7 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    if (!mobileMenuOpen) return;
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -33,35 +36,56 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY && isVisible) {
+        // if scroll down hide the navbar
+        setIsVisible(false);
+      } else if (window.scrollY < lastScrollY && !isVisible) {
+        // if scroll up show the navbar
+        setIsVisible(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
   return (
-    <nav className="py-4 px-6 flex items-center justify-between relative z-10">
+    <nav
+      className={`py-4 px-6 flex items-center justify-between z-10 sticky top-0 transition-transform duration-300 bg-white/30 transparent backdrop-blur-xl ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex items-center justify-center space-x-2">
         <img src="/logo.png" alt="Logo" className="w-40" />
       </div>
       <div className="hidden text-sm lg:text-base md:flex space-x-6 text-gray-700">
-        <span className="hover:text-yellow-600">
-          <DropdownMenu>
-            <DropdownMenuTrigger>About US</DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {/* <DropdownMenuLabel>About US</DropdownMenuLabel> */}
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile lorem Profile lorem Profile lorem </DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
-              <DropdownMenuItem>Team</DropdownMenuItem>
-              <DropdownMenuItem>Subscription</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+        {/* About US */}
+        <span className="hover:scale-105 transition-transform ease-in-out">
+          <Dropdown title="About US" variant="about" />
         </span>
-        <a href="/" className="hover:text-yellow-600">
-          Home
-        </a>
-        <a href="/services" className="hover:text-yellow-600">
-          Services
-        </a>
-        <a href="/portfolio" className="hover:text-yellow-600">
+        <span className="hover:scale-105 transition-transform ease-in-out">
+          <Dropdown title="Services" variant="services" />
+        </span>
+        <a
+          href="/portfolio"
+          className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
+        >
           Portfolio
         </a>
-        <a href="/#technologies" className="hover:text-yellow-600">
+        <a
+          href="/#technologies"
+          className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
+        >
           Technologies
         </a>
       </div>
@@ -96,30 +120,22 @@ export default function Navbar() {
           className="md:hidden absolute top-16 left-0 w-full h-screen bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10"
           ref={menuRef}
         >
-          <a
-            href="/#about-us"
-            className="hover:text-yellow-600"
-            onClick={handleLinkClick}
-          >
-            About US
-          </a>
-          <a
-            href="/#services"
-            className="hover:text-yellow-600"
-            onClick={handleLinkClick}
-          >
-            Services
-          </a>
+          <span className="hover:scale-105 transition-transform ease-in-out">
+            <Dropdown title="About US" variant="about" />
+          </span>
+          <span className="hover:scale-105 transition-transform ease-in-out">
+            <Dropdown title="Services" variant="services" />
+          </span>
           <a
             href="/portfolio"
-            className="hover:text-yellow-600"
+            className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
             onClick={handleLinkClick}
           >
             Portfolio
           </a>
           <a
             href="/#technologies"
-            className="hover:text-yellow-600"
+            className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
             onClick={handleLinkClick}
           >
             Technologies
