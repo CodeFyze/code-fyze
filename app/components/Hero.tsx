@@ -4,21 +4,21 @@ import { CodeFyzeMarquee } from "./CodeFyzeMarquee";
 export default function Hero() {
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="flex flex-col-reverse gap-y-5 my-6 lg:flex-row items-center justify-center w-full overflow-hidden px-[10vw]">
-        <div className="flex flex-col items-start h-4/6 space-y-4 lg:w-3/5">
-          <h1 className="text-5xl max-lg:text-center md:text-5xl font-bold text-gray-800">
-            We provide reliable solutions and support
+      <div className="flex flex-col-reverse gap-y-5 mb-6 lg:flex-row items-center justify-center w-full overflow-hidden md:px-[10vw] lg:pl-[10vw] lg:pr-0 lg:items-end">
+        <div className="flex flex-col items-center space-y-4 h-4/6 lg:w-[40%] lg:items-start lg:mb-[6vw]">
+          <h1 className="~/lg:~text-lg/7xl lg:text-4xl xl:text-[3.5vw] xl:leading-none max-md:px-[10vw] max-lg:text-center font-bold text-gray-800">
+            We provide reliable<br/>solutions and support
           </h1>
           <div
-            className="flex w-full h-full aspect-[16/10] lg:hidden justify-center items-center bg-contain bg-no-repeat bg-center"
+            className="flex w-full h-full aspect-[852/509] lg:hidden justify-center items-center bg-cover bg-no-repeat bg-center"
             style={{ backgroundImage: "url('hero-sec-pic.png')" }}
           ></div>
-          <p className="text-lg max-lg:text-center w-full md:text-xl text-[#7D8D9A] font-bold">
+          <p className="max-md:px-[10vw] text-lg max-lg:text-center w-full md:text-xl text-[#7D8D9A] font-bold">
             To manage your business{" "}
             <span className="text-[#0E3172]">data with precision</span>
           </p>
-          <div className="flex space-x-4 h-11 max-lg:justify-center w-full">
-            <button className="flex items-center md:px-6 md:py-3 p-3 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300">
+          <div className="max-md:px-[10vw] ~h-6/14 flex space-x-4 max-lg:justify-center w-full">
+            <button className="flex items-center md:px-6 md:py-3 p-3 bg-black text-white text-[3vw] sm:text-base rounded-full hover:bg-gray-800 transition duration-300">
               Get a Free Consultation
             </button>
 
@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
 
         <div
-          className="hidden w-full h-full aspect-video lg:flex justify-center items-center bg-contain bg-no-repeat bg-center"
+          className="hidden w-[60%] h-full aspect-[852/509] lg:flex justify-center items-center bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: "url('hero-sec-pic.png')" }}
         ></div>
       </div>

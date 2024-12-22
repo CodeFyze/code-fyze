@@ -127,7 +127,9 @@ export default {
   	}
   },
   plugins: [
-    fluid,
+    fluid({
+		checkSC144: false // default: true
+	  }),
       require("tailwindcss-animate")
 ]
 } satisfies Config;
