@@ -43,16 +43,19 @@ export default function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger>About US</DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuLabel>About US</DropdownMenuLabel>
+              {/* <DropdownMenuLabel>About US</DropdownMenuLabel> */}
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Profile lorem Profile lorem Profile lorem </DropdownMenuItem>
               <DropdownMenuItem>Billing</DropdownMenuItem>
               <DropdownMenuItem>Team</DropdownMenuItem>
               <DropdownMenuItem>Subscription</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </span>
-        <a href="/#services" className="hover:text-yellow-600">
+        <a href="/" className="hover:text-yellow-600">
+          Home
+        </a>
+        <a href="/services" className="hover:text-yellow-600">
           Services
         </a>
         <a href="/portfolio" className="hover:text-yellow-600">
@@ -90,7 +93,7 @@ export default function Navbar() {
       </div>
       {mobileMenuOpen && (
         <div
-          className="md:hidden absolute top-16 left-0 w-full h-max bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10"
+          className="md:hidden absolute top-16 left-0 w-full h-screen bg-[#F1F1F1] flex flex-col items-center space-y-4 py-4 text-gray-700 z-20 pb-10"
           ref={menuRef}
         >
           <a

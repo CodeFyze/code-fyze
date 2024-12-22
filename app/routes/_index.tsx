@@ -11,6 +11,7 @@ import Innovation from "~/components/Innovation";
 import Navbar from "~/components/Navbar";
 import Technologies from "~/components/Technologies";
 import TopServices from "~/components/TopServices";
+import FAQ from "~/components/FAQ";
 
 export const meta: MetaFunction = () => {
   return [
@@ -49,6 +50,8 @@ export default function Index() {
         <Contact />
 
         {/* <section className="2 mb-8"></section> */}
+
+        <FAQ page="home" />
       </main>
       <footer>
         <Footer />
