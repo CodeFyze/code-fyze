@@ -18,6 +18,11 @@ body {
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 .msg {
   @apply bg-[#CCE1F7] w-[80%] md:w-[50%] absolute rounded shadow p-2 sm:p-2 max-md:static hover:scale-105 transition-transform duration-300
 }

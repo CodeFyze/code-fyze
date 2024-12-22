@@ -75,9 +75,9 @@ export default function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex items-center justify-center space-x-2">
+      <a href="/" className="flex items-center justify-center space-x-2">
         <img src="/logo.png" alt="Logo" className="w-40" />
-      </div>
+      </a>
       <div className="hidden text-sm lg:text-base md:flex space-x-6 text-gray-700">
         {/* About US */}
         <span className="hover:scale-105 transition-transform ease-in-out">
