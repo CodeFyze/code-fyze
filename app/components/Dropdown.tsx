@@ -14,12 +14,12 @@ export default function Dropdown({ title,variant }: { title?: string, variant?: 
               key={index}
               className="p-4 lg:p-4 space-y-1 flex flex-col items-start focus:bg-transparent"
             >
-              <h2 className="text-sm font-semibold text-black">
+              <h2 className="text-base font-semibold text-black">
                 {service.title}
               </h2>
               <ul className="list-disc list-inside">
                 {service.technologies.map((tech, techIndex) => (
-                  <li key={techIndex} className="text-[#7D8D9A] text-xs">
+                  <li key={techIndex} className="text-[#7D8D9A] text-sm">
                     {tech}
                   </li>
                 ))}
