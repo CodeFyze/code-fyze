@@ -22,9 +22,11 @@ export default function DevelopmentProcess() {
               className="w-[55vw] h-full max-md:hidden block object-contain"
             />
             {/* Message Boxes */}
-            <div className="w-full h-full max-md:flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-y-5 bg-humanWithoutArrows bg-center bg-contain bg-no-repeat">
+            <div className="w-full h-full max-md:flex max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-y-5">
+              <div className="px-20 w-full"><div className="md:hidden bg-humanWithoutArrows bg-center bg-contain bg-no-repeat w-full aspect-[512/554]"></div></div>
               <div className="msg -top-[13vw] -left-[15vw] md:-top-[10vw] lg:-top-[8vw]">
                 <h1>Project Planning</h1>
+
                 <p>
                   We collaborate closely with our client to understand their
                   requirements,{" "}
