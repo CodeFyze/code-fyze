@@ -2,7 +2,7 @@ import cards from "~/constants/technologies";
 
 export default function Technologies() {
   return (
-    <section className="w-full h-max" id="technologies">
+    <section className="w-full h-max relative lg:-top-24" id="technologies">
       {/* Text Header */}
       <header className="flex justify-center py-10 bg-[url('/Ellipse237.png')] bg-cover bg-center">
         <div className="heading flex flex-col items-center w-10/12 sm:gap-2">

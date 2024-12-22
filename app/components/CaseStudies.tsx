@@ -26,7 +26,7 @@ export default function CaseStudies() {
   };
 
   return (
-    <section className="w-full space-y-2 max-sm:pb-[44vw] pt-32 pb-40 bg-element3 bg-center bg-cover bg-no-repeat">
+    <section className="w-full space-y-2 max-sm:pb-[44vw] pt-32 pb-40 bg-element3 bg-center bg-cover bg-no-repeat relative lg:-top-24">
       {/* Text Header */}
       <header className="flex justify-center mb-2">
         <div className="heading flex flex-col items-center w-4/6 lg:w-2/5 sm:gap-2">

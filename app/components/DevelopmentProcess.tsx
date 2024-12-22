@@ -1,6 +1,6 @@
 export default function DevelopmentProcess() {
   return (
-    <section className="w-full">
+    <section className="w-full relative lg:-top-24">
       <div className="w-full h-max bg-whiteBg bg-cover bg-center py-8">
         <div className="w-full h-full flex flex-col justify-center items-center max-md:gap-[7vw] gap-[18vw] md:gap-28 xl:gap-[10vw]">
           <div className="heading flex flex-col items-center w-10/12 md:w-4/6 lg:w-6/12 sm:gap-2">
