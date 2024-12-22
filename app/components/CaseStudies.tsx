@@ -54,7 +54,7 @@ export default function CaseStudies() {
             alt="Web-Development"
             className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
               carouselItem === 1
-                ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
+                ? "max-sm:opacity-100 max-sm:scale-100"
                 : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
             } ${
               carouselItem === 1
@@ -70,7 +70,7 @@ export default function CaseStudies() {
             alt="App-Development"
             className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
               carouselItem === 2
-                ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
+                ? "max-sm:opacity-100 max-sm:scale-100"
                 : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
             } ${carouselItem === 2 ? "w-[44%]" : "w-[22%]"} rounded-lg`}
           />
@@ -80,7 +80,7 @@ export default function CaseStudies() {
             alt="UI-UX-design"
             className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
               carouselItem === 3
-                ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
+                ? "max-sm:opacity-100 max-sm:scale-100"
                 : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
             } ${carouselItem === 3 ? "w-[44%]" : "w-[22%]"} rounded-lg`}
           />
@@ -90,7 +90,7 @@ export default function CaseStudies() {
             alt="Panel-Development"
             className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${
               carouselItem === 4
-                ? "max-sm:opacity-100 max-sm:scale-100 max-sm:z-10"
+                ? "max-sm:opacity-100 max-sm:scale-100"
                 : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
             } ${
               carouselItem === 4
