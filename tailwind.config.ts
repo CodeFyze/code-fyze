@@ -33,6 +33,7 @@ export default {
         "innovationBgVertical": "url('/innovation-bg-vertical.png')",
         "topServicesBg": "url('/top-services-bg.png')",
         "topServicesBgVertical": "url('/top-services-bg-vertical.png')",
+        "aboutUsBg": "url('/about-us-bg.png')",
   		},
   		screens: {
   			xs: '20rem'
