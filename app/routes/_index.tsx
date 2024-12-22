@@ -31,12 +31,12 @@ export default function Index() {
         {/* Innovation Section */}
         <Innovation />
 
-        {/* Innovation Section */}
-        <About />
-
-        {/* Top Services Section */}
-        <TopServices />
-
+        <div className="bg-aboutUsBg bg-cover bg-no-repeat">
+          {/* Innovation Section */}
+          <About />
+          {/* Top Services Section */}
+          <TopServices />
+        </div>
         {/* Technologies Section */}
         <Technologies />
 
