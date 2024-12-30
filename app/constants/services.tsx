@@ -1,8 +1,12 @@
 // Define the interface for a card
+interface Technology {
+  text: string;
+  link: string;
+}
 interface Service {
   icon: string;
   title: string;
-  technologies: string[];
+  technologies: Technology[];
 }
 
 // Define the constants for the 6 cards
@@ -11,34 +15,72 @@ const Services: Service[] = [
     icon: "/services/web.png",
     title: "WEB developement Services",
     technologies: [
-      "Frontend Developement",
-      "Backend Developement",
-      "Wordpress & Shopify",
+      {
+        text: "Frontend Developement",
+        link: "#",
+      },
+      {
+        text: "Backend Developement",
+        link: "#",
+      },
+      {
+        text: "Wordpress & Shopify",
+        link: "#",
+      },
     ],
   },
   {
     icon: "/services/marketing.png",
     title: "Digital Marketing",
     technologies: [
-      "SEO",
-      "Social Media Mangement (SMM)",
-      "Social Media Marketing",
-      "Google Ads",
+      {
+        text: "SEO",
+        link: "/service/seo"
+      },
+      {
+        text: "Social Media Mangement (SMM)",
+        link: "/service/socialmediamanagement"
+      },
+      {
+        text: "Social Media Marketing",
+        link: "/service/socialmediamarketing"
+      },
+      {
+        text: "Google Ads",
+        link: "/service/googleads"
+      },
     ],
   },
   {
     icon: "/services/app.png",
     title: "App Developement Services",
-    technologies: ["Android & IOS App Developement"],
+    technologies: [
+      {
+        text: "Android & IOS App Developement",
+        link: "#",
+      },
+    ],
   },
   {
     icon: "/services/graphics.png",
     title: "Graphic Design Services",
     technologies: [
-      "UI/UX Design",
-      "Logo Design",
-      "Poster Design",
-      "Social Media Post Design",
+      {
+        text: "UI/UX Design",
+        link: "#",
+      },
+      {
+        text: "Logo Design",
+        link: "#",
+      },
+      {
+        text: "Poster Design",
+        link: "#",
+      },
+      {
+        text: "Social Media Post Design",
+        link: "#",
+      },
     ],
   },
 ];

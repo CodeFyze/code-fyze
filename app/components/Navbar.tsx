@@ -202,9 +202,9 @@ export default function Navbar() {
                   </h2>
                   <ul className="list-disc list-inside">
                     {service.technologies.map((tech, techIndex) => (
-                      <li key={techIndex} className="text-[#7D8D9A] text-xs">
-                        {tech}
-                      </li>
+                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-xs cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300">
+                        {tech.text}
+                      </li></a>
                     ))}
                   </ul>
                 </div>

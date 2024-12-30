@@ -19,9 +19,9 @@ export default function Dropdown({ title,variant }: { title?: string, variant?: 
               </h2>
               <ul className="list-disc list-inside">
                 {service.technologies.map((tech, techIndex) => (
-                  <li key={techIndex} className="text-[#7D8D9A] text-sm">
-                    {tech}
-                  </li>
+                  <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-sm cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:font-bold hover:text-[#0E3172]">
+                    {tech.text}
+                  </li></a>
                 ))}
               </ul>
             </DropdownMenuItem>

@@ -32,7 +32,7 @@ export default function TopServices() {
               <ul className="w-4/5">
                 {service.technologies.map((tech, techIndex) => (
                   <li key={techIndex} className="text-[#7D8D9A]">
-                    {tech}
+                    {tech.text}
                   </li>
                 ))}
               </ul>
