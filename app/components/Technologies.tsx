@@ -2,14 +2,14 @@ import cards from "~/constants/technologies";
 
 export default function Technologies() {
   return (
-    <section className="w-full h-max space-y-2" id="technologies">
+    <section className="w-full h-max relative lg:-top-24" id="technologies">
       {/* Text Header */}
-      <header className="flex justify-center my-10">
+      <header className="flex justify-center py-10 bg-[url('/Ellipse237.png')] bg-cover bg-center">
         <div className="heading flex flex-col items-center w-10/12 sm:gap-2">
           <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-3xl">
-            Technologies We Used
+            Technologies We Use
           </p>
-          <p className="font-medium text-center text-[3vw] md:text-sm">
+          <p className="font-medium text-center text-xs sm:text-base">
             At Code Fyze, we leverage cutting-edge technology to deliver
             seamless solutions.
             <br />

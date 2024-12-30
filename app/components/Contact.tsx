@@ -2,7 +2,7 @@ import CircleButton from "./CircleButton";
 
 export default function Contact() {
   return (
-    <div className="flex w-full h-full py-12 text-center justify-center">
+    <div className="flex w-full h-full py-12 text-center justify-center lg:relative lg:top-6 xl:top-12">
       <div className="flex flex-col items-center justify-center space-y-8 w-5/6">
         <div className="flex flex-col items-center justify-center space-y-4">
           <h1 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">

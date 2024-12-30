@@ -1,12 +1,12 @@
 // Define the interface for a card
-interface TopService {
+interface Service {
   icon: string;
   title: string;
   technologies: string[];
 }
 
 // Define the constants for the 6 cards
-const topServices: TopService[] = [
+const Services: Service[] = [
   {
     icon: "/services/web.png",
     title: "WEB developement Services",
@@ -43,4 +43,4 @@ const topServices: TopService[] = [
   },
 ];
 
-export default topServices;
+export default Services;

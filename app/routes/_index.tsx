@@ -31,26 +31,25 @@ export default function Index() {
         {/* Innovation Section */}
         <Innovation />
 
-        {/* Innovation Section */}
-        <About />
+        <div className="bg-aboutUsBg bg-cover bg-top bg-no-repeat">
+          {/* Innovation Section */}
+          <About />
+          {/* Top Services Section */}
+          <TopServices />
+        </div>
+        <div className="lg:relative lg:-top-24 xl:-top-48">
+          {/* Technologies Section */}
+          <Technologies />
 
-        {/* Top Services Section */}
-        <TopServices />
+          {/* Case Studies Component */}
+          <CaseStudies />
 
-        {/* Technologies Section */}
-        <Technologies />
+          {/* Development Process Component */}
+          <DevelopmentProcess />
 
-        {/* Case Studies Component */}
-        <CaseStudies />
-
-        {/* Development Process Component */}
-        <DevelopmentProcess />
-
-        {/* Contact Component */}
-        <Contact />
-
-        {/* <section className="2 mb-8"></section> */}
-
+          {/* Contact Component */}
+          <Contact />
+        </div>
         <FAQ page="home" />
       </main>
       <footer>
