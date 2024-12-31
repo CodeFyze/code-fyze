@@ -1,6 +1,7 @@
 import React from "react";
 import FAQ from "~/components/FAQ";
 import Navbar from "~/components/Navbar";
+import { landingFAQs } from "~/constants/faqs";
 
 const LandingPageProcess = () => {
   const steps = [
@@ -130,7 +131,7 @@ const LandingPageProcess = () => {
     </div>
   </div>
 </section>
-        <FAQ page="landing"  />
+        <FAQ faq={landingFAQs}/>
       </section>
     </>
   );

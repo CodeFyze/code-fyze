@@ -12,6 +12,7 @@ import Navbar from "~/components/Navbar";
 import Technologies from "~/components/Technologies";
 import TopServices from "~/components/TopServices";
 import FAQ from "~/components/FAQ";
+import { homeFAQs } from "~/constants/faqs";
 
 export const meta: MetaFunction = () => {
   return [
@@ -50,7 +51,7 @@ export default function Index() {
           {/* Contact Component */}
           <Contact />
         </div>
-        <FAQ page="home" />
+        <FAQ faq={homeFAQs} />
       </main>
       <footer>
         <Footer />
