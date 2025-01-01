@@ -8,17 +8,17 @@ export default function About() {
         <h1 className="font-bold text-4xl md:text-start lg:text-6xl text-[#0E3172]">
           About Us
         </h1>
-        <p className="text-base md:text-xl lg:text-2xl xl:text-3xl mt-4">
+        <p className="text-base md:text-lg lg:text-xl xl:text-2xl mt-4">
           At CODE FYZE, we believe in powering businesses with cutting-edge IT
           solutions that are as dynamic as the digital world we live in.
         </p>
-        <p className="text-base md:text-xl lg:text-2xl xl:text-3xl">
+        <p className="text-base md:text-lg lg:text-xl xl:text-2xl">
           Founded with a passion for technology and a commitment to excellence,
           CODE FYZE specializes in providing robust, customized IT services that
           help our clients streamline operations, enhance security, and drive
           growth.
         </p>
-        <p className="text-base md:text-xl lg:text-2xl xl:text-3xl">
+        <p className="text-base md:text-lg lg:text-xl xl:text-2xl">
           Our team is a diverse group of skilled professionals dedicated to
           understanding your unique needs and delivering solutions that exceed
           expectations.
