@@ -38,7 +38,7 @@ export default function ServiceSeo() {
         <div className="">
           <div className="gap-6 flex flex-col items-center">
             <motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -68,14 +68,16 @@ export default function ServiceSeo() {
                   credibility for long-term growth.
                 </p>
               </div>
-              <img
-                className="w-full h-1/4 md:w-2/5 md:h-full object-cover"
-                src={"/services/SEO/SEO_1.jpg"}
-                alt={"SEO"}
-              />
+              <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
+                <img
+                  className="object-cover h-full"
+                  src={"/services/SEO/SEO_1.jpg"}
+                  alt={"SEO"}
+                />
+              </div>
             </motion.div>
             <motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center md:flex-row-reverse`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center md:flex-row-reverse`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -99,11 +101,13 @@ export default function ServiceSeo() {
                   </li>
                 </ul>
               </div>
-              <img
-                className="w-full h-1/4 md:w-2/5 md:h-full object-cover"
-                src={"/services/SEO/SEO_2.png"}
-                alt={"SEO"}
-              />
+              <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-72">
+                <img
+                  className="object-cover h-full"
+                  src={"/services/SEO/SEO_2.png"}
+                  alt={"SEO"}
+                />
+              </div>
             </motion.div>
             <motion.div
               className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center bg-[url('/hero-sec-bg.png')] bg-cover bg-center`}

@@ -83,7 +83,7 @@ export default function Navbar() {
       <div className="hidden text-sm font-bold lg:text-base lg:flex space-x-6 text-gray-700">
         <a
           href="/"
-          className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
+          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Home
         </a>
@@ -95,13 +95,13 @@ export default function Navbar() {
         </span>
         <a
           href="/portfolio"
-          className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
+          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Portfolio
         </a>
         <a
           href="/#technologies"
-          className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out"
+          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Technologies
         </a>
@@ -139,14 +139,14 @@ export default function Navbar() {
         >
           <a
             href="/"
-            className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             Home
           </a>
           <div>
             <p
-              className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out flex gap-x-1 font-bold text-[#0E3172]"
+              className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex gap-x-1 font-bold text-[#0E3172]"
               onClick={toggleAboutUs}
             >
               About US
@@ -166,14 +166,14 @@ export default function Navbar() {
               }`}
             >
               <div className="px-4 flex flex-col items-center space-y-2 mt-2">
-                <span>About Us 1</span>
-                <span>About Us 2</span>
+                <span className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out duration-300">About Us 1</span>
+                <span className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out duration-300">About Us 2</span>
               </div>
             </div>
           </div>
           <div>
             <p
-              className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out flex gap-x-1 font-bold text-[#0E3172]"
+              className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex gap-x-1 font-bold text-[#0E3172]"
               onClick={toggleServices}
             >
               Services
@@ -202,7 +202,7 @@ export default function Navbar() {
                   </h2>
                   <ul className="list-disc list-inside">
                     {service.technologies.map((tech, techIndex) => (
-                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-xs cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300">
+                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-xs cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800">
                         {tech.text}
                       </li></a>
                     ))}
@@ -213,14 +213,14 @@ export default function Navbar() {
           </div>
           <a
             href="/portfolio"
-            className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             Portfolio
           </a>
           <a
             href="/#technologies"
-            className="hover:text-yellow-600 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             Technologies

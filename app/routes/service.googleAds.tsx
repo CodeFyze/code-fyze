@@ -37,7 +37,7 @@ export default function ServiceGoogleAds() {
         <div className="">
           <div className="gap-6 flex flex-col items-center">
             <motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -53,13 +53,13 @@ export default function ServiceGoogleAds() {
                 </p>
               </div>
               <img
-                className="w-full h-1/4 md:w-2/5 md:h-full object-cover"
+                className="w-full h-1/4 md:w-2/5 md:h-[30rem] lg:h-[22rem] object-cover"
                 src={"/services/GoogleAds/GoogleAds_1.jpg"}
                 alt={"SEO"}
               />
             </motion.div>
             <motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center md:flex-row-reverse`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center md:flex-row-reverse`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -75,13 +75,13 @@ export default function ServiceGoogleAds() {
                 </p>
               </div>
               <img
-                className="w-full h-1/4 md:w-2/5 md:h-full object-cover"
+                className="w-full h-1/4 md:w-2/5 md:h-[20rem] lg:h-[15rem] object-cover"
                 src={"/services/GoogleAds/GoogleAds_2.jpg"}
                 alt={"SEO"}
               />
             </motion.div>
             <motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -97,12 +97,12 @@ export default function ServiceGoogleAds() {
                 </p>
               </div>
               <img
-                className="w-full h-1/4 md:w-2/5 md:h-full object-cover"
+                className="w-full h-1/4 md:w-2/5 md:h-[20rem] lg:h-[16rem] object-cover"
                 src={"/services/GoogleAds/GoogleAds_3.jpeg"}
                 alt={"SEO"}
               />
             </motion.div><motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center md:flex-row-reverse`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center md:flex-row-reverse`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -123,20 +123,20 @@ export default function ServiceGoogleAds() {
                 </ul>
               </div>
               <img
-                className="w-full h-1/4 md:w-2/5 md:h-full object-cover"
+                className="w-full h-1/4 md:w-2/5 md:h-[30rem] lg:h-[26rem] object-cover"
                 src={"/services/GoogleAds/GoogleAds_4.png"}
                 alt={"SEO"}
               />
             </motion.div>
             <motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.2 }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="h-3/4 md:h-auto px-6 py-4 md:w-3/5">
+              <div className="h-3/4 md:h-auto px-6 py-4 md:w-11/12">
                 <div className="font-bold text-xl mb-2 font-baskervville">
                 How CodeFyze Can Help
                 </div>
@@ -144,11 +144,13 @@ export default function ServiceGoogleAds() {
                 At CodeFyze, we are experts in managing Google Ads campaigns to help businesses grow. Our team focuses on creating smart, results-driven strategies that maximize your ad spend and boost your bottom line. Whether you{"'"}re new to Google Ads or looking to improve your current campaigns, CodeFyze is here to help you succeed.
                 </p>
               </div>
-              <img
-                className="w-full h-1/4 md:w-2/5 md:h-full object-contain"
-                src={"/help.png"}
-                alt={"SEO"}
-              />
+              <div className="w-2/5 sm:w-1/5 h-1/4 md:h-full md:w-2/5 md:flex md:justify-center">
+                <img
+                  className="object-contain md:p-10 xl:p-18"
+                  src={"/help.png"}
+                  alt={"SEO"}
+                />
+              </div>
             </motion.div>
           </div>
         </div>

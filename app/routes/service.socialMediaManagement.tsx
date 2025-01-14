@@ -30,7 +30,7 @@ export default function ServiceSocialMediaManagement() {
         <div className="">
           <div className="gap-6 flex flex-col items-center">
             <motion.div
-              className={`w-4/5 h-96 rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
+              className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
