@@ -1,8 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
-import { useEffect, useState } from "react";
 import About from "~/components/About";
+import Team from "~/components/Team";
 import CaseStudies from "~/components/CaseStudies";
-import CircleButton from "~/components/CircleButton";
 import Contact from "~/components/Contact";
 import DevelopmentProcess from "~/components/DevelopmentProcess";
 import Footer from "~/components/Footer";
@@ -32,9 +31,11 @@ export default function Index() {
         {/* Innovation Section */}
         <Innovation />
 
-        <div className="bg-aboutUsBg bg-cover bg-top bg-no-repeat">
-          {/* Innovation Section */}
+        <div className="bg-aboutUsBg bg-cover bg-top bg-no-repeat flex flex-col items-center">
+          {/* About Section */}
           <About />
+          {/* Team */}
+          <Team />
           {/* Top Services Section */}
           <TopServices />
         </div>
