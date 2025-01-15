@@ -73,7 +73,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`py-4 px-6 flex items-center justify-between z-10 sticky top-0 transition-transform duration-300 bg-white/30 transparent backdrop-blur-xl ${
+      className={`py-4 px-6 flex items-center justify-between sticky top-0 transition-transform duration-300 bg-white/30 transparent backdrop-blur-xl z-50 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >

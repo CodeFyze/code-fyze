@@ -19,7 +19,7 @@ export default function Team() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-[50vw] md:w-[80vw]"
+      className="w-[80vw] z-10"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
@@ -52,8 +52,8 @@ export default function Team() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="max-md:hidden"/>
+      <CarouselNext className="max-md:hidden"/>
     </Carousel>
   );
 }
