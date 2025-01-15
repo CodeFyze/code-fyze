@@ -47,7 +47,7 @@ export default function DevelopmentProcess() {
                 <h1>Development</h1>
                 <p>
                   Our skilled developers bring the designs to life, writing
-                  clean and <span className="font-bold">efficient code</span>
+                  clean and <span className="font-bold">efficient code </span>
                   while following industry standards and best practices.
                 </p>
               </div>
@@ -55,7 +55,7 @@ export default function DevelopmentProcess() {
                 <h1>Desinging</h1>
                 <p>
                   Our experienced team of designers create intuitive and
-                  <span className="font-bold">use-friendly interfaces</span>,
+                  <span className="font-bold"> user-friendly interfaces</span>,
                   ensuring a seamless user experience while adhering to the
                   client&apos;s brand guidelines.
                 </p>
