@@ -15,7 +15,7 @@ const devTeam = [
     role:"Digital Marketing Expert",
   },
   {
-    roleimage: "/devTeam/nazakat1.png",
+    roleimage: "/devTeam/nazakat.png",
     name: "Nazakat Umrani",
     role:"Full Stack Developer",
   },

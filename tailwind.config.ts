@@ -117,14 +117,29 @@ export default {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+			'pulse-ring': {
+			  '0%': {
+				transform: 'scale(0.9)',
+				opacity: '0.7',
+			  },
+			  '70%': {
+				transform: 'scale(1.1)',
+				opacity: '0',
+			  },
+			  '100%': {
+				transform: 'scale(0.9)',
+				opacity: '0',
+			  },
+			}
   		},
   		animation: {
   			marquee: 'marquee var(--duration) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+			  'accordion-up': 'accordion-up 0.2s ease-out',
+			  'pulse-ring': 'pulse-ring 1.5s infinite'
+  		},
   	}
   },
   plugins: [

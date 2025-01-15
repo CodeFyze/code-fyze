@@ -12,6 +12,7 @@ import Technologies from "~/components/Technologies";
 import TopServices from "~/components/TopServices";
 import FAQ from "~/components/FAQ";
 import { homeFAQs } from "~/constants/faqs";
+import Portfolio from "~/components/Portfolio";
 
 export const meta: MetaFunction = () => {
   return [
@@ -31,14 +32,22 @@ export default function Index() {
         {/* Innovation Section */}
         <Innovation />
 
-        <div className="bg-aboutUsBg bg-cover bg-top bg-no-repeat flex flex-col items-center">
+        <div className="bg-aboutUsBg bg-contain bg-top bg-y-repeat flex flex-col items-center">
           {/* About Section */}
           <About />
           {/* Team */}
           <Team />
           {/* Top Services Section */}
           <TopServices />
+          <Portfolio title="Website Projects"/>
+          <Portfolio title="Website Projects"/>
+          <Portfolio title="Website Projects"/>
         </div>
+
+        {/* Portfolio Section */}
+        {/* <div>
+        </div> */}
+        
         <div className="lg:relative lg:-top-24 xl:-top-48">
           {/* Technologies Section */}
           <Technologies />
