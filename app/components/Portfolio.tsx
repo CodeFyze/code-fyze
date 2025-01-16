@@ -4,18 +4,33 @@ import { FaEye } from "react-icons/fa"; // Import the eye icon from react-icons
 export default function Portfolio({ title }: { title: string }) {
   const projectsTemplate = [
     {
-        images: ["website/01.png", "website/02.png", "website/03.png"],
-        links: ["https://license-help.vercel.app", "https://emaps-web.vercel.app", "https://review-website-eight.vercel.app"],
+      images: ["website/01.png", "website/02.png", "website/03.png"],
+      hoverImages: [],
+      links: [
+        "https://license-help.vercel.app",
+        "https://emaps-web.vercel.app",
+        "https://review-website-eight.vercel.app",
+      ],
     },
     {
-        images: ["mobile.png", "mobile.png", "mobile.png"],
-        links: ["https://www.google.com", "https://www.google.com", "https://www.google.com"],
+      images: ["app/app_01.jpg", "app/app_02.jpg", "app/app_03.jpg"],
+      hoverImages: [
+        "app/app_01_hover.jpg",
+        "app/app_02_hover.jpg",
+        "app/app_03_hover.jpg",
+      ],
+      links: [],
     },
     {
-        images: ["wordpress.png", "wordpress.png", "wordpress.png"],
-        links: ["https://www.google.com", "https://www.google.com", "https://www.google.com"],
+      images: ["wordpress.png", "wordpress.png", "wordpress.png"],
+      hoverImages: [],
+      links: [
+        "https://www.google.com",
+        "https://www.google.com",
+        "https://www.google.com",
+      ],
     },
-  ]
+  ];
 
   const projects =
     title === "Website Projects"
@@ -33,16 +48,30 @@ export default function Portfolio({ title }: { title: string }) {
         </div>
         <div className="flex flex-col lg:flex-row max-lg:space-y-4 lg:space-x-3 text-sm sm:text-base max-lg:text-center md:text-xl text-[#7D8D9A]">
           {projects.images.map((image, index) => (
-            <div 
-                key={index}
-                className="relative group rounded-lg overflow-hidden cursor-pointer shadow-xl"
-                onClick={() => window.open(projects.links[index], "_blank")}>
+            <div
+              key={index}
+              className="relative group rounded-lg overflow-hidden cursor-pointer shadow-xl"
+              onClick={() => window.open(projects.links[index], "_blank")}
+            >
               <img
                 src={`/portfolio/${image}`}
                 alt={`${title} ${index + 1}`}
-                className="w-full aspect-video transition-transform duration-300 ease-in-out group-hover:brightness-50 group-hover:scale-105 object-cover object-center"
+                className={`w-full aspect-[1800/820] transition-transform duration-300 ease-in-out object-cover object-center ${
+                  title === "Mobile App Projects"
+                    ? "group-hover:scale-105"
+                    : "group-hover:brightness-50 group-hover:scale-105"
+                }`}
               />
-              <FaEye className="absolute inset-0 m-auto text-white text-3xl opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
+              {title === "Mobile App Projects" && (
+                <img
+                  src={`/portfolio/${projects.hoverImages[index]}`}
+                  alt={`${title} ${index + 1} hover`}
+                  className="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                />
+              )}
+              {title !== "Mobile App Projects" && (
+                <FaEye className="absolute inset-0 m-auto text-white text-3xl opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
+              )}
             </div>
           ))}
         </div>

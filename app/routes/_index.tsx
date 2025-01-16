@@ -40,7 +40,7 @@ export default function Index() {
           {/* Top Services Section */}
           <TopServices />
           <Portfolio title="Website Projects"/>
-          <Portfolio title="Website Projects"/>
+          <Portfolio title="Mobile App Projects"/>
           <Portfolio title="Website Projects"/>
         </div>
 
