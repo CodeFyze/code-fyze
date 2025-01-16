@@ -134,7 +134,7 @@ export default function Navbar() {
       </div>
       {mobileMenuOpen && (
         <div
-          className="lg:hidden absolute top-14 left-0 w-full min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[10vw] space-y-4 py-4 text-gray-700 z-20 pb-32 overflow-y-scroll h-full"
+          className="lg:hidden absolute top-14 left-0 w-full min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[10vw] space-y-4 py-4 text-gray-700 z-20 pb-32 overflow-y-scroll h-full text-lg"
           ref={menuRef}
         >
           <a
@@ -146,7 +146,7 @@ export default function Navbar() {
           </a>
           <div>
             <p
-              className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex gap-x-1 font-bold text-[#0E3172]"
+              className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex font-bold text-[#0E3172]"
               onClick={toggleAboutUs}
             >
               About US
@@ -165,7 +165,7 @@ export default function Navbar() {
                 aboutUsOpen ? "max-h-40" : "max-h-0"
               }`}
             >
-              <div className="px-4 flex flex-col items-center space-y-2 mt-2">
+              <div className="flex flex-col space-y-2 mt-2 text-[#7D8D9A]">
                 <span className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out duration-300">About Us 1</span>
                 <span className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out duration-300">About Us 2</span>
               </div>
@@ -173,7 +173,7 @@ export default function Navbar() {
           </div>
           <div>
             <p
-              className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex gap-x-1 font-bold text-[#0E3172]"
+              className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex font-bold text-[#0E3172]"
               onClick={toggleServices}
             >
               Services
@@ -188,21 +188,21 @@ export default function Navbar() {
               </span>
             </p>
             <div
-              className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
-                servicesOpen ? "max-h-[30rem]" : "max-h-0"
+              className={`transition-max-height duration-300 ease-in-out overflow-hidden w-full ${
+                servicesOpen ? "max-h-[34rem]" : "max-h-0"
               }`}
             >
               {Services.map((service, index) => (
                 <div
                   key={index}
-                  className="p-4 space-y-1 flex flex-col items-start focus:bg-transparent"
+                  className="py-2 space-y-1 flex flex-col items-start focus:bg-transparent"
                 >
-                  <h2 className="text-md font-semibold text-[#0E3172]">
+                  <h2 className="font-medium text-[#0E3172]">
                     {service.title}
                   </h2>
-                  <ul className="ml-4">
+                  <ul className="">
                     {service.technologies.map((tech, techIndex) => (
-                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-sm font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800">
+                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800 origin-left">
                         {tech.text}
                       </li></a>
                     ))}
