@@ -134,7 +134,7 @@ export default function Navbar() {
       </div>
       {mobileMenuOpen && (
         <div
-          className="lg:hidden absolute top-14 left-0 w-full min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[10vw] space-y-4 py-4 text-gray-700 z-20 pb-20 overflow-y-scroll h-full"
+          className="lg:hidden absolute top-14 left-0 w-full min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[10vw] space-y-4 py-4 text-gray-700 z-20 pb-32 overflow-y-scroll h-full"
           ref={menuRef}
         >
           <a
@@ -189,7 +189,7 @@ export default function Navbar() {
             </p>
             <div
               className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
-                servicesOpen ? "max-h-96" : "max-h-0"
+                servicesOpen ? "max-h-[30rem]" : "max-h-0"
               }`}
             >
               {Services.map((service, index) => (
@@ -197,12 +197,12 @@ export default function Navbar() {
                   key={index}
                   className="p-4 space-y-1 flex flex-col items-start focus:bg-transparent"
                 >
-                  <h2 className="text-sm font-semibold text-[#0E3172]">
+                  <h2 className="text-md font-semibold text-[#0E3172]">
                     {service.title}
                   </h2>
-                  <ul className="list-disc list-inside">
+                  <ul className="ml-4">
                     {service.technologies.map((tech, techIndex) => (
-                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-xs cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800">
+                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-sm font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800">
                         {tech.text}
                       </li></a>
                     ))}
