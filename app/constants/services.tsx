@@ -57,7 +57,7 @@ const Services: Service[] = [
     technologies: [
       {
         text: "Android & IOS App Developement",
-        link: "#",
+        link: "/service/android-ios",
       },
     ],
   },
@@ -67,15 +67,15 @@ const Services: Service[] = [
     technologies: [
       {
         text: "UI/UX Design",
-        link: "#",
+        link: "/service/ui-ux",
       },
       {
         text: "Logo Design",
-        link: "#",
+        link: "/service/logo",
       },
       {
         text: "Poster Design",
-        link: "#",
+        link: "/service/poster",
       },
       {
         text: "Social Media Post Design",

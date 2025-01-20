@@ -49,7 +49,7 @@ export default function ServiceSeo() {
               </div>
               <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
                 <img
-                  className="object-cover h-full"
+                  className="object-cover h-full w-full"
                   src={"/services/Frontend/Frontend_1.jpg"}
                   alt={"SEO"}
                 />
@@ -77,7 +77,7 @@ export default function ServiceSeo() {
               </div>
               <div className="w-full h-full max-md:aspect-video md:w-2/5 md:h-72">
                 <img
-                  className="object-cover h-full"
+                  className="object-cover h-full w-full"
                   src={"/services/Frontend/Frontend_2.jpg"}
                   alt={"SEO"}
                 />

@@ -83,7 +83,8 @@ From processing user data to ensuring secure transactions, the backend is critic
                   alt={"SEO"}
                 />
               </div>
-            </motion.div> <motion.div
+            </motion.div> 
+            <motion.div
               className={`w-4/5 h-full rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-90 flex max-md:flex-col-reverse items-center`}
               variants={cardVariants}
               initial="hidden"

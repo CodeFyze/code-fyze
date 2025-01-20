@@ -9,11 +9,11 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   // Mobile Nav About us and services submenu
-  const [aboutUsOpen, setAboutUsOpen] = useState(false);
+  // const [aboutUsOpen, setAboutUsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const toggleAboutUs = () => {
-    setAboutUsOpen(!aboutUsOpen);
-  };
+  // const toggleAboutUs = () => {
+  //   setAboutUsOpen(!aboutUsOpen);
+  // };
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
   };
@@ -81,15 +81,21 @@ export default function Navbar() {
         <img src="/logo.png" alt="Logo" className="w-40" />
       </a>
       <div className="hidden text-sm font-bold lg:text-base lg:flex space-x-6 text-gray-700">
-        <a
+      <a
           href="/"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Home
         </a>
-        <span className="hover:scale-105 transition-transform ease-in-out">
+        <a
+          href="/"
+          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
+        >
+          About US
+        </a>
+        {/* <span className="hover:scale-105 transition-transform ease-in-out">
           <Dropdown title="About US" variant="about" />
-        </span>
+        </span> */}
         <span className="hover:scale-105 transition-transform ease-in-out">
           <Dropdown title="Services" variant="services" />
         </span>
@@ -144,7 +150,14 @@ export default function Navbar() {
           >
             Home
           </a>
-          <div>
+          <a
+            href="/"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
+            onClick={handleLinkClick}
+          >
+            About US
+          </a>
+          {/* <div>
             <p
               className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex font-bold text-[#0E3172]"
               onClick={toggleAboutUs}
@@ -170,7 +183,7 @@ export default function Navbar() {
                 <span className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out duration-300">About Us 2</span>
               </div>
             </div>
-          </div>
+          </div> */}
           <div>
             <p
               className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex font-bold text-[#0E3172]"
