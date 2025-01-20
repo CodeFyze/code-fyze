@@ -39,7 +39,7 @@ export default function Portfolio() {
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.01 }}
                 whileHover={{ scale: 1.05 }}
               >
                 <img

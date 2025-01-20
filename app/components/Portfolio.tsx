@@ -22,7 +22,7 @@ export default function Portfolio({ title }: { title: string }) {
       links: [],
     },
     {
-      images: ["wordpress.png", "wordpress.png", "wordpress.png"],
+      images: ["wordpress/wordpress_01.png", "wordpress/wordpress_02.png", "wordpress/wordpress_03.png"],
       hoverImages: [],
       links: [
         "https://www.google.com",

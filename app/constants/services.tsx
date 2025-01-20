@@ -17,15 +17,15 @@ const Services: Service[] = [
     technologies: [
       {
         text: "Frontend Developement",
-        link: "#",
+        link: "/service/frontend",
       },
       {
         text: "Backend Developement",
-        link: "#",
+        link: "/service/backend",
       },
       {
         text: "Wordpress & Shopify",
-        link: "#",
+        link: "/service/wordpress-shopify",
       },
     ],
   },

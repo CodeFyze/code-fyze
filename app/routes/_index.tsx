@@ -41,7 +41,7 @@ export default function Index() {
           <TopServices />
           <Portfolio title="Website Projects"/>
           <Portfolio title="Mobile App Projects"/>
-          <Portfolio title="Website Projects"/>
+          <Portfolio title="Wordpress Projects"/>
         </div>
 
         {/* Portfolio Section */}
