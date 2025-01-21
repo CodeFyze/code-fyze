@@ -9,6 +9,8 @@ import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
 import Socials from "./components/Socials";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 
 export const links: LinksFunction = () => [
@@ -35,11 +37,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
       <body>
+        <Navbar />
         {children}
         <Socials />
         <ScrollRestoration />
         <Scripts />
       </body>
+      <footer>
+        <Footer />
+      </footer>
     </html>
   );
 }

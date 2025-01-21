@@ -88,7 +88,7 @@ export default function Navbar() {
           Home
         </a>
         <a
-          href="/"
+          href="/About-US"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           About US
@@ -151,7 +151,7 @@ export default function Navbar() {
             Home
           </a>
           <a
-            href="/"
+            href="/About-US"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >

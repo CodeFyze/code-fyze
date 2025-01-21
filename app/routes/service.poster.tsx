@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Navbar from "~/components/Navbar";
 
 export default function ServiceSeo() {
   const cardVariants = {
@@ -16,7 +15,6 @@ export default function ServiceSeo() {
 
   return (
     <>
-      <Navbar />
       <div
         className="mx-auto px-4 py-8 bg-contain bg-center bg-y-repeat"
         style={{
@@ -50,7 +48,7 @@ export default function ServiceSeo() {
               <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
                 <img
                   className="object-cover h-full w-full"
-                  src={"/services/UI-UX/UI-UX_1.png"}
+                  src={"/services/Poster/Poster_1.jpg"}
                   alt={"SEO"}
                 />
               </div>
@@ -78,7 +76,7 @@ export default function ServiceSeo() {
               <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
                 <img
                   className="object-cover h-full"
-                  src={"/services/UI-UX/UI-UX_2.jpg"}
+                  src={"/services/Poster/Poster_2.jpg"}
                   alt={"SEO"}
                 />
               </div>
@@ -106,7 +104,7 @@ export default function ServiceSeo() {
               <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
                 <img
                   className="object-cover h-full"
-                  src={"/services/UI-UX/UI-UX_2.jpg"}
+                  src={"/services/Poster/Poster_3.jpg"}
                   alt={"SEO"}
                 />
               </div>
@@ -130,7 +128,7 @@ export default function ServiceSeo() {
               <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
                 <img
                   className="object-cover h-full w-full"
-                  src={"/services/UI-UX/UI-UX_1.png"}
+                  src={"/services/Poster/Poster_4.jpg"}
                   alt={"SEO"}
                 />
               </div>

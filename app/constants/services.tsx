@@ -79,7 +79,7 @@ const Services: Service[] = [
       },
       {
         text: "Social Media Post Design",
-        link: "#",
+        link: "/service/social-media",
       },
     ],
   },

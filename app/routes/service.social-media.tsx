@@ -11,12 +11,12 @@ export default function ServiceSeo() {
   };
 
   const title = "Graphic Design Services";
-  const description = "Logo Design";
+  const description = "Social Media Post Design";
 
   return (
     <>
       <div
-        className="mx-auto px-4 py-8 bg-contain bg-center bg-y-repeat"
+        className="mx-auto px-4 py-8 bg-contain bg-center bg-no-repeat bg-y-repeat"
         style={{
           backgroundImage: "url('/element3.png')",
         }}
@@ -39,16 +39,16 @@ export default function ServiceSeo() {
             >
               <div className="h-3/4 md:h-auto px-6 py-4 md:w-3/5">
                 <div className="font-bold text-xl mb-2 font-baskervville">
-                  Why a Professional Logo is Important for Your Business:
+                Get Professional Social Media Poster Design 
                 </div>
                 <p className="text-gray-700 text-base font-mingzat">
-                A professional logo is more than just a graphic; it&apos;s the face of your brand. It&apos;s the first thing customers notice and remember about your business. A strong, memorable logo creates trust and recognition, ensuring that your brand stands out in a crowded market. It serves as the foundation for your company&apos;s identity, reflecting your values, mission, and professionalism. Without a professional logo, your business could risk being perceived as untrustworthy or amateurish, which could limit its potential for growth and success.
+                In today&apos;s digital world, standing out on social media is crucial for success. At CodeFyze, we offer professional social media poster design services that not only captivate attention but also drive engagement with your audience. Our expert designers create custom, high-quality posters tailored to your brand, ensuring that your posts make an impact across all platforms.
                 </p>
               </div>
               <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
                 <img
                   className="object-cover h-full w-full"
-                  src={"/services/Logo/Logo_1.jpg"}
+                  src={"/services/Social-Media/1.jpg"}
                   alt={"SEO"}
                 />
               </div>
@@ -63,21 +63,21 @@ export default function ServiceSeo() {
             >
               <div className="h-3/4 md:h-auto px-6 py-4 md:w-3/5">
                 <div className="font-bold text-xl mb-2 font-baskervville">
-                  Benefits of Hiring CodeFyze for Logo Design:
+                Benefits of Hiring CodeFyze for Social Media Poster Design:
                 </div>
                 <ul className="text-gray-700 text-base font-mingzat list-disc list-inside">
-                  <li><b>Custom, Tailored Designs:</b> At CodeFyze, we create logos that are not only visually stunning but are tailored to reflect your unique brand identity.</li>
-                  <li><b>Expertise & Creativity:</b> Our team of experienced designers brings creativity and expert insights, ensuring your logo stands out while maintaining industry relevance.</li>
-                  <li><b>Brand Consistency:</b> We design logos that seamlessly align with your existing branding, creating a cohesive and professional look across all platforms.</li>
-                  <li><b>High-Quality Designs:</b> We use the latest design tools and trends to create logos that are sharp, scalable, and adaptable for both digital and print media.</li>
-                  <li><b>Enhanced Brand Recognition:</b> A well-designed logo helps to increase recognition and brand recall, making your business more memorable to your target audience.</li>
-                  <li><b>Ongoing Support:</b> After we deliver your logo, we offer continued support and guidance on how to best use your new logo across various marketing channels.</li>
+                  <li><b>Boost Engagement:</b> Our eye-catching and professionally designed posters help increase engagement, making your social media posts more likely to be shared, liked, and commented on.</li>
+                  <li><b>Brand Consistency:</b> We ensure that every poster aligns with your brand&aposs identity, maintaining a consistent visual language across all your social media channels for better recognition and trust.</li>
+                  <li><b>Tailored Designs for Your Audience:</b> We create posters that speak directly to your target audience. From event promotions to product launches, our designs are strategically crafted to match the needs and interests of your followers.</li>
+                  <li><b>High-Quality, Shareable Designs:</b> Our designs are not only visually stunning but optimized for sharing, ensuring that your content looks great across all social media platforms and devices.</li>
+                  <li><b>Time-Saving & Efficient:</b> We provide fast turnaround times, so you can focus on running your business while we handle the creative aspect of your social media presence. Plus, with revisions included, you&apos;re guaranteed a design that meets your exact specifications.</li>
+                  <li><b>Affordable Marketing Solutions:</b> With our cost-effective social media poster design services, you can enhance your digital marketing without breaking the bank.</li>
                 </ul>
               </div>
               <div className="w-full h-auto max-md:aspect-video md:w-2/5 md:h-[26rem]">
                 <img
                   className="object-cover h-full"
-                  src={"/services/Logo/Logo_2.png"}
+                  src={"/services/Social-Media/2.jpg"}
                   alt={"SEO"}
                 />
               </div>

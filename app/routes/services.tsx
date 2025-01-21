@@ -1,6 +1,4 @@
-import React from "react";
 import FAQ from "~/components/FAQ";
-import Navbar from "~/components/Navbar";
 import { landingFAQs } from "~/constants/faqs";
 
 const LandingPageProcess = () => {
@@ -34,7 +32,6 @@ const LandingPageProcess = () => {
 
   return (
     <>
-      <Navbar />
       <section className="bg-gray-50 bg-[url('/element3.png')] bg-cover bg-center py-10 ">
         <div className=" bg-opacity-80  py-10 px-6 md:px-16 rounded-xl ">
           <div className="container mx-auto">

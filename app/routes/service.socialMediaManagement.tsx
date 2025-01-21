@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Navbar from "~/components/Navbar";
 
 export default function ServiceSocialMediaManagement() {
   const cardVariants = {
@@ -16,7 +15,6 @@ export default function ServiceSocialMediaManagement() {
 
   return (
     <>
-      <Navbar />
       <div
         className="mx-auto px-4 py-8 bg-contain bg-center bg-y-repeat"
         style={{

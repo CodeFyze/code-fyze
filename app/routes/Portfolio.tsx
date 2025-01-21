@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Navbar from "~/components/Navbar";
 import portfolioItems from "~/constants/portfolioItems";
 
 export default function Portfolio() {
@@ -14,7 +13,6 @@ export default function Portfolio() {
 
   return (
     <>
-      <Navbar />
       <div
         className="mx-auto px-4 py-8 bg-contain bg-center"
         style={{

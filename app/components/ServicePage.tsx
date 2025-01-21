@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Navbar from "~/components/Navbar";
 
 interface Constant {
   title: string;
@@ -25,7 +24,6 @@ export default function ServicePage({title, description, constants}:ServicePageP
 
   return (
     <>
-      <Navbar />
       <div
         className="mx-auto px-4 py-8 bg-contain bg-center"
         style={{

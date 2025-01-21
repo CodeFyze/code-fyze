@@ -24,7 +24,6 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <>
-      <Navbar />
       <main className="flex flex-col items-center justify-center w-screen">
         {/* Hero Section */}
         <Hero />
@@ -63,9 +62,6 @@ export default function Index() {
         </div>
         <FAQ faq={homeFAQs} />
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 }
