@@ -1,72 +1,60 @@
-const portfolioItems = [
+export const wordpressPortfolioItems = [
   {
-    image: "/App-Development.jpg",
-    title: "Project One",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
+    image: "/portfolio/wordpress/all/01.png",
+    link: "https://www.3mLimonyc.com",
   },
   {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
+    image: "/portfolio/wordpress/all/02.png",
+    link: "https://charlesgraydogtraining.com/",
   },
+  {
+    image: "/portfolio/wordpress/all/03.png",
+    link: "https://www.kitchenunionsg.com",
+  },
+  {
+    image: "/portfolio/wordpress/all/04.png",
+    link: "https://www.fjminternational.com",
+  },
+  {
+    image: "/portfolio/wordpress/all/05.png",
+    link: "https://www.bytelah.com",
+  },
+  {
+    image: "/portfolio/wordpress/all/06.png",
+    link: "https://www.megazonetechnical.com",
+  },
+  {
+    image: "/portfolio/wordpress/all/07.png",
+    link: "https://www.horizondrivingschool.com",
+  },
+  // {
+  //   image: "/App-Development.jpg",
+  //   link: "https://www.customizablewear.com",
+  // },
+];
 
+export const shopifyPortfolioItems = [
   {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
+    image: "/portfolio/shopify/all/01.png",
+    link: "https://kukdu-ku.com/",
   },
-
   {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
+    image: "/portfolio/shopify/all/02.png",
+    link: "https://earthrhythm.com/",
   },
-
   {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
+    image: "/portfolio/shopify/all/03.png",
+    link: "https://www.thetribes.in/",
   },
-
   {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
+    image: "/portfolio/shopify/all/04.png",
+    link: "https://theearthyweaves.com/",
   },
-
   {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
-  },
-
-  {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
-  },
-
-  {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
-  },
-
-  {
-    image: "/App-Development.jpg",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit quo. Porro, eveniet hic amet, vero ducimus ad illo quos alias possimus sapiente sed animi vel. Rerum reiciendis ipsa rem..",
+    image: "/portfolio/shopify/all/05.png",
+    link: "https://www.happiestbaby.com/",
   },
 ];
 
-export default portfolioItems;
+
+export default wordpressPortfolioItems;

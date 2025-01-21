@@ -13,11 +13,11 @@ export default function Portfolio({ title }: { title: string }) {
       ],
     },
     {
-      images: ["app/app_01.jpg", "app/app_02.jpg", "app/app_03.jpg"],
+      images: ["app/app_01.jpg", "app/app_02.jpg", "app/app_03.jpeg"],
       hoverImages: [
         "app/app_01_hover.jpg",
         "app/app_02_hover.jpg",
-        "app/app_03_hover.jpg",
+        "app/app_03_hover.jpeg",
       ],
       links: [],
     },

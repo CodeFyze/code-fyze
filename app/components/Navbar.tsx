@@ -106,10 +106,10 @@ export default function Navbar() {
           Portfolio
         </a>
         <a
-          href="/#technologies"
+          href="/ContactUS"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
-          Technologies
+          Contact US
         </a>
       </div>
       <div className="hidden lg:flex space-x-4 items-center">
@@ -232,11 +232,11 @@ export default function Navbar() {
             Portfolio
           </a>
           <a
-            href="/#technologies"
+            href="/ContactUS"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
-            Technologies
+            Contact US
           </a>
         </div>
       )}

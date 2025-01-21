@@ -23,7 +23,7 @@ const AboutUS: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold mb-4">We Always Make The Best</h2>
             <p className="text-gray-400 mb-6">
-            Our expertise spans Frontend Development, Backend Systems, Databases, Frameworks, Designing, and SEO Optimization, ensuring a perfect blend of functionality and aesthetics.
+            At CODE FYZE, we believe in powering businesses with cutting-edge IT solutions that are as dynamic as the digital world we live in.
             </p>
             <button className="flex items-center md:px-6 md:py-3 p-5 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300">
             Contact Us
@@ -39,7 +39,7 @@ const AboutUS: React.FC = () => {
             {/* Left Content */}
             <div>
               <p className="mb-4">
-                At CODE FYZE, we believe in powering businesses with cutting-edge IT solutions that are as dynamic as the digital world we live in.
+              Our expertise spans Frontend Development, Backend Systems, Databases, Frameworks, Designing, and SEO Optimization, ensuring a perfect blend of functionality and aesthetics.
               </p>
               {/* Skill Bars */}
               <div className="mb-6">

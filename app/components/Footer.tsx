@@ -24,16 +24,16 @@ export default function Footer() {
           </div>
           <div className="flex flex-col justify-end items-end text-end xl:w-[45vw] space-y-10">
             <div className="w-full flex flex-col max-lg:space-y-5 lg:flex-row items-center justify-between text-lg lg:max-xl:text-base font-bold">
-              <a href="/#about-us" className="hover:text-yellow-600">
+              <a href="/#about-us" className="hover:text-blue-800">
                 About US
               </a>
-              <a href="/#services" className="hover:text-yellow-600">
+              <a href="/#services" className="hover:text-blue-800">
                 Services
               </a>
-              <a href="/portfolio" className="hover:text-yellow-600">
+              <a href="/portfolio" className="hover:text-blue-800">
                 Portfolio
               </a>
-              <a href="/#technologies" className="hover:text-yellow-600">
+              <a href="/#technologies" className="hover:text-blue-800">
                 Technologies
               </a>
             </div>
