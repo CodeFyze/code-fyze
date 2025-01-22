@@ -3,3 +3,4 @@ export default {
     tailwind: true,
     postcss: true,
 };
+require("dotenv").config();
