@@ -1,7 +1,8 @@
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { RiTelegramLine } from "react-icons/ri";
+import { GrFacebookOption } from "react-icons/gr";
+import { HiOutlineMail } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -18,24 +19,24 @@ export default function Footer() {
             <div className="flex justify-between w-4/5 lg:w-[46%] space-x-3 h-12">
             <a href="https://www.linkedin.com/company/codefyze/" className="w-fit h-full" target="_blank"><CiLinkedin size={30}/></a>
             <a href="https://www.instagram.com/code_fyze/" className="w-fit h-full" target="_blank"><FaInstagram size={30}/></a>
-            <a href="#" className="w-fit h-full" target="_blank"><FaXTwitter size={30}/></a>
-            <a href="#" className="w-fit h-full" target="_blank"><RiTelegramLine size={30}/></a>
+            <a href="https://www.facebook.com/profile.php?id=61566949416573&mibextid=LQQJ4d" className="w-fit h-full" target="_blank"><GrFacebookOption size={30}/></a>
+            <a href="mailto:codefyze@gmail.com" className="w-fit h-full" target="_blank"><HiOutlineMail size={30}/></a>
             </div>
           </div>
           <div className="flex flex-col justify-end items-end text-end xl:w-[45vw] space-y-10">
             <div className="w-full flex flex-col max-lg:space-y-5 lg:flex-row items-center justify-between text-lg lg:max-xl:text-base font-bold">
-              <a href="/#about-us" className="hover:text-blue-800">
+              <Link to="/about-us" className="hover:text-blue-800">
                 About US
-              </a>
-              <a href="/#services" className="hover:text-blue-800">
+              </Link>
+              <Link to="/#services" className="hover:text-blue-800">
                 Services
-              </a>
-              <a href="/portfolio" className="hover:text-blue-800">
+              </Link>
+              <Link to="/portfolio" className="hover:text-blue-800">
                 Portfolio
-              </a>
-              <a href="/#technologies" className="hover:text-blue-800">
+              </Link>
+              <Link to="/#technologies" className="hover:text-blue-800">
                 Technologies
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col space-y-4 items-center lg:items-end">
               <p className="text-[3vw] sm:text-base md:text-xl">

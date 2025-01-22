@@ -1,8 +1,14 @@
 import React from 'react';
 import Contact from '~/components/Contact';
-import Footer from '~/components/Footer';
+import { useNavigate } from "react-router-dom";
 
 const AboutUS: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate("/contactus");
+  };
+  
   return (
     <div className="font-sans bg-contain bg-no-repeat bg-y-repeat bg-topServicesBg">
       {/* Header Section */}
@@ -25,7 +31,7 @@ const AboutUS: React.FC = () => {
             <p className="text-gray-400 mb-6">
             At CODE FYZE, we believe in powering businesses with cutting-edge IT solutions that are as dynamic as the digital world we live in.
             </p>
-            <button className="flex items-center md:px-6 md:py-3 p-5 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300">
+            <button className="flex items-center md:px-6 md:py-3 p-5 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300" onClick={handleRedirect}>
             Contact Us
           </button>
           </div>

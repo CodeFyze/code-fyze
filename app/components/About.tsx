@@ -1,6 +1,13 @@
 import CircleButton from "./CircleButton";
+import { useNavigate } from "react-router-dom";
 
 export default function About() {
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate("/about-us");
+  };
+
   return (
     <div className="flex flex-col md:flex-row w-[95%] md:w-full px-11 lg:px-24 mt-11 relative pb-24" id="about-us">
       <div className="w-full md:w-2/5 bg-womanWithLaptop bg-contain bg-center h-full aspect-[2/3] bg-no-repeat"></div>
@@ -24,7 +31,7 @@ export default function About() {
           expectations.
         </p>
       </div>
-      <span className="-rotate-45 aspect-square w-[5vw] lg:w-[3vw] absolute bottom-10 right-10 lg:right-20">
+      <span className="-rotate-45 aspect-square w-[5vw] lg:w-[3vw] absolute bottom-10 right-10 lg:right-20" onClick={handleRedirect}>
         <CircleButton className="w-full h-full" />
       </span>
     </div>

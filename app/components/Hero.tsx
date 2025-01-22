@@ -1,7 +1,14 @@
 import CircleButton from "./CircleButton";
 import { CodeFyzeMarquee } from "./CodeFyzeMarquee";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate("/contactus");
+  };
+
   return (
     <div className="flex flex-col w-full h-full bg-[url('/hero-sec-bg.png')] bg-cover bg-center">
       <div className="flex flex-col-reverse gap-y-5 mb-6 lg:flex-row items-center justify-center w-full overflow-hidden md:px-[10vw] lg:pl-[10vw] xl:pl-[9vw] lg:pr-0 lg:items-end mt-11">
@@ -18,11 +25,13 @@ export default function Hero() {
             <span className="text-[#0E3172]">data with precision</span>
           </p>
           <div className="max-md:px-[10vw] ~h-6/14 flex space-x-4 max-lg:justify-center w-full">
-            <button className="flex items-center md:px-6 md:py-3 p-3 bg-black text-white text-[3vw] sm:text-base rounded-full hover:bg-gray-800 transition duration-300">
+            <button className="flex items-center md:px-6 md:py-3 p-3 bg-black text-white text-[3vw] sm:text-base rounded-full hover:bg-gray-800 transition duration-300"
+            onClick={handleRedirect}
+            >
               Get a Free Consultation
             </button>
 
-            <span className="-rotate-45 aspect-square h-full">
+            <span className="-rotate-45 aspect-square h-full" onClick={handleRedirect}>
               <CircleButton className="w-full h-full" />
             </span>
           </div>

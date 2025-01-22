@@ -1,8 +1,11 @@
-import React from 'react';
-import Contact from '~/components/Contact';
-import Footer from '~/components/Footer';
+import React, { useRef, useState } from 'react';
+// import dotenv from "dotenv";
+// import emailjs from "emailjs-com";
+// dotenv.config();
 
-const AboutUS: React.FC = () => {
+
+
+const ContactUS: React.FC = () => {
   return (
     <div className="font-sans bg-contain bg-no-repeat bg-y-repeat bg-topServicesBg">
       {/* Header Section */}
@@ -77,18 +80,25 @@ const AboutUS: React.FC = () => {
             <form className="space-y-4 text-black">
               <input
                 type="text"
+                name="user_name"
                 placeholder="Name"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
+                required
               />
               <input
                 type="email"
+                name="user_email"
                 placeholder="E-mail address"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               />
               <textarea
+                name="message"
                 placeholder="Message"
                 rows={5}
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
+                required
               ></textarea>
               <button
                 type="submit"
@@ -103,4 +113,4 @@ const AboutUS: React.FC = () => {
   );
 };
 
-export default AboutUS;
+export default ContactUS;

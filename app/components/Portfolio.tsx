@@ -1,7 +1,9 @@
-import CircleButton from "./CircleButton";
-import { FaEye } from "react-icons/fa"; // Import the eye icon from react-icons
+import { useNavigate } from "@remix-run/react";
+import { FaEye } from "react-icons/fa";
 
 export default function Portfolio({ title }: { title: string }) {
+  const navigate = useNavigate();
+
   const projectsTemplate = [
     {
       images: ["website/01.png", "website/02.png", "website/03.png"],
@@ -38,6 +40,19 @@ export default function Portfolio({ title }: { title: string }) {
       : title === "Mobile App Projects"
       ? projectsTemplate[1]
       : projectsTemplate[2];
+
+  const handleRedirect = () => {
+    if(title === "Website Projects") {
+      navigate("/portfolio/#website");
+    }
+    else if(title === "Mobile App Projects") {
+      navigate("/portfolio/#app");
+    }
+    else {
+      navigate("/portfolio/#wordpress");
+    }
+  };
+
   return (
     <div className="flex w-full h-full py-12 text-center justify-center relative lg:-top-52 xl:-top-80">
       <div className="flex flex-col items-center justify-center space-y-8 w-5/6">
@@ -76,7 +91,7 @@ export default function Portfolio({ title }: { title: string }) {
           ))}
         </div>
         <div className="flex space-x-4 h-12 max-lg:justify-center">
-          <button className="flex items-center md:px-16 md:py-2 p-5 bg-black/30 transparent backdrop-blur-xl border-slate-200 border-[3px] text-white rounded-xl hover:bg-[#10375c] transition duration-300">
+          <button className="flex items-center md:px-16 md:py-2 p-5 bg-black/30 transparent backdrop-blur-xl border-slate-200 border-[3px] text-white rounded-xl hover:bg-[#10375c] transition duration-300" onClick={handleRedirect}>
             View All
           </button>
         </div>
