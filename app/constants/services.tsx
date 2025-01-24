@@ -53,17 +53,17 @@ const Services: Service[] = [
   },
   {
     icon: "/services/app.png",
-    title: "App Developement Services",
+    title: "App Developement Services ",
     technologies: [
       {
-        text: "Android & IOS Developement",
+        text: "Android & IOS Development",
         link: "/service/android-ios",
       },
     ],
   },
   {
     icon: "/services/graphics.png",
-    title: "Graphic Design Services",
+    title: "Graphic Designing Services ",
     technologies: [
       {
         text: "UI/UX Design",
