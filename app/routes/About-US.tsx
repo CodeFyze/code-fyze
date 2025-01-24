@@ -10,28 +10,24 @@ const AboutUS: React.FC = () => {
   };
   
   return (
-    <div className="font-sans bg-contain bg-no-repeat bg-y-repeat bg-topServicesBg">
+    <div className="font-sans ">
+      <div className='bg-contain bg-y-repeat bg-topServicesBg xl:bg-cover'>
       {/* Header Section */}
-      <header className="relative text-center py-16 lg:pb-0">
+      <header className="relative text-center py-4">
         <h1 className="text-5xl font-bold">About Us</h1>
         <p className="text-gray-400 mt-2">Home / About Us</p>
       </header>
 
       {/* About Section */}
-      <section className="py-16 px-4 md:px-16 lg:px-32 lg:py-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Image */}
-          <div>
-            <img src="/hero-sec-pic.png" alt="Video Editing" className="rounded-lg" />
-          </div>
-
+      <section className="py-16 px-4 md:px-16 lg:px-32 lg:py-4 flex justify-center">
+        <div className="grid grid-cols-1 gap-8 w-3/5 lg:w-2/3">
           {/* Content */}
-          <div>
+          <div className=''>
             <h2 className="text-3xl font-bold mb-4">We Always Make The Best</h2>
             <p className="text-gray-400 mb-6">
             At CODE FYZE, we believe in powering businesses with cutting-edge IT solutions that are as dynamic as the digital world we live in.
             </p>
-            <button className="flex items-center md:px-6 md:py-3 p-5 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300" onClick={handleRedirect}>
+            <button className="flex items-center px-5 py-2 md:px-6 md:py-3 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300" onClick={handleRedirect}>
             Contact Us
           </button>
           </div>
@@ -39,7 +35,7 @@ const AboutUS: React.FC = () => {
       </section>
 
       {/* Skills Section */}
-      <section className='flex items-center justify-center'>
+      <section className='flex items-center justify-center mt-10'>
         <div className="w-[80%] py-16 px-4 md:px-16 text-white bg-black/30 transparent backdrop-blur-xl lg:px-24 rounded-md border-slate-200 border-[3px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Content */}
@@ -90,6 +86,7 @@ const AboutUS: React.FC = () => {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Contact Component */}
       <div className='py-24'>

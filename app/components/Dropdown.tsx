@@ -1,5 +1,6 @@
 import services from "~/constants/services";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
+import { Link } from "@remix-run/react";
 
 export default function Dropdown({ title,variant }: { title?: string, variant?: string }) {
     return (
@@ -19,9 +20,9 @@ export default function Dropdown({ title,variant }: { title?: string, variant?: 
               </h2>
               <ul className="list-disc list-inside">
                 {service.technologies.map((tech, techIndex) => (
-                  <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] text-base cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:font-bold hover:text-[#0E3172]">
+                  <Link key={techIndex} to={tech.link}><li className="text-[#7D8D9A] text-base cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:font-bold hover:text-[#0E3172]">
                     {tech.text}
-                  </li></a>
+                  </li></Link>
                 ))}
               </ul>
             </DropdownMenuItem>

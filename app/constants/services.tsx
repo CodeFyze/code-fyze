@@ -31,14 +31,14 @@ const Services: Service[] = [
   },
   {
     icon: "/services/marketing.png",
-    title: "Digital Marketing",
+    title: "Digital Marketing Services",
     technologies: [
       {
         text: "SEO",
         link: "/service/seo"
       },
       {
-        text: "Social Media Mangement (SMM)",
+        text: "Social Media Mangement",
         link: "/service/socialmediamanagement"
       },
       {
@@ -56,7 +56,7 @@ const Services: Service[] = [
     title: "App Developement Services",
     technologies: [
       {
-        text: "Android & IOS App Developement",
+        text: "Android & IOS Developement",
         link: "/service/android-ios",
       },
     ],

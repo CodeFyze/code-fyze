@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
 import Services from "~/constants/services";
+import { Link } from "@remix-run/react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -77,40 +78,40 @@ export default function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <a href="/" className="flex items-center justify-center space-x-2">
+      <Link to="/" className="flex items-center justify-center space-x-2">
         <img src="/logo.png" alt="Logo" className="w-40" />
-      </a>
+      </Link>
       <div className="hidden text-sm font-bold lg:text-base lg:flex space-x-6 text-gray-700">
-      <a
-          href="/"
+      <Link
+          to="/"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Home
-        </a>
-        <a
-          href="/About-US"
+        </Link>
+        <Link
+          to="/About-US"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           About US
-        </a>
+        </Link>
         {/* <span className="hover:scale-105 transition-transform ease-in-out">
           <Dropdown title="About US" variant="about" />
         </span> */}
         <span className="hover:scale-105 transition-transform ease-in-out">
           <Dropdown title="Services" variant="services" />
         </span>
-        <a
-          href="/portfolio"
+        <Link
+          to="/portfolio"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Portfolio
-        </a>
-        <a
-          href="/ContactUS"
+        </Link>
+        <Link
+          to="/ContactUS"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Contact US
-        </a>
+        </Link>
       </div>
       <div className="hidden lg:flex space-x-4 items-center">
         <button className="bg-[#3B3B3B] text-white px-4 py-2 rounded-full">
@@ -143,20 +144,20 @@ export default function Navbar() {
           className="lg:hidden absolute top-14 left-0 w-full min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[10vw] space-y-4 py-4 text-gray-700 z-20 pb-32 overflow-y-scroll h-full text-lg"
           ref={menuRef}
         >
-          <a
-            href="/"
+          <Link
+            to="/"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             Home
-          </a>
-          <a
-            href="/About-US"
+          </Link>
+          <Link
+            to="/About-US"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             About US
-          </a>
+          </Link>
           {/* <div>
             <p
               className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out flex font-bold text-[#0E3172]"
@@ -215,29 +216,29 @@ export default function Navbar() {
                   </h2>
                   <ul className="">
                     {service.technologies.map((tech, techIndex) => (
-                      <a key={techIndex} href={tech.link}><li className="text-[#7D8D9A] font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800 origin-left">
+                      <Link key={techIndex} to={tech.link}><li className="text-[#7D8D9A] font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800 origin-left">
                         {tech.text}
-                      </li></a>
+                      </li></Link>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
           </div>
-          <a
-            href="/portfolio"
+          <Link
+            to="/portfolio"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             Portfolio
-          </a>
-          <a
-            href="/ContactUS"
+          </Link>
+          <Link
+            to="/ContactUS"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             Contact US
-          </a>
+          </Link>
         </div>
       )}
     </nav>
