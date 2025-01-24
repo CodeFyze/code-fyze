@@ -35,7 +35,7 @@ const ContactUS: React.FC = () => {
 
   return (
     <div className="font-sans ">
-      <div className="bg-contain bg-y-repeat bg-topServicesBg xl:bg-cover">
+      <div className="bg-contain bg-y-repeat bg-topServicesBg lg:bg-cover">
         {/* Toast Container */}
         <ToastContainer
           position="top-right"
@@ -69,7 +69,7 @@ const ContactUS: React.FC = () => {
         {/* Form Section */}
         <div className="grid lg:grid-cols-2 gap-8 mx-4 my-4 text-white">
           {/* Left Section - Get in Touch */}
-          <div className="bg-black/30 transparent backdrop-blur-xl lg:px-24 rounded-md border-slate-200 border-[3px] shadow-md">
+          <div className="bg-black/30 transparent backdrop-blur-xl lg:px-10 rounded-md border-slate-200 border-[3px] shadow-md px-4">
             <h3 className="text-xl font-semibold my-4">Get In Touch</h3>
             <p className="mb-4">
               At CODE FYZE, we believe in powering businesses with cutting-edge

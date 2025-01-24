@@ -17,7 +17,7 @@ export default function ServiceSocialMediaMarketing() {
   return (
     <>
       <div
-        className="mx-auto px-4 py-8 bg-contain bg-center bg-y-repeat"
+        className="mx-auto px-4 py-8 bg-contain bg-center bg-y-repeat xl:bg-cover"
         style={{
           backgroundImage: "url('/element3.png')",
         }}
