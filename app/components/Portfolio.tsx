@@ -1,7 +1,17 @@
 import { useNavigate } from "@remix-run/react";
 import { FaEye } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Portfolio({ title }: { title: string }) {
+  const divVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   const navigate = useNavigate();
 
   const projectsTemplate = [
@@ -24,7 +34,11 @@ export default function Portfolio({ title }: { title: string }) {
       links: [],
     },
     {
-      images: ["wordpress/wordpress_01.png", "wordpress/wordpress_02.png", "wordpress/wordpress_03.png"],
+      images: [
+        "wordpress/wordpress_01.png",
+        "wordpress/wordpress_02.png",
+        "wordpress/wordpress_03.png",
+      ],
       hoverImages: [],
       links: [
         "https://www.google.com",
@@ -42,20 +56,24 @@ export default function Portfolio({ title }: { title: string }) {
       : projectsTemplate[2];
 
   const handleRedirect = () => {
-    if(title === "Website Projects") {
+    if (title === "Website Projects") {
       navigate("/portfolio/#website");
-    }
-    else if(title === "Mobile App Projects") {
+    } else if (title === "Mobile App Projects") {
       navigate("/portfolio/#app");
-    }
-    else {
+    } else {
       navigate("/portfolio/#wordpress");
     }
   };
 
   return (
     <div className="flex w-full h-full py-12 text-center justify-center relative lg:-top-52 xl:-top-80">
-      <div className="flex flex-col items-center justify-center space-y-8 w-5/6">
+      <motion.div
+        className="flex flex-col items-center justify-center space-y-8 w-5/6"
+        variants={divVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.01 }}
+      >
         <div className="flex flex-col items-center justify-center space-y-4">
           <h1 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">
             {title}
@@ -91,11 +109,14 @@ export default function Portfolio({ title }: { title: string }) {
           ))}
         </div>
         <div className="flex space-x-4 h-12 max-lg:justify-center">
-          <button className="flex items-center md:px-16 md:py-2 p-5 bg-black/30 transparent backdrop-blur-xl border-slate-200 border-[3px] text-white rounded-xl hover:bg-[#10375c] transition duration-300" onClick={handleRedirect}>
+          <button
+            className="flex items-center md:px-16 md:py-2 p-5 bg-black/30 transparent backdrop-blur-xl border-slate-200 border-[3px] text-white rounded-xl hover:bg-[#10375c] transition duration-300"
+            onClick={handleRedirect}
+          >
             View All
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

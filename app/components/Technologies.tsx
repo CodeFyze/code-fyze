@@ -1,11 +1,27 @@
 import cards from "~/constants/technologies";
+import { motion } from "framer-motion";
 
 export default function Technologies() {
+  const divVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
     <section className="w-full h-max relative lg:-top-24" id="technologies">
       {/* Text Header */}
       <header className="flex justify-center py-10 bg-[url('/Ellipse237.png')] bg-cover bg-center">
-        <div className="heading flex flex-col items-center w-10/12 sm:gap-2">
+        <motion.div
+          className="heading flex flex-col items-center w-10/12 sm:gap-2"
+          variants={divVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.01 }}
+        >
           <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-3xl">
             Technologies We Use
           </p>
@@ -24,7 +40,7 @@ export default function Technologies() {
             This comprehensive approach allows us to craft efficient, scalable,
             and user-focused digital experiences.
           </p>
-        </div>
+        </motion.div>
       </header>
 
       {/* Cards */}
@@ -33,9 +49,13 @@ export default function Technologies() {
           <div className="~w-5/6/6/12 md:w-9/12 lg:w-4/6 xl:w-7/12 h-full grid md:grid-cols-3 gap-7 py-10">
             {/* Cards */}
             {cards.map((card, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="p-4 border rounded-xl shadow-lg bg-white space-y-2 hover:scale-105 transition-transform duration-300"
+                variants={divVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.01 }}
               >
                 <div className="w-full flex justify-center">
                   <img
@@ -54,7 +74,7 @@ export default function Technologies() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

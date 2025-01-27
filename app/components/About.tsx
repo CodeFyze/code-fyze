@@ -1,7 +1,17 @@
 import CircleButton from "./CircleButton";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function About() {
+  const divVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+  
   const navigate = useNavigate();
 
   const handleRedirect = () => {
@@ -9,7 +19,13 @@ export default function About() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row w-[95%] md:w-full px-11 lg:px-24 mt-11 relative pb-24" id="about-us">
+    <motion.div
+        className="flex flex-col md:flex-row w-[95%] md:w-full px-11 lg:px-24 mt-11 relative pb-24" id="about-us"
+        variants={divVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.01 }}
+      >
       <div className="w-full md:w-2/5 bg-womanWithLaptop bg-contain bg-center h-full aspect-[2/3] bg-no-repeat"></div>
       <div className="w-full md:w-3/5 flex flex-col h-auto justify-evenly gap-y-8 xl:justify-center">
         <h1 className="font-bold text-4xl md:text-start lg:text-6xl text-[#0E3172]">
@@ -34,6 +50,6 @@ export default function About() {
       <span className="-rotate-45 aspect-square w-[5vw] lg:w-[3vw] absolute bottom-10 right-10 lg:right-20" onClick={handleRedirect}>
         <CircleButton className="w-full h-full" />
       </span>
-    </div>
+    </motion.div>
   );
 }

@@ -9,14 +9,29 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import { Card, CardContent } from "./ui/card";
-
+import { motion } from "framer-motion";
 
 export default function Team() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
+  
+  const divVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
+    <motion.div
+        variants={divVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.01 }}
+      >
     <Carousel
       plugins={[plugin.current]}
       className="w-[80vw] z-10"
@@ -55,5 +70,6 @@ export default function Team() {
       <CarouselPrevious className="max-md:hidden"/>
       <CarouselNext className="max-md:hidden"/>
     </Carousel>
+    </motion.div>
   );
 }

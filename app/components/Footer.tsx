@@ -3,11 +3,28 @@ import { FaInstagram } from "react-icons/fa";
 import { GrFacebookOption } from "react-icons/gr";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Footer() {
+  const divVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+  
   return (
     <div className="w-screen h-full p-[7vw] bg-[#3B3B3B] text-white">
-      <div className="flex flex-col items-center justify-center space-y-16">
+      <motion.div
+        className="flex flex-col items-center justify-center space-y-16"
+        variants={divVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.01 }}
+      >
+      
         <div className="w-full h-[2px] bg-white/50 backdrop-blur-md"></div>
         <div className="w-full flex flex-col lg:flex-row items-center justify-center md:justify-between lg:items-start max-lg:space-y-16">
           <div className="w-2/3 lg:w-2/6 h-full flex flex-col items-center lg:items-start justify-center space-y-6">
@@ -48,7 +65,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

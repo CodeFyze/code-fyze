@@ -1,9 +1,29 @@
 import services from "~/constants/services";
+import { motion } from "framer-motion";
 
 export default function TopServices() {
+  const divVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:pt-72 max-md:mt-11 bg-cover bg-no-repeat bg-topServicesBgVertical md:bg-topServicesBg md:bg-contain xl:bg-cover bg-center relative lg:-top-24 xl:-top-48" id="services">
-      <div className="flex flex-col gap-y-7 items-center justify-around w-full text-white bg-black/30 transparent backdrop-blur-xl py-16 px-5 lg:px-2 rounded-md border-slate-200 border-[3px]">
+    <div
+      className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:pt-72 max-md:mt-11 bg-cover bg-no-repeat bg-topServicesBgVertical md:bg-topServicesBg md:bg-contain xl:bg-cover bg-center relative lg:-top-24 xl:-top-48"
+      id="services"
+    >
+      <motion.div
+        className="flex flex-col gap-y-7 items-center justify-around w-full text-white bg-black/30 transparent backdrop-blur-xl py-16 px-5 lg:px-2 rounded-md border-slate-200 border-[3px]"
+        id="about-us"
+        variants={divVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.01 }}
+      >
         <div className="[&>*]:text-center">
           <h1 className="font-bold text-2xl md:text-3xl md:text-start lg:text-3xl">
             Our Top Services
@@ -39,7 +59,7 @@ export default function TopServices() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

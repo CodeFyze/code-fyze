@@ -1,7 +1,16 @@
 import CircleButton from "./CircleButton";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function CaseStudies() {
+  const divVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
   const [carouselItem, setCarouselItem] = useState(1);
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -26,7 +35,13 @@ export default function CaseStudies() {
   };
 
   return (
-    <section className="w-full space-y-2 max-sm:pb-[44vw] pt-32 pb-40 bg-element3 bg-center bg-cover bg-no-repeat relative lg:-top-24">
+    <motion.div
+      className="w-full space-y-2 max-sm:pb-[44vw] pt-32 pb-40 bg-element3 bg-center bg-cover bg-no-repeat relative lg:-top-24"
+      variants={divVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.01 }}
+    >
       {/* Text Header */}
       <header className="flex justify-center mb-2">
         <div className="heading flex flex-col items-center w-4/6 lg:w-2/5 sm:gap-2">
@@ -106,6 +121,6 @@ export default function CaseStudies() {
           <CircleButton />
         </div>
       </div>
-    </section>
+    </motion.div>
   );
 }
