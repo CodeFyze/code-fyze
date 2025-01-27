@@ -3,6 +3,7 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { faqs } from "~/constants/faqs";
 import { motion } from "framer-motion";
 
+
 interface FAQProps {
   faq: faqs;
 }
