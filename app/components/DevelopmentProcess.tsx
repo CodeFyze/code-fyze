@@ -19,7 +19,7 @@ export default function DevelopmentProcess() {
             variants={divVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.01 }}
+            viewport={{ once: false, amount: 0.4 }}
           >
             <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-2xl lg:text-4xl">
               Our Development Process
@@ -48,7 +48,7 @@ export default function DevelopmentProcess() {
                 variants={divVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.01 }}
+                viewport={{ once: false, amount: 0.4 }}
               >
                 <h1>Project Planning</h1>
 
@@ -65,7 +65,7 @@ export default function DevelopmentProcess() {
                 variants={divVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.01 }}
+                viewport={{ once: false, amount: 0.4 }}
               >
                 <h1>Testing and Deployment</h1>
                 <p>
@@ -79,7 +79,7 @@ export default function DevelopmentProcess() {
                 variants={divVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.01 }}
+                viewport={{ once: false, amount: 0.4 }}
               >
                 <h1>Development</h1>
                 <p>
@@ -93,7 +93,7 @@ export default function DevelopmentProcess() {
                 variants={divVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.01 }}
+                viewport={{ once: false, amount: 0.4 }}
               >
                 <h1>Desinging</h1>
                 <p>

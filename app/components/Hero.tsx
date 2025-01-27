@@ -27,15 +27,15 @@ export default function Hero() {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
-        <div className="flex flex-col items-center space-y-4 h-4/6 lg:w-[40%] lg:items-start lg:mb-[6vw]">
+        <div className="flex flex-col items-center space-y-4 h-4/6 lg:w-[42%] lg:items-start lg:mb-[6vw]">
           <h1 className="~/lg:~text-lg/7xl lg:text-4xl xl:text-[3.5vw] xl:leading-none max-md:px-[10vw] max-lg:text-center font-bold text-gray-800">
             We provide reliable
             <br />
             <span className="inline-block min-w-[250px]">
               <TypeAnimation
-                sequence={["solutions and support", 2000, " ", 500]}
+                sequence={["solutions and support", 1000, " ", 350]}
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
@@ -68,7 +68,7 @@ export default function Hero() {
         </div>
 
         <div
-          className="hidden w-[60%] h-full aspect-[852/509] lg:flex justify-center items-center bg-cover bg-no-repeat bg-center"
+          className="hidden w-[58%] h-full aspect-[852/509] lg:flex justify-center items-center bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: "url('hero-sec-pic.png')" }}
         ></div>
       </motion.div>

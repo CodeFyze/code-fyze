@@ -22,7 +22,7 @@ export default function TopServices() {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
         <div className="[&>*]:text-center">
           <h1 className="font-bold text-2xl md:text-3xl md:text-start lg:text-3xl">

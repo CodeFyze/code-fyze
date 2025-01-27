@@ -25,7 +25,7 @@ export default function Contact() {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <h1 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">

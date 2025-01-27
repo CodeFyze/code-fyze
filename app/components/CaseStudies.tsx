@@ -40,7 +40,7 @@ export default function CaseStudies() {
       variants={divVariant}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.01 }}
+      viewport={{ once: false, amount: 0.4 }}
     >
       {/* Text Header */}
       <header className="flex justify-center mb-2">

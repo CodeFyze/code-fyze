@@ -34,7 +34,7 @@ export default function ServiceSeo() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.01 }}
+              viewport={{ once: false, amount: 0.4 }}
               whileHover={{ scale: 1.05 }}
             >
               <div className="h-3/4 md:h-auto px-6 py-4 md:w-3/5">
@@ -64,7 +64,7 @@ export default function ServiceSeo() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.01 }}
+              viewport={{ once: false, amount: 0.4 }}
               whileHover={{ scale: 1.05 }}
             >
               <div className="h-3/4 md:h-auto px-6 py-4 md:w-3/5">
@@ -94,7 +94,7 @@ export default function ServiceSeo() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.01 }}
+              viewport={{ once: false, amount: 0.4 }}
               whileHover={{ scale: 1.05 }}
             >
               <div className="h-3/4 md:h-auto px-6 py-4 md:w-3/5">

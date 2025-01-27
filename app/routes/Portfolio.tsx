@@ -45,7 +45,7 @@ export default function Portfolio() {
                   variants={cardVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.01 }}
+                  viewport={{ once: false, amount: 0.4 }}
                   onClick={() => window.open(item.link, "_blank")}
                 >
                   <img
@@ -81,7 +81,7 @@ export default function Portfolio() {
                   variants={cardVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.01 }}
+                  viewport={{ once: false, amount: 0.4 }}
                   onClick={() => window.open(item.link, "_blank")}
                 >
                   <img
@@ -117,7 +117,7 @@ export default function Portfolio() {
                   variants={cardVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.01 }}
+                  viewport={{ once: false, amount: 0.4 }}
                   onClick={() => window.open(item.link, "_blank")}
                 >
                   <img
@@ -153,7 +153,7 @@ export default function Portfolio() {
                   variants={cardVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.01 }}
+                  viewport={{ once: false, amount: 0.4 }}
                 >
                   <img
                     className="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"

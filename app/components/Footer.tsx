@@ -22,7 +22,7 @@ export default function Footer() {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
       
         <div className="w-full h-[2px] bg-white/50 backdrop-blur-md"></div>

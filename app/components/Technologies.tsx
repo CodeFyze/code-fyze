@@ -20,7 +20,7 @@ export default function Technologies() {
           variants={divVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.01 }}
+          viewport={{ once: false, amount: 0.4 }}
         >
           <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-3xl">
             Technologies We Use
@@ -55,7 +55,7 @@ export default function Technologies() {
                 variants={divVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.01 }}
+                viewport={{ once: false, amount: 0.4 }}
               >
                 <div className="w-full flex justify-center">
                   <img

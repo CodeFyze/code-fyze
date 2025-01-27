@@ -17,7 +17,7 @@ export default function Innovation() {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
         <div className="w-full md:w-[40%] text-center">
           <h1 className="font-bold text-xl md:text-2xl md:text-start lg:text-2xl">

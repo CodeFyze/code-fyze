@@ -34,7 +34,7 @@ const FAQ: React.FC<FAQProps> = ({ faq }) => {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">
           {faq.heading}
@@ -49,7 +49,7 @@ const FAQ: React.FC<FAQProps> = ({ faq }) => {
             variants={divVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.01 }}
+            viewport={{ once: false, amount: 0.4 }}
           >
             <button
               className="w-full text-left px-4 py-3 sm:py-4 font-semibold text-[#0E3172] text-lg sm:text-xl focus:outline-none flex justify-between items-center"

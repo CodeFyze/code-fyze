@@ -24,7 +24,7 @@ export default function About() {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
       <div className="w-full md:w-2/5 bg-womanWithLaptop bg-contain bg-center h-full aspect-[2/3] bg-no-repeat"></div>
       <div className="w-full md:w-3/5 flex flex-col h-auto justify-evenly gap-y-8 xl:justify-center">

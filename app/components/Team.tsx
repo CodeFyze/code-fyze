@@ -30,7 +30,7 @@ export default function Team() {
         variants={divVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.01 }}
+        viewport={{ once: false, amount: 0.4 }}
       >
     <Carousel
       plugins={[plugin.current]}
