@@ -14,11 +14,11 @@ const devTeam = [
     name: "Areeza",
     role:"Digital Marketing Expert",
   },
-  {
-    roleimage: "/devTeam/nazakat.png",
-    name: "Nazakat Umrani",
-    role:"Full Stack Developer",
-  },
+  // {
+  //   roleimage: "/devTeam/nazakat.png",
+  //   name: "Nazakat Umrani",
+  //   role:"Full Stack Developer",
+  // },
   {
     roleimage: "/devTeam/hunain.png",
     name: "Mahmood Ali Hunain",
@@ -43,6 +43,17 @@ const devTeam = [
     roleimage: "/devTeam/rehman.png",
     name: "Abdul Rehman",
     role:"Sales Executive",
+  },
+
+  {
+    roleimage: "/devTeam/hamza.png",
+    name: "Hamza",
+    role:"Wordpress Expert",
+  },
+  {
+    roleimage: "/devTeam/huzaifa.png",
+    name: "Huzaifa Huda",
+    role:"UI/UX & Animation Expert",
   },
 ];
 
