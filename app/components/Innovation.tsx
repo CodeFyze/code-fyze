@@ -29,12 +29,12 @@ export default function Innovation() {
         </div>
         <div className="flex flex-col justify-around sm:flex-row gap-y-7">
           <div className="w-full md:w-[29%] flex flex-col items-center justify-center">
-            <h1 className="text-2xl md:text-5xl font-black">1500+</h1>
+            <h1 className="text-2xl md:text-5xl font-black">1000+</h1>
             <p className="text-center">Success Projects</p>
           </div>
           <div className="w-full h-[2px] sm:h-full sm:w-[2px] md:w-10 bg-white/70 backdrop-blur-md"></div>
           <div className="w-full md:w-[29%] flex flex-col items-center justify-center">
-            <h1 className="text-2xl md:text-5xl font-black">500+</h1>
+            <h1 className="text-2xl md:text-4xl font-black">500+</h1>
             <p className="text-center">Happy Clients</p>
           </div>
         </div>

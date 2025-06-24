@@ -29,7 +29,7 @@ export default function TopServices() {
             Our Top Services
           </h1>
           <p className="font-medium text-base md:text-lg md:text-start">
-            We provide a full suite of IT services designed to help businesses
+            We provide top IT services & consulting to help businesses grow, and stay ahead in the digital world.
           </p>
         </div>
         <div className="~w-5/6/6/12 md:w-11/12 h-full grid md:grid-cols-2 lg:grid-cols-4 gap-7">

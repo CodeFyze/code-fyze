@@ -67,15 +67,15 @@ const AboutUS: React.FC = () => {
             {/* Right Stats */}
             <div className="grid grid-cols-2 gap-8 text-center">
               <div>
-                <h3 className="text-4xl font-bold">20+</h3>
+                <h3 className="text-4xl font-bold">10+</h3>
                 <p className="mt-2">Year Of Experience</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold">1,000+</h3>
+                <h3 className="text-4xl font-bold">1000+</h3>
                 <p className="mt-2">Project Done</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold">300+</h3>
+                <h3 className="text-4xl font-bold">500+</h3>
                 <p className="mt-2">Satisfied Clients</p>
               </div>
               <div>

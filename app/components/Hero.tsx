@@ -31,11 +31,11 @@ export default function Hero() {
       >
         <div className="flex flex-col items-center space-y-4 h-4/6 lg:w-[42%] lg:items-start lg:mb-[6vw]">
           <h1 className="~/lg:~text-lg/7xl lg:text-4xl xl:text-[3.5vw] xl:leading-none max-md:px-[10vw] max-lg:text-center font-bold text-gray-800">
-            We provide reliable
+            Top-Rated Software
             <br />
             <span className="inline-block min-w-[250px]">
               <TypeAnimation
-                sequence={["solutions and support", 1000, " ", 350]}
+                sequence={["Development Agency", 1000, " ", 350]}
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
@@ -47,8 +47,8 @@ export default function Hero() {
             style={{ backgroundImage: "url('hero-sec-pic.png')" }}
           ></div>
           <p className="max-md:px-[10vw] text-lg max-lg:text-center w-full md:text-xl text-[#7D8D9A] font-bold">
-            To manage your business{" "}
-            <span className="text-[#0E3172]">data with precision</span>
+            Delivering Digital Solutions{" "}
+            <span className="text-[#0E3172]">Worldwide.</span>
           </p>
           <div className="max-md:px-[10vw] ~h-6/14 flex space-x-4 max-lg:justify-center w-full">
             <button

@@ -25,10 +25,9 @@ export default function DevelopmentProcess() {
               Our Development Process
             </p>
             <p className="font-medium text-center text-[3vw] md:text-base lg:text-lg">
-              At <span className="font-extrabold">Code Fyze</span>, we follow a
-              streamlined process from planning and design to development and
-              deployment. Each step is tailored to deliver innovative solutions
-              that meet client needs with precision.
+              At <span className="font-extrabold">Code Fyze</span>, one of the top software companies in the world, 
+              we follow a streamlined process from planning and design to development and deployment. 
+              Each step is tailored to deliver innovative solutions that meet client needs with precision.
             </p>
           </motion.div>
           {/* Image */}
@@ -95,7 +94,7 @@ export default function DevelopmentProcess() {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.4 }}
               >
-                <h1>Desinging</h1>
+                <h1>Designing</h1>
                 <p>
                   Our experienced team of designers create intuitive and
                   <span className="font-bold"> user-friendly interfaces</span>,

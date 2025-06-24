@@ -49,8 +49,7 @@ export default function CaseStudies() {
             Our Case Studies
           </p>
           <p className="font-medium text-center text-[3vw] md:text-sm lg:text-base">
-            Here are a few case studies highlighting successful projects we have
-            undertaken. Web Development
+            Explore how our web development projects have helped clients achieve real results.
           </p>
         </div>
       </header>

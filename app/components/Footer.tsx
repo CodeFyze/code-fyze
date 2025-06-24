@@ -37,7 +37,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/codefyze/" className="w-fit h-full" target="_blank"><CiLinkedin size={30}/></a>
             <a href="https://www.instagram.com/code_fyze/" className="w-fit h-full" target="_blank"><FaInstagram size={30}/></a>
             <a href="https://www.facebook.com/profile.php?id=61566949416573&mibextid=LQQJ4d" className="w-fit h-full" target="_blank"><GrFacebookOption size={30}/></a>
-            <a href="mailto:codefyze@gmail.com" className="w-fit h-full" target="_blank"><HiOutlineMail size={30}/></a>
+            <a href="mailto:info@codefyze.com" className="w-fit h-full" target="_blank"><HiOutlineMail size={30}/></a>
             </div>
           </div>
           <div className="flex flex-col justify-end items-end text-end xl:w-[45vw] space-y-10">
@@ -60,7 +60,7 @@ export default function Footer() {
                 Empowering Your Business with Innovative IT Solutions
               </p>
               <p className="text-sm sm:text-base md:text-xl">
-                Copyright by CODE FYZE 2024
+                CODEFYZE © 2025 || All Rights are Reserved
               </p>
             </div>
           </div>

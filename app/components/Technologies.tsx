@@ -26,19 +26,18 @@ export default function Technologies() {
             Technologies We Use
           </p>
           <p className="font-medium text-center text-xs sm:text-base">
-            At Code Fyze, we leverage cutting-edge technology to deliver
-            seamless solutions.
+            At CodeFyze, we use the latest technology to create smooth and effective digital solutions.
             <br />
-            Our expertise spans{" "}
+            As a custom software development agency offering expert IT services consulting, Our expertise spans{" "}
             <span className="font-bold">
-              Frontend Development, Backend Systems, Databases, Frameworks,
-              Designing, and SEO Optimization,
+             Frontend Development, Backend Systems, Databases, Frameworks, Designing, and SEO Optimization{" "}
             </span>
+            — ensuring a perfect blend of functionality and aesthetics.
+
             <br />
-            ensuring a perfect blend of functionality and aesthetics.
+            With this complete approach, we deliver digital solutions that are fast, reliable, and easy for users.
             <br />
-            This comprehensive approach allows us to craft efficient, scalable,
-            and user-focused digital experiences.
+            
           </p>
         </motion.div>
       </header>

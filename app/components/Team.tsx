@@ -1,75 +1,48 @@
 import * as React from "react";
-import Autoplay from "embla-carousel-autoplay";
 import devTeam from "../constants/devTeam";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
 import { Card, CardContent } from "./ui/card";
-import { motion } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Team() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
-  
-  const divVariant = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
+  // Get only the first 3 team members
+  const founders = devTeam.slice(0, 3);
 
   return (
-    <motion.div
-        variants={divVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.4 }}
-      >
-    <Carousel
-      plugins={[plugin.current]}
-      className="w-[80vw] z-10"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-    >
-      <CarouselContent>
-        {devTeam.map((member, index) => (
-          <CarouselItem key={index} className="aspect-square md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-            <div className="p-1">
-              <Card 
-              className="bg-cover bg-left-top bg-no-repeat"
-              style={{
+    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Founders</h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          The visionary leaders who brought this company to life
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {founders.map((member, index) => (
+          <div key={index} className="flex justify-center">
+            <Card className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md border-none bg-cover bg-left-top bg-no-repeat"
+               style={{
                 backgroundImage: `url(${index % 2 === 0 ? 'circleDevBg.png' : 'circleDevBgRotate.png'})`,
-              }}>
-                <CardContent className="flex items-center justify-center p-2 md:p-6">
-                  <div className="flex w-max h-full flex-col items-center justify-center">
-                    <img
-                      src={member.roleimage}
-                      alt="UI-UX-design"
-                      className={`w-full aspect-[9/10] object-cover object-top`}
-                    />
-                    <div className="text-center">
-                      <h2 className="text-lg font-semibold text-black mt-4">
-                        {member.name}
-                      </h2>
-                      <p className="text-[#7D8D9A] text-base">{member.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
+              }}
+            >
+              <div className="relative pt-[120%] overflow-hidden">
+                <img
+                  src={member.roleimage}
+                  alt={member.name}
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-2 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-lg text-gray-600 mb-2">{member.role}</p>
+
+                
+              </CardContent>
+            </Card>
+          </div>
         ))}
-      </CarouselContent>
-      <CarouselPrevious className="max-md:hidden"/>
-      <CarouselNext className="max-md:hidden"/>
-    </Carousel>
-    </motion.div>
+      </div>
+    </section>
   );
 }

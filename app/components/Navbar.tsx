@@ -89,7 +89,7 @@ export default function Navbar() {
           Home
         </Link>
         <Link
-          to="/About-US"
+          to="/about-us"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           About US
@@ -107,7 +107,7 @@ export default function Navbar() {
           Portfolio
         </Link>
         <Link
-          to="/ContactUS"
+          to="/contactus"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Contact US
