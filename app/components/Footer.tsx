@@ -53,11 +53,14 @@ export default function Footer() {
             <a href="https://www.instagram.com/code_fyze/" className="w-fit h-full" target="_blank"><FaInstagram size={30}/></a>
             <a href="https://www.facebook.com/profile.php?id=61566949416573&mibextid=LQQJ4d" className="w-fit h-full" target="_blank"><GrFacebookOption size={30}/></a>
             
-            <div className="cursor-pointer" onClick={handleEmailClick }
-            >
-            <a 
-            className="w-fit h-full" target="_blank"><HiOutlineMail size={30}/></a>
-            </div>
+             <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codefyze.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-fit h-full"
+    title="Send via Gmail"
+  ><HiOutlineMail size={30}/></a>
+            
             </div>
           </div>
           <div className="flex flex-col justify-end items-end text-end xl:w-[45vw] space-y-10">
