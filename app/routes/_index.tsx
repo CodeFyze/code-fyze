@@ -34,10 +34,13 @@ export default function Index() {
         <div className="bg-aboutUsBg bg-contain bg-top bg-y-repeat flex flex-col items-center">
           {/* About Section */}
           <About />
-          {/* Team */}
-          <Team />
           {/* Top Services Section */}
           <TopServices />
+          {/* Team */}
+          <Team />
+          <div
+          className="py-10"
+          ></div>
           <Portfolio title="Website Projects"/>
           <Portfolio title="Mobile App Projects"/>
           <Portfolio title="Wordpress Projects"/>

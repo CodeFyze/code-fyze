@@ -17,7 +17,7 @@ export default function Hero() {
   const navigate = useNavigate();
 
   const handleRedirect = () => {
-    navigate("/contactus");
+    navigate("/contact-us");
   };
 
   return (

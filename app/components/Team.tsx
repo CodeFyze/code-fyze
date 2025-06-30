@@ -8,7 +8,7 @@ export default function Team() {
   const founders = devTeam.slice(0, 3);
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="py-16 pb-20 px-4 sm:px-6 lg:px-8 relative lg:-top-24 xl:-top-48 lg:py-40 max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Founders</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">

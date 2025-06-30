@@ -13,7 +13,7 @@ interface Service {
 const Services: Service[] = [
   {
     icon: "/services/web.png",
-    title: "WEB developement Services",
+    title: "Web Developement Services",
     technologies: [
       {
         text: "Frontend Developement",

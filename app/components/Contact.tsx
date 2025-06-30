@@ -15,7 +15,7 @@ export default function Contact() {
   const navigate = useNavigate();
 
   const handleRedirect = () => {
-    navigate("/contactus");
+    navigate("/contact-us");
   };
 
   return (

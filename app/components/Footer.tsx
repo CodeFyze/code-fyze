@@ -34,7 +34,14 @@ export default function Footer() {
               className="w-4/5 lg:w-[20vw] h-full block object-contain"
             />
             <div className="flex justify-between w-4/5 lg:w-[46%] space-x-3 h-12">
-            <a href="https://www.linkedin.com/company/codefyze/" className="w-fit h-full" target="_blank"><CiLinkedin size={30}/></a>
+            <div onClick={() => window.open("mailto:info@codefyze.com", "_blank")}
+            ><a 
+            // href="https://www.linkedin.com/company/codefyze/"
+             className="w-fit h-full"
+             rel="noopener noreferrer"
+            //  target="_blank"
+              >
+                <CiLinkedin size={30}/></a></div>
             <a href="https://www.instagram.com/code_fyze/" className="w-fit h-full" target="_blank"><FaInstagram size={30}/></a>
             <a href="https://www.facebook.com/profile.php?id=61566949416573&mibextid=LQQJ4d" className="w-fit h-full" target="_blank"><GrFacebookOption size={30}/></a>
             <a href="mailto:info@codefyze.com" className="w-fit h-full" target="_blank"><HiOutlineMail size={30}/></a>

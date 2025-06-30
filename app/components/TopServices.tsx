@@ -1,5 +1,6 @@
 import services from "~/constants/services";
 import { motion } from "framer-motion";
+import { Link } from "@remix-run/react";
 
 export default function TopServices() {
   const divVariant = {
@@ -13,7 +14,7 @@ export default function TopServices() {
 
   return (
     <div
-      className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:pt-72 max-md:mt-11 bg-cover bg-no-repeat bg-topServicesBgVertical md:bg-topServicesBg md:bg-contain xl:bg-cover bg-center relative lg:-top-24 xl:-top-48"
+      className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:pt-72 max-md:mt-11 bg-cover bg-no-repeat bg-topServicesBgVertical md:bg-topServicesBg md:bg-contain xl:bg-cover bg-center relative lg:-top-20 xl:-top-28"
       id="services"
     >
       <motion.div
@@ -35,9 +36,10 @@ export default function TopServices() {
         <div className="~w-5/6/6/12 md:w-11/12 h-full grid md:grid-cols-2 lg:grid-cols-4 gap-7">
           {/* Top Services */}
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-4 lg:p-7 border rounded-xl shadow-lg bg-white space-y-2 hover:scale-105 transition-transform duration-300 ease-in-out"
+              whileHover={{ scale: 1.02 }}
+              className="p-4 lg:p-7 border rounded-xl shadow-lg bg-white space-y-2 transition-transform duration-300 ease-in-out"
             >
               <div className="w-full">
                 <img
@@ -51,12 +53,18 @@ export default function TopServices() {
               </h2>
               <ul className="w-4/5">
                 {service.technologies.map((tech, techIndex) => (
-                  <li key={techIndex} className="text-[#7D8D9A]">
-                    {tech.text}
+                  <li key={techIndex} className="text-[#7D8D9A] hover:text-[#5a6b78]">
+                    <Link 
+                      to={tech.link} 
+                      className="block hover:underline cursor-pointer"
+                      prefetch="intent"
+                    >
+                      {tech.text}
+                    </Link>
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>

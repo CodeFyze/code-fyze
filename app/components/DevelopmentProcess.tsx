@@ -25,7 +25,7 @@ export default function DevelopmentProcess() {
               Our Development Process
             </p>
             <p className="font-medium text-center text-[3vw] md:text-base lg:text-lg">
-              At <span className="font-extrabold">Code Fyze</span>, one of the top software companies in the world, 
+              At <span className="font-extrabold">CodeFyze</span>, one of the top software companies in the world, 
               we follow a streamlined process from planning and design to development and deployment. 
               Each step is tailored to deliver innovative solutions that meet client needs with precision.
             </p>

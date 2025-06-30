@@ -107,7 +107,7 @@ export default function Navbar() {
           Portfolio
         </Link>
         <Link
-          to="/contactus"
+          to="/contact-us"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >
           Contact US
