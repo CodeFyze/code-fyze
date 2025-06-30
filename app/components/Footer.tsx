@@ -14,6 +14,15 @@ export default function Footer() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
+  const handleEmailClick = () => {
+    window.location.href = "mailto:info@codefyze.com";
+    setTimeout(() => {
+      if (!document.hidden) {
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@codefyze.com', '_blank');
+      }
+    }, 500);
+  };
   
   return (
     <div className="w-screen h-full p-[7vw] bg-[#3B3B3B] text-white">
@@ -34,17 +43,21 @@ export default function Footer() {
               className="w-4/5 lg:w-[20vw] h-full block object-contain"
             />
             <div className="flex justify-between w-4/5 lg:w-[46%] space-x-3 h-12">
-            <div onClick={() => window.open("mailto:info@codefyze.com", "_blank")}
-            ><a 
-            // href="https://www.linkedin.com/company/codefyze/"
+            <a 
+             href="https://www.linkedin.com/company/codefyze/"
              className="w-fit h-full"
-             rel="noopener noreferrer"
-            //  target="_blank"
+             
+              target="_blank"
               >
-                <CiLinkedin size={30}/></a></div>
+                <CiLinkedin size={30}/></a>
             <a href="https://www.instagram.com/code_fyze/" className="w-fit h-full" target="_blank"><FaInstagram size={30}/></a>
             <a href="https://www.facebook.com/profile.php?id=61566949416573&mibextid=LQQJ4d" className="w-fit h-full" target="_blank"><GrFacebookOption size={30}/></a>
-            <a href="mailto:info@codefyze.com" className="w-fit h-full" target="_blank"><HiOutlineMail size={30}/></a>
+            
+            <div className="cursor-pointer" onClick={handleEmailClick }
+            >
+            <a 
+            className="w-fit h-full" target="_blank"><HiOutlineMail size={30}/></a>
+            </div>
             </div>
           </div>
           <div className="flex flex-col justify-end items-end text-end xl:w-[45vw] space-y-10">

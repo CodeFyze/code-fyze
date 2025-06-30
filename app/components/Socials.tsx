@@ -4,9 +4,18 @@ import { SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Socials() {
+
+   const handleEmailClick = () => {
+    window.location.href = "mailto:info@codefyze.com";
+    setTimeout(() => {
+      if (!document.hidden) {
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@codefyze.com', '_blank');
+      }
+    }, 500);
+  };
   return (
     <div className="fixed bottom-10 right-4 flex flex-col space-y-2 z-50">
-          <div className="relative flex items-center justify-center cursor-pointer" onClick={() => window.open("mailto:info@codefyze.com", "_blank")}>
+          <div className="relative flex items-center justify-center cursor-pointer" onClick={handleEmailClick}>
             <a
               // mail to
               // href="mailto:codefyze@gmail.com"
