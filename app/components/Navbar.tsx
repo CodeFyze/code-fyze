@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
 import Services from "~/constants/serviceslink";
-import { Link } from "@remix-run/react";
+import { Link, useNavigate } from "@remix-run/react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,6 +23,13 @@ export default function Navbar() {
       setMobileMenuOpen(false);
     }
   };
+
+   const navigate = useNavigate();
+  
+    const handleRedirect = () => {
+      navigate("/contact-us");
+    };
+  
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -114,7 +121,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="hidden lg:flex space-x-4 items-center">
-        <button className="bg-[#3B3B3B] text-white px-4 py-2 rounded-full">
+        <button className="bg-[#3B3B3B] text-white px-4 py-2 rounded-full" onClick={handleRedirect}>
           Free Consultation
         </button>
       </div>
@@ -141,7 +148,7 @@ export default function Navbar() {
       </div>
       {mobileMenuOpen && (
         <div
-          className="lg:hidden absolute top-14 left-0 w-full min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[10vw] space-y-4 py-4 text-gray-700 z-20 pb-32 overflow-y-scroll h-full text-lg"
+          className="lg:hidden absolute top-14 right-0 w-3/4 max-w-md min-h-screen bg-[#F1F1F1] flex flex-col items-start pl-[8vw] space-y-4 py-4 text-gray-700 z-20 pb-32 overflow-y-scroll h-full text-lg"
           ref={menuRef}
         >
           <Link
@@ -216,7 +223,7 @@ export default function Navbar() {
                   </h2>
                   <ul className="">
                     {service.technologies.map((tech, techIndex) => (
-                      <Link key={techIndex} to={tech.link}><li className="text-[#7D8D9A] font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800 origin-left">
+                      <Link key={techIndex} onClick={handleLinkClick} to={tech.link}><li className="text-[#7D8D9A] font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800 origin-left">
                         {tech.text}
                       </li></Link>
                     ))}
