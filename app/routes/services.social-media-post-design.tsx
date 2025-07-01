@@ -39,7 +39,7 @@ export default function ServiceSeo() {
             >
               <div className="h-3/4 md:h-auto px-6 py-4 md:w-3/5">
                 <div className="font-bold text-xl mb-2 font-baskervville">
-                Get Professional Social Media Poster Design 
+                Get Professional Social Media Post Design 
                 </div>
                 <p className="text-gray-700 text-base font-mingzat">
                 In today&apos;s digital world, standing out on social media is crucial for success. At CodeFyze, we offer professional social media poster design services that not only captivate attention but also drive engagement with your audience. Our expert designers create custom, high-quality posters tailored to your brand, ensuring that your posts make an impact across all platforms.

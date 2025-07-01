@@ -10,22 +10,22 @@ interface Service {
 }
 
 // Define the constants for the 6 cards
-const Services: Service[] = [
+const Serviceslink: Service[] = [
   {
     icon: "/services/web.png",
-    title: "Web Developement Services",
+    title: "Web Development Services",
     technologies: [
       {
-        text: "Frontend Developement",
-        link: "/service/frontend",
+        text: "Frontend Development",
+        link: "/services/frontend-development",
       },
       {
-        text: "Backend Developement",
-        link: "/service/backend",
+        text: "Backend Development",
+        link: "/services/backend-development",
       },
       {
         text: "Wordpress & Shopify",
-        link: "/service/wordpress-shopify",
+        link: "/services/wordpress-shopify-development",
       },
     ],
   },
@@ -35,29 +35,29 @@ const Services: Service[] = [
     technologies: [
       {
         text: "SEO",
-        link: "/service/seo"
+        link: "/services/seo"
       },
       {
         text: "Social Media Mangement",
-        link: "/service/socialmediamanagement"
+        link: "/services/social-media-management"
       },
       {
         text: "Social Media Marketing",
-        link: "/service/socialmediamarketing"
+        link: "/services/social-media-marketing"
       },
       {
         text: "Google Ads",
-        link: "/service/googleads"
+        link: "/services/google-ads"
       },
     ],
   },
   {
     icon: "/services/app.png",
-    title: "App Developement Services ",
+    title: "App Development Services ",
     technologies: [
       {
         text: "Android & IOS Development",
-        link: "/service/android-ios",
+        link: "/services/android-ios-app-development",
       },
     ],
   },
@@ -67,22 +67,22 @@ const Services: Service[] = [
     technologies: [
       {
         text: "UI/UX Design",
-        link: "/service/ui-ux",
+        link: "/services/ui-ux-design",
       },
       {
         text: "Logo Design",
-        link: "/service/logo",
+        link: "/services/logo-design",
       },
       {
         text: "Poster Design",
-        link: "/service/poster",
+        link: "/services/poster-design",
       },
       {
         text: "Social Media Post Design",
-        link: "/service/social-media",
+        link: "/services/social-media-post-design",
       },
     ],
   },
 ];
 
-export default Services;
+export default Serviceslink;

@@ -1,4 +1,4 @@
-import services from "~/constants/services";
+import services from "~/constants/serviceslink";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Link } from "@remix-run/react";
 

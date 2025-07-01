@@ -1,6 +1,7 @@
-import services from "~/constants/services";
+
 import { motion } from "framer-motion";
 import { Link } from "@remix-run/react";
+import serviceslink from "~/constants/serviceslink";
 
 export default function TopServices() {
   const divVariant = {
@@ -35,7 +36,7 @@ export default function TopServices() {
         </div>
         <div className="~w-5/6/6/12 md:w-11/12 h-full grid md:grid-cols-2 lg:grid-cols-4 gap-7">
           {/* Top Services */}
-          {services.map((service, index) => (
+          {serviceslink.map((service, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.02 }}
