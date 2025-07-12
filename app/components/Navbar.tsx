@@ -114,6 +114,12 @@ export default function Navbar() {
           Portfolio
         </Link>
         <Link
+          to="/blogs"
+          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
+        >
+          Blogs
+        </Link>
+        <Link
           to="/contact-us"
           className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
         >

@@ -4,17 +4,20 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useMatches,
+  useLoaderData,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 
 import "./tailwind.css";
 import Socials from "./components/Socials";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import { destroySession, getSession } from "./utills/session.server";
 
 export const links: LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com", },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
     href: "https://fonts.gstatic.com",
@@ -26,9 +29,38 @@ export const links: LinksFunction = () => [
   },
 ];
 
+export async function loader({ request }: LoaderFunctionArgs) {
+  // Optional: block DevTools JSON inspection request
+  const session = await getSession(request.headers.get("Cookie"));
+  const token = session.get("token");
+  const url = new URL(request.url);
+  if (url.pathname === '/.well-known/appspecific/com.chrome.devtools.json') {
+    return new Response(null, { status: 404 });
+  }
+
+  return json({
+    ENV: {
+      API_BASE_URL: process.env.API_BASE_URL,
+      TOKEN: token || null, 
+    },
+  });
+}
+
+export async function action({ request }: { request: Request }) {
+  const session = await getSession(request.headers.get("Cookie"));
+  return redirect("/admin/login", {
+    headers: { "Set-Cookie": await destroySession(session) },
+  });
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const matches = useMatches();
+  const isDashboardRoute = matches.some((match) =>
+    match.pathname.startsWith("/dashboard")
+  );
+
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,20 +68,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <body>
-        <Navbar />
+      <body className="bg-white">
+        {!isDashboardRoute && <Navbar />}
         {children}
-        <Socials />
+        {!isDashboardRoute && <Socials />}
         <ScrollRestoration />
         <Scripts />
       </body>
-      <footer>
-        <Footer />
-      </footer>
+      <footer>{!isDashboardRoute && <Footer />}</footer>
     </html>
   );
 }
 
 export default function App() {
-  return <Outlet />;
+  const data = useLoaderData<typeof loader>();
+
+  return (
+    <>
+      <Outlet />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.ENV = ${JSON.stringify(data.ENV)};`,
+        }}
+      />
+    </>
+  );
 }

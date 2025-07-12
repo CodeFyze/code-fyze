@@ -2,6 +2,18 @@ import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MetaFunction } from "@remix-run/node";
+import { CiLinkedin } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
+import { GrFacebookOption } from "react-icons/gr";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Contact Us | Top-Rated Software Development Agency " },
+    { name: "description", content: "Get in touch with a top-rated software development agency, specializing in custom solutions. Contact us +971 55 265 4401 today." },
+  ];
+};
 
 const ContactUS: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -55,12 +67,11 @@ const ContactUS: React.FC = () => {
           <div className="grid grid-cols-1 gap-8 w-3/5 lg:w-2/3">
             <div>
               <h2 className="text-3xl font-bold mb-4">
-                We Always Make The Best
+                We Deliver Excellence Every Time
               </h2>
               <p className="text-gray-400 mb-6">
-                Our expertise spans Frontend Development, Backend Systems,
-                Databases, Frameworks, Designing, and SEO Optimization, ensuring
-                a perfect blend of functionality and aesthetics.
+                As the best web development company, we offer a wide range of services — including Frontend Development, Backend, Databases, Frameworks, UI/UX Design, SEO Optimization, Graphic Designing, Social Media Marketing and Management. We combine functionality with aesthetics to create digital solutions that truly stand out.
+
               </p>
             </div>
           </div>
@@ -72,40 +83,41 @@ const ContactUS: React.FC = () => {
           <div className="bg-black/30 transparent backdrop-blur-xl lg:px-10 rounded-md border-slate-200 border-[3px] shadow-md px-4">
             <h3 className="text-xl font-semibold my-4">Get In Touch</h3>
             <p className="mb-4">
-              At CODE FYZE, we believe in powering businesses with cutting-edge
-              IT solutions that are as dynamic as the digital world we live in.
+              At CodeFyze, we believe in powering businesses with cutting-edge IT solutions that are as dynamic as the digital world we live in.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="text-orange-500">
-                  <i className="fas fa-map-marker-alt"></i>
+                  <FaMapMarkerAlt />
                 </div>
-                <span>Nawabshah, Sindh, Pakistan</span>
+                <span>Sindh, Pakistan</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="text-orange-500">
-                  <i className="fas fa-phone-alt"></i>
+                   <FaPhoneAlt />
                 </div>
-                <span>+92 306-3026466</span>
+                <span>+971 55 265 4401
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="text-orange-500">
-                  <i className="fas fa-envelope"></i>
+                  <FaEnvelope />
                 </div>
-                <span>codefyze@gmail.com</span>
+                <span>info@codefyze.com</span>
               </div>
             </div>
 
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-orange-500 hover:text-orange-600">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-orange-500 hover:text-orange-600">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="text-orange-500 hover:text-orange-600">
-                <i className="fab fa-instagram"></i>
-              </a>
+               <a 
+                           href="https://www.linkedin.com/company/codefyze/"
+                           className="w-fit h-full"
+                           
+                            target="_blank"
+                            >
+                              <CiLinkedin size={30}/></a>
+                          <a href="https://www.instagram.com/code_fyze/" className="w-fit h-full" target="_blank"><FaInstagram size={30}/></a>
+                          <a href="https://www.facebook.com/profile.php?id=61566949416573&mibextid=LQQJ4d" className="w-fit h-full" target="_blank"><GrFacebookOption size={30}/></a>
+                          
             </div>
           </div>
 

@@ -16,8 +16,8 @@ import Portfolio from "~/components/Portfolio";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "CodeFyze Personal Website" },
-    { name: "description", content: "We provide business services!" },
+    { title: "Top-Rated Software Development Agency | CodeFyze" },
+    { name: "description", content: "CodeFyze a top-rated software development agency that builds custom digital solutions for businesses around the world. Contact +971 55 265 4401 today" },
   ];
 };
 
