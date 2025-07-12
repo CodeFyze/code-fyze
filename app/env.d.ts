@@ -7,6 +7,7 @@ declare global {
     ENV: {
       API_BASE_URL: string;
       TOKEN:string;
+      editor_API:string
     };
   }
 }

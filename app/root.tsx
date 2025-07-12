@@ -42,6 +42,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
     ENV: {
       API_BASE_URL: process.env.API_BASE_URL,
       TOKEN: token || null, 
+      editor_API:process.env.editor_API
     },
   });
 }
