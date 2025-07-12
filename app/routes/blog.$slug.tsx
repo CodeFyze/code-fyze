@@ -32,8 +32,8 @@ export async function loader({ params }: LoaderFunctionArgs) {
   if (!apiUrl) throw new Error("API_BASE_URL not set");
 
   const [blogRes, recentRes] = await Promise.all([
-    fetch(`https://cf-backend-5d4o.onrender.com/api/blog/${params.slug}`),
-    fetch(`https://cf-backend-5d4o.onrender.com/api/blog/recent`)
+    fetch(`${apiUrl}blog/${params.slug}`),
+    fetch(`${apiUrl}blog/recent`)
   ]);
 
   if (!blogRes.ok) throw new Response("Blog not found", { status: 404 });
