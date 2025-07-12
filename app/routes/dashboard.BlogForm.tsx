@@ -80,7 +80,7 @@ export function BlogForm({ blog, error, isSubmitting = false, token }: BlogFormP
                 />
 
                 <Editor
-  apiKey={window.ENV.editor_API}
+  apiKey="oe3pqrvw0irsxhxmf0et8aj2ftny5tycp7y67a4nahr46gix"
   onInit={(_evt: unknown, editor: TinyMCEEditor) => {
     editorRef.current = editor;
     setContent(blog?.content || "");
