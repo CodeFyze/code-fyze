@@ -115,7 +115,7 @@ export default function BlogSlug() {
   return (
      <div className="font-sans">
       {/* Header with background image */}
-      <header className="relative text-center py-20 bg-gradient-to-r from-gray-100 to-white overflow-hidden">
+      <header className="relative text-center py-20 bg-gradient-to-br from-blue-100 to-white overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={blog.featuredImage.url}

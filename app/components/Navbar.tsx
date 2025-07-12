@@ -246,6 +246,13 @@ export default function Navbar() {
             Portfolio
           </Link>
           <Link
+            to="/blogs"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
+            onClick={handleLinkClick}
+          >
+            Blogs
+          </Link>
+          <Link
             to="/ContactUS"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
