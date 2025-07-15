@@ -51,7 +51,8 @@ export async function loader({ params }: LoaderFunctionArgs) {
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [
     { title: data?.blog?.metaTitle || data?.blog?.title },
-    { name: "description", content: data?.blog?.metaDescription || "" }
+    { name: "description", content: data?.blog?.metaDescription || "" },
+     { name: "robots", content: "index, follow" }
   ];
 };
 
