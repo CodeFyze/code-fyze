@@ -63,8 +63,9 @@ export default function BlogSlug() {
   useEffect(() => {
   if (!contentRef.current) return;
   const container = contentRef.current;
+  
+  // Handle images (your existing code)
   const paragraphs = container.querySelectorAll("p");
-
   paragraphs.forEach((p) => {
     const images = p.querySelectorAll("img");
     const onlyImages = Array.from(p.childNodes).every((node) => {
@@ -72,10 +73,8 @@ export default function BlogSlug() {
     });
 
     if (onlyImages && images.length >= 2) {
-      p.classList.add("flex", "flex-wrap", "gap-4", "justify-center");
-
+      p.classList.add("flex", "flex-wrap", "gap-8", "justify-center");
       images.forEach((img) => {
-        img.classList.remove("mx-auto");
         img.classList.add(
           "object-cover",
           "rounded-lg",
@@ -86,19 +85,50 @@ export default function BlogSlug() {
           "sm:w-[48%]",
           "md:w-[30%]",
           "max-h-[250px]",
-           "m-4"
+          "m-4",
         );
-
-        // Remove fixed dimensions
         img.removeAttribute("width");
         img.removeAttribute("height");
-
-        // Ensure responsiveness and aspect ratio
         img.style.height = "auto";
         img.style.maxHeight = "250px";
         img.style.objectFit = "cover";
       });
     }
+  });
+
+  // Handle links (your existing code)
+  const links = container.querySelectorAll("a");
+  links.forEach((link) => {
+    link.classList.add(
+      "text-blue-600",
+      "hover:underline",
+      "transition-all",
+      "duration-200"
+    );
+    if (link.hostname !== window.location.hostname) {
+      link.classList.add("after:content-['_↗']");
+    }
+  });
+
+  // Fix lists - NEW CODE
+  const lists = container.querySelectorAll('ul, ol');
+  lists.forEach(list => {
+    // Clean up malformed classes
+    list.classList.remove('list-disc,');
+    list.classList.add('list-disc', 'pl-6', 'my-4');
+    
+    // Fix list items
+    const listItems = list.querySelectorAll('li');
+    listItems.forEach(li => {
+      li.classList.remove('list-disc,');
+      li.classList.add('list-item', 'my-2');
+      
+      // Handle paragraphs inside list items
+      const paragraphs = li.querySelectorAll('p');
+      paragraphs.forEach(p => {
+        p.classList.add('mb-0', 'inline'); // Make paragraphs flow with list items
+      });
+    });
   });
 }, []);
 
