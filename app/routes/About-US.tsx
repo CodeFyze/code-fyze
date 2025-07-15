@@ -1,6 +1,16 @@
 import React from 'react';
 import Contact from '~/components/Contact';
 import { useNavigate } from "react-router-dom";
+import { MetaFunction } from '@remix-run/node';
+import { loader } from '~/root';
+// Meta
+  export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    return [
+      { title: "About Us | Software Development Agency | CodeFyze" },
+      { name: "CodeFyze is one of the top software development agencies delivering scalable, custom solutions for global businesses. Call +971 55 265 4401 for a free consultation." },
+       { name: "robots", content: "index, follow" }
+    ];
+  };
 
 const AboutUS: React.FC = () => {
   const navigate = useNavigate();
@@ -8,6 +18,9 @@ const AboutUS: React.FC = () => {
   const handleRedirect = () => {
     navigate("/contact-us");
   };
+
+
+  
   
   return (
     <div className="font-sans ">
@@ -25,7 +38,7 @@ const AboutUS: React.FC = () => {
           <div className=''>
             <h2 className="text-3xl font-bold mb-4">We Always Make The Best</h2>
             <p className="text-gray-400 mb-6">
-            At CODE FYZE, we believe in powering businesses with cutting-edge IT solutions that are as dynamic as the digital world we live in.
+            At CodeFyze, as one of the top software companies in the world, we blend innovation, strategy, and technology to accelerate your business growth.
             </p>
             <button className="flex items-center px-5 py-2 md:px-6 md:py-3 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300" onClick={handleRedirect}>
             Contact Us

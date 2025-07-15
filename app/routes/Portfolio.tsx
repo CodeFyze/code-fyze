@@ -1,3 +1,4 @@
+import { MetaFunction } from "@remix-run/node";
 import { motion } from "framer-motion";
 import { FaEye } from "react-icons/fa";
 import {
@@ -6,7 +7,16 @@ import {
   shopifyPortfolioItems,
   appPortfolioItems
 } from "~/constants/portfolioItems";
+import { loader } from "~/root";
 
+// Meta
+  export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    return [
+      { title: "Portfolio | Top-Rated Software Development Agency | CodeFyze" },
+      { name: "See how CodeFyze transforms ideas into high-performing digital products. View our portfolio of software solutions. Contact +971 55 265 4401." },
+       { name: "robots", content: "index, follow" }
+    ];
+  };
 export default function Portfolio() {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
