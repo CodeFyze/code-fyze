@@ -16,22 +16,36 @@ interface BlogPost {
 export async function loader() {
   const apiUrl = process.env.API_BASE_URL;
   if (!apiUrl) {
-  throw new Error("API_BASE_URL environment variable is not set");
-}
+    throw new Error("API_BASE_URL environment variable is not set");
+  }
+  
   try {
     const response = await fetch(`${apiUrl}blog`);
-
+    
     if (!response.ok) {
       throw new Error(`Failed to fetch blog posts: ${response.status}`);
     }
 
-    const data = await response.json();
-
-    if (!data.data?.blogPosts) {
-      throw new Error("Unexpected API response structure");
+    // First check if the response is turbo-stream
+    const contentType = response.headers.get('content-type');
+    if (contentType?.includes('text/vnd.turbo-stream.html')) {
+      throw new Error('Received turbo-stream response when expecting JSON');
     }
 
-    return json(data.data.blogPosts);
+    // Try to parse as JSON
+    try {
+      const data = await response.json();
+      
+      if (!data.data?.blogPosts) {
+        throw new Error("Unexpected API response structure");
+      }
+      
+      return json(data.data.blogPosts);
+    } catch (jsonError) {
+      console.error("JSON parsing error:", jsonError);
+      throw new Error("Invalid JSON response from server");
+    }
+    
   } catch (error) {
     console.error("Error in blog loader:", error);
     throw new Response("Could not load blog posts", { status: 500 });
