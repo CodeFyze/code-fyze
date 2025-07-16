@@ -49,7 +49,7 @@ export default function DevelopmentProcess() {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.4 }}
               >
-                <h1>Project Planning</h1>
+                <h2 className="font-bold">Project Planning</h2>
 
                 <p>
                   We collaborate closely with our client to understand their
@@ -66,7 +66,7 @@ export default function DevelopmentProcess() {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.4 }}
               >
-                <h1>Testing and Deployment</h1>
+                <h2 className="font-bold">Testing and Deployment</h2>
                 <p>
                   We rigorously test and deploy the developed software, ensuring
                   it meets the highest quality standards and is ready to be used
@@ -80,7 +80,7 @@ export default function DevelopmentProcess() {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.4 }}
               >
-                <h1>Development</h1>
+                <h2 className="font-bold">Development</h2>
                 <p>
                   Our skilled developers bring the designs to life, writing
                   clean and <span className="font-bold">efficient code </span>
@@ -94,7 +94,7 @@ export default function DevelopmentProcess() {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.4 }}
               >
-                <h1>Designing</h1>
+                <h2 className="font-bold">Designing</h2>
                 <p>
                   Our experienced team of designers create intuitive and
                   <span className="font-bold"> user-friendly interfaces</span>,

@@ -73,9 +73,9 @@ export default function Portfolio() {
         {/* Wordpress Portfolio */}
         <div id="wordpress">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold mb-4 font-baskervville text-[#0E3172]">
+            <h2 className="text-5xl font-bold mb-4 font-baskervville text-[#0E3172]">
               Wordpress Portfolio
-            </h1>
+            </h2>
             <p className="text-lg text-black font-mingzat">
               Explore our portfolio of wordpress websites, designed to deliver
               exceptional user experiences and cutting-edge technology
@@ -109,9 +109,9 @@ export default function Portfolio() {
         {/* Shopify Portfolio */}
         <div>
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold mb-4 font-baskervville text-[#0E3172]">
+            <h2 className="text-5xl font-bold mb-4 font-baskervville text-[#0E3172]">
               Shopify Portfolio
-            </h1>
+            </h2>
             <p className="text-lg text-black font-mingzat">
               Explore our portfolio of shopify websites, designed to deliver
               exceptional user experiences and cutting-edge technology
@@ -145,9 +145,9 @@ export default function Portfolio() {
         {/* Mobile App Portfolio */}
         <div id="app">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold mb-4 font-baskervville text-[#0E3172]">
+            <h2 className="text-5xl font-bold mb-4 font-baskervville text-[#0E3172]">
               Mobile App Portfolio
-            </h1>
+            </h2>
             <p className="text-lg text-black font-mingzat">
               Explore our portfolio of Mobile Applications, designed to deliver
               exceptional user experiences and cutting-edge technology

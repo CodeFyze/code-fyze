@@ -28,9 +28,9 @@ export default function About() {
     >
       <div className="w-full md:w-2/5 bg-womanWithLaptop bg-contain bg-center h-full aspect-[2/3] bg-no-repeat"></div>
       <div className="w-full md:w-3/5 flex flex-col h-auto justify-evenly gap-y-8 xl:justify-center">
-        <h1 className="font-bold text-4xl md:text-start lg:text-6xl text-[#0E3172]">
+        <h2 className="font-bold text-4xl md:text-start lg:text-6xl text-[#0E3172]">
           About Us
-        </h1>
+        </h2>
         <p className="text-base md:text-lg lg:text-xl xl:text-2xl mt-4">
           CodeFyze is a growing software development company that helps businesses succeed with smart and reliable IT solutions.
         </p>

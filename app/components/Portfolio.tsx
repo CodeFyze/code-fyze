@@ -75,9 +75,9 @@ export default function Portfolio({ title }: { title: string }) {
         viewport={{ once: false, amount: 0.4 }}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
-          <h1 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">
+          <h2 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">
             {title}
-          </h1>
+          </h2>
         </div>
         <div className="flex flex-col lg:flex-row max-lg:space-y-4 lg:space-x-3 text-sm sm:text-base max-lg:text-center md:text-xl text-[#7D8D9A]">
           {projects.images.map((image, index) => (

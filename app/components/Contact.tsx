@@ -28,9 +28,9 @@ export default function Contact() {
         viewport={{ once: false, amount: 0.4 }}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
-          <h1 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">
+          <h3 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">
             Ready to Transform Your Business with Expert IT Solutions?
-          </h1>
+          </h3>
           <p className="text-sm sm:text-base max-lg:text-center md:text-xl text-[#7D8D9A]">
             For a free consultation and let&apos;s discuss how we can drive your
             business forward

@@ -27,9 +27,9 @@ export default function TopServices() {
         viewport={{ once: false, amount: 0.4 }}
       >
         <div className="[&>*]:text-center">
-          <h1 className="font-bold text-2xl md:text-3xl md:text-start lg:text-3xl">
+          <h2 className="font-bold text-2xl md:text-3xl md:text-start lg:text-3xl">
             Our Top Services
-          </h1>
+          </h2>
           <p className="font-medium text-base md:text-lg md:text-start">
             We provide top IT services & consulting to help businesses grow, and stay ahead in the digital world.
           </p>
