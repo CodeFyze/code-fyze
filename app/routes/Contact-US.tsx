@@ -12,6 +12,7 @@ export const meta: MetaFunction = () => {
   return [
     { title: "Contact Us | Top-Rated Software Development Agency " },
     { name: "description", content: "Get in touch with a top-rated software development agency, specializing in custom solutions. Contact us +971 55 265 4401 today." },
+     { name: "robots", content: "index, follow" }
   ];
 };
 

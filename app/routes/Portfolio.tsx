@@ -13,7 +13,7 @@ import { loader } from "~/root";
   export const meta: MetaFunction<typeof loader> = ({ data }) => {
     return [
       { title: "Portfolio | Top-Rated Software Development Agency | CodeFyze" },
-      { name: "See how CodeFyze transforms ideas into high-performing digital products. View our portfolio of software solutions. Contact +971 55 265 4401." },
+      { name: "description",content: "See how CodeFyze transforms ideas into high-performing digital products. View our portfolio of software solutions. Contact +971 55 265 4401." },
        { name: "robots", content: "index, follow" }
     ];
   };
