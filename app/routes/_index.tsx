@@ -18,6 +18,7 @@ export const meta: MetaFunction = () => {
   return [
     { title: "Top-Rated Software Development Agency | CodeFyze" },
     { name: "description", content: "CodeFyze a top-rated software development agency that builds custom digital solutions for businesses around the world. Contact +971 55 265 4401 today" },
+     { name: "robots", content: "index, follow" }
   ];
 };
 
