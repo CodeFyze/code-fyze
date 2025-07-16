@@ -7,7 +7,7 @@ import { loader } from '~/root';
   export const meta: MetaFunction<typeof loader> = ({ data }) => {
     return [
       { title: "About Us | Software Development Agency | CodeFyze" },
-      { name: "CodeFyze is one of the top software development agencies delivering scalable, custom solutions for global businesses. Call +971 55 265 4401 for a free consultation." },
+      { name: "description",content: "CodeFyze is one of the top software development agencies delivering scalable, custom solutions for global businesses. Call +971 55 265 4401 for a free consultation." },
        { name: "robots", content: "index, follow" }
     ];
   };
