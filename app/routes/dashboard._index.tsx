@@ -52,12 +52,15 @@ export async function loader({ request }: { request: Request }) {
 
   try {
     const statsResponse = await fetch(`${process.env.API_BASE_URL}visitors/analytics/dashboard`, {
-      headers: { Authorization: `Bearer ${token}` }
+      headers: { 
+        Authorization: `Bearer ${token}`, 
+        'Content-Type': 'application/json'
+      }
     });
 
     if (!statsResponse.ok) throw new Error("Failed to fetch stats");
-    
     const stats = await statsResponse.json();
+    console.log(`STAts: ${stats}`);
     return json<DashboardLoaderData>({ user, stats });
   } catch (error) {
     return json<DashboardLoaderData>({ user, stats: null });
