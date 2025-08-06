@@ -1,4 +1,4 @@
-import { json } from "@remix-run/node";
+import { json, MetaFunction } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 import { htmlToText } from "html-to-text";
 
@@ -12,6 +12,15 @@ interface BlogPost {
   slug: string;
   createdAt: string;
 }
+
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Software Development Agency Blogs | CodeFyze" },
+    { name: "description", content: "Stay updated with our blogs covering tech trends, & digital solutions for businesses. Contact +971 55 265 4401" },
+     { name: "robots", content: "index, follow" }
+  ];
+};
 
 export async function loader() {
   const apiUrl = process.env.API_BASE_URL;
@@ -51,6 +60,9 @@ export async function loader() {
     throw new Response("Could not load blog posts", { status: 500 });
   }
 }
+
+
+
 
 export default function BlogIndex() {
   const blogs = useLoaderData<BlogPost[]>();
