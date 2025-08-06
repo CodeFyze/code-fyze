@@ -1,12 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { MetaFunction } from "@remix-run/node";
+import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { GrFacebookOption } from "react-icons/gr";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { useLoaderData } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,7 +17,36 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const loader: LoaderFunction = () => {
+  return json({
+    apiUrl: process.env.API_BASE_URL
+  });
+};
+
 const ContactUS: React.FC = () => {
+
+   const { apiUrl } = useLoaderData<typeof loader>();
+    
+    useEffect(() => {
+      const logVisitor = async () => {
+        try {
+          await fetch(`${apiUrl}visitors/log`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ path: "/contact us" }),
+          });
+        } catch (err) {
+          console.error("Visitor logging failed:", err);
+        }
+      };
+  
+      if (apiUrl) {
+        logVisitor();
+      }
+    }, [apiUrl]);
+
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 

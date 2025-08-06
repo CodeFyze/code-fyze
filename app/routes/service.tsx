@@ -1,5 +1,15 @@
+import { json, LoaderFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { useEffect } from "react";
 import FAQ from "~/components/FAQ";
 import { landingFAQs } from "~/constants/faqs";
+
+
+export const loader: LoaderFunction = () => {
+    return json({
+      apiUrl: process.env.API_BASE_URL
+    });
+  };
 
 const LandingPageProcess = () => {
   const steps = [
@@ -29,6 +39,29 @@ const LandingPageProcess = () => {
         "After deployment, we monitor the landing page's performance and provide ongoing support and optimization as needed.",
     },
   ];
+
+
+  const { apiUrl } = useLoaderData<typeof loader>();
+        
+        useEffect(() => {
+          const logVisitor = async () => {
+            try {
+              await fetch(`${apiUrl}visitors/log`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ path: "/services" }),
+              });
+            } catch (err) {
+              console.error("Visitor logging failed:", err);
+            }
+          };
+      
+          if (apiUrl) {
+            logVisitor();
+          }
+        }, [apiUrl]);
 
   return (
     <>

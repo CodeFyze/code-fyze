@@ -1,4 +1,6 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction, LoaderFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import About from "~/components/About";
 import Team from "~/components/Team";
 import CaseStudies from "~/components/CaseStudies";
@@ -13,19 +15,48 @@ import TopServices from "~/components/TopServices";
 import FAQ from "~/components/FAQ";
 import { homeFAQs } from "~/constants/faqs";
 import Portfolio from "~/components/Portfolio";
+import { useEffect } from "react";
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Top-Rated Software Development Agency | CodeFyze" },
     { name: "description", content: "CodeFyze a top-rated software development agency that builds custom digital solutions for businesses around the world. Contact +971 55 265 4401 today" },
-     { name: "robots", content: "index, follow" },
-     { name: "keywords", content: "software development, custom software, CodeFyze, web development, mobile app development, top software agency, Dubai tech company" }
- 
+    { name: "robots", content: "index, follow" },
+    { name: "keywords", content: "software development, custom software, CodeFyze, web development, mobile app development, top software agency, Dubai tech company" },
+    { tagName: "link", rel: "canonical", href: "https://www.codefyze.com/" }
+
   ];
 };
 
+export const loader: LoaderFunction = () => {
+  return json({
+    apiUrl: process.env.API_BASE_URL
+  });
+};
 
 export default function Index() {
+  const { apiUrl } = useLoaderData<typeof loader>();
+  
+  useEffect(() => {
+    const logVisitor = async () => {
+      try {
+        await fetch(`${apiUrl}visitors/log`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ path: "/home" }),
+        });
+      } catch (err) {
+        console.error("Visitor logging failed:", err);
+      }
+    };
+
+    if (apiUrl) {
+      logVisitor();
+    }
+  }, [apiUrl]);
+
   return (
     <>
       <main className="flex flex-col items-center justify-center w-screen">
@@ -42,18 +73,12 @@ export default function Index() {
           <TopServices />
           {/* Team */}
           <Team />
-          <div
-          className="py-10"
-          ></div>
+          <div className="py-10"></div>
           <Portfolio title="Website Projects"/>
           <Portfolio title="Mobile App Projects"/>
           <Portfolio title="Wordpress Projects"/>
         </div>
 
-        {/* Portfolio Section */}
-        {/* <div>
-        </div> */}
-        
         <div className="lg:relative lg:-top-24 xl:-top-48">
           {/* Technologies Section */}
           <Technologies />

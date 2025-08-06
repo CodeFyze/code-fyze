@@ -1,5 +1,7 @@
-import { MetaFunction } from "@remix-run/node";
+import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { FaEye } from "react-icons/fa";
 import {
   websitePortfolioItems,
@@ -7,7 +9,6 @@ import {
   shopifyPortfolioItems,
   appPortfolioItems
 } from "~/constants/portfolioItems";
-import { loader } from "~/root";
 
 // Meta
   export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -17,6 +18,13 @@ import { loader } from "~/root";
        { name: "robots", content: "index, follow" }
     ];
   };
+
+  export const loader: LoaderFunction = () => {
+    return json({
+      apiUrl: process.env.API_BASE_URL
+    });
+  };
+  
 export default function Portfolio() {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -26,6 +34,29 @@ export default function Portfolio() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
+
+  const { apiUrl } = useLoaderData<typeof loader>();
+      
+      useEffect(() => {
+        const logVisitor = async () => {
+          try {
+            await fetch(`${apiUrl}visitors/log`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ path: "/portfolio" }),
+            });
+          } catch (err) {
+            console.error("Visitor logging failed:", err);
+          }
+        };
+    
+        if (apiUrl) {
+          logVisitor();
+        }
+      }, [apiUrl]);
 
   return (
     <>
