@@ -40,6 +40,7 @@ export default function Index() {
   useEffect(() => {
     const logVisitor = async () => {
       try {
+        debugger
         await fetch(`${apiUrl}visitors/log`, {
           method: "POST",
           headers: {

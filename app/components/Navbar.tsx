@@ -253,7 +253,7 @@ export default function Navbar() {
             Blogs
           </Link>
           <Link
-            to="/ContactUS"
+            to="/contact-us"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
