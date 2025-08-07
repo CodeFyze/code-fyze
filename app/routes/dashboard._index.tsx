@@ -59,11 +59,33 @@ export async function loader({ request }: { request: Request }) {
     });
 
     if (!statsResponse.ok) throw new Error("Failed to fetch stats");
+    
     const stats = await statsResponse.json();
-    console.log(`STAts: ${stats}`);
-    return json<DashboardLoaderData>({ user, stats });
+    
+    // Ensure stats has all required fields with defaults
+    const safeStats = {
+      totalVisits: stats.totalVisits || 0,
+      uniqueVisitors: stats.uniqueVisitors || 0,
+      leads: stats.leads || 0,
+      topPages: stats.topPages || [],
+      devices: stats.devices || [],
+      recentLeads: stats.recentLeads || []
+    };
+
+    return json<DashboardLoaderData>({ user, stats: safeStats });
   } catch (error) {
-    return json<DashboardLoaderData>({ user, stats: null });
+    console.error("Error loading dashboard stats:", error);
+    return json<DashboardLoaderData>({ 
+      user, 
+      stats: {
+        totalVisits: 0,
+        uniqueVisitors: 0,
+        leads: 0,
+        topPages: [],
+        devices: [],
+        recentLeads: []
+      } 
+    });
   }
 }
 
