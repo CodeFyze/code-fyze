@@ -15,7 +15,7 @@ export default function Hero() {
   };
 
   const navigate = useNavigate();
-
+  //Redirect to contact
   const handleRedirect = () => {
     navigate("/contact-us");
   };
@@ -29,6 +29,7 @@ export default function Hero() {
         whileInView="visible"
         viewport={{ once: false, amount: 0.4 }}
       >
+
         <div className="flex flex-col items-center space-y-4 h-4/6 lg:w-[42%] lg:items-start lg:mb-[6vw]">
           <h1 className="~/lg:~text-lg/7xl lg:text-4xl xl:text-[3.5vw] xl:leading-none max-md:px-[10vw] max-lg:text-center font-bold text-gray-800">
             Top-Rated Software
