@@ -268,7 +268,7 @@ export default function BlogListPage() {
                     <h3 className="text-xl font-bold text-gray-800"> {blog.title.length > 50 ? `${blog.title.substring(0, 50)}...` : blog.title}</h3>
                     <div className="flex space-x-2">
                       <Link
-                        to={`/dashboard/${blog._id}`}
+                        to={`/dashboard/${blog._id}/`}
                         className="text-blue-600 hover:text-blue-800 px-2 py-1 rounded hover:bg-blue-50"
                       >
                         Edit

@@ -1,5 +1,5 @@
 import { json, redirect } from "@remix-run/node";
-import { Form, Link, Outlet, useLoaderData, useNavigate } from "@remix-run/react";
+import { Form, Outlet, useLoaderData, useNavigate } from "@remix-run/react";
 import { useEffect } from "react";
 import { Sidebar } from "~/components/Sidebar";
 import { getSession, destroySession } from "~/utills/session.server";
@@ -25,7 +25,7 @@ export async function loader({ request }: { request: Request }) {
 
 export async function action({ request }: { request: Request }) {
   const session = await getSession(request.headers.get("Cookie"));
-  
+
   // Simply destroy the session on logout
   return redirect("/admin/login", {
     headers: {
@@ -59,9 +59,9 @@ export default function DashboardLayout() {
             <Form method="post">
               <button
                 type="submit"
-                className="text-blue-600 hover:text-blue-800"
+                className="bg-blue-600 hover:bg-blue-800 px-3 py-2 rounded text-white font-medium"
               >
-                Logout
+                Log out
               </button>
             </Form>
           </div>
