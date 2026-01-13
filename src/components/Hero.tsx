@@ -1,10 +1,10 @@
 'use client';
 
 import CircleButton from "./CircleButton";
-import { CodeFyzeMarquee } from "./CodeFyzeMarquee";
 import { useRouter } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { CodeFyzeMarquee } from "./CodeFyzeMarquee";
 
 export default function Hero() {
   const divVariant = {
@@ -72,7 +72,7 @@ export default function Hero() {
 
         <div
           className="hidden w-[58%] h-full aspect-[852/509] lg:flex justify-center items-center bg-cover bg-no-repeat bg-center"
-          style={{ backgroundImage: "url('hero-sec-pic.png')" }}
+          style={{ backgroundImage: "url('/hero-sec-pic.png')" }}
         ></div>
       </motion.div>
       <CodeFyzeMarquee />

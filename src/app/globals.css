@@ -1,7 +1,7 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
 
+/* =================== THEME VARIABLES =================== */
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -34,11 +34,13 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
+  /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-marquee: marquee var(--duration) linear infinite;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 
+  /* Keyframes */
   @keyframes accordion-down {
     from {
       height: 0;
@@ -61,25 +63,43 @@
 
   @keyframes marquee {
     from {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
 
     to {
-      transform: translateX(calc(-100% - var(--gap)));
+      transform: translate3d(calc(-100% - var(--gap)), 0, 0);
     }
   }
 
   @keyframes marquee-vertical {
     from {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
 
     to {
-      transform: translateY(calc(-100% - var(--gap)));
+      transform: translate3d(0, calc(-100% - var(--gap)), 0);
     }
   }
 }
 
+/* =================== GLOBAL CLASSES FOR MARQUEE =================== */
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.group-hover\:pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+.reverse-animation {
+  animation-direction: reverse;
+}
+
+/* =================== ROOT COLORS =================== */
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
@@ -108,6 +128,7 @@
   --chart-5: 27 87% 67%;
 }
 
+/* =================== DARK THEME =================== */
 .dark {
   --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;
@@ -135,6 +156,7 @@
   --chart-5: 340 75% 55%;
 }
 
+/* =================== BASE =================== */
 @layer base {
   * {
     @apply border-border;

@@ -9,8 +9,8 @@ export function CodeFyzeMarquee() {
         {Array.from({ length: 16 }).map((_, i) => (
           <img
             key={i}
-            src={`/icons/${i+1}.png`}
-            alt={`logo ${i+1}`}
+            src={`/icons/${i + 1}.png`}
+            alt={`logo ${i + 1}`}
             className="w-auto h-8 mx-4 block object-contain"
           />
         ))}
