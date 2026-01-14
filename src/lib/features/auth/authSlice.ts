@@ -30,25 +30,29 @@ const authSlice = createSlice({
       state.user = user;
       state.token = token;
       if (typeof window !== 'undefined') {
-        localStorage.setItem('token', token);
-        localStorage.setItem('user', JSON.stringify(user));
+        sessionStorage.setItem('token', token);
+        sessionStorage.setItem('user', JSON.stringify(user));
       }
     },
     logout: (state) => {
       state.user = null;
       state.token = null;
       if (typeof window !== 'undefined') {
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
+        sessionStorage.removeItem('token');
+        sessionStorage.removeItem('user');
       }
     },
     initializeAuth: (state) => {
       if (typeof window !== 'undefined') {
-        const token = localStorage.getItem('token');
-        const user = localStorage.getItem('user');
+        const token = sessionStorage.getItem('token');
+        const user = sessionStorage.getItem('user');
         if (token && user) {
           state.token = token;
-          state.user = JSON.parse(user);
+          try {
+            state.user = JSON.parse(user);
+          } catch (e) {
+            console.error("Failed to parse user from session storage");
+          }
         }
       }
     }

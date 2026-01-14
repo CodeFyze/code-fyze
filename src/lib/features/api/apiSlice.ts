@@ -4,7 +4,7 @@ import { RootState } from '../../store';
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: '/', // Proxied to backend
+    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL,
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.token;
       if (token) {
@@ -17,45 +17,51 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (credentials) => ({
-        url: 'api/auth/login',
+        url: 'auth/login',
         method: 'POST',
         body: credentials,
       }),
     }),
     getBlogs: builder.query({
-      query: () => 'api/blog',
-      providesTags: ['Blogs'],
+      query: () => 'blog',
+      providesTags: (result) =>
+        result
+          ? [
+            ...result.data.blogPosts.map(({ _id }: { _id: string }) => ({ type: 'Blogs' as const, id: _id })),
+            { type: 'Blogs', id: 'LIST' },
+          ]
+          : [{ type: 'Blogs', id: 'LIST' }],
     }),
     getBlog: builder.query({
-      query: (id) => `api/blog/id/${id}`,
+      query: (id) => `blog/id/${id}`,
       providesTags: (result, error, id) => [{ type: 'Blogs', id }],
     }),
     createBlog: builder.mutation({
       query: (formData) => ({
-        url: 'api/blog',
+        url: 'blog',
         method: 'POST',
         body: formData,
       }),
-      invalidatesTags: ['Blogs'],
+      invalidatesTags: [{ type: 'Blogs', id: 'LIST' }],
     }),
     updateBlog: builder.mutation({
       query: ({ id, formData }) => ({
-        url: `api/blog/${id}`,
+        url: `blog/${id}`,
         method: 'PATCH',
         body: formData,
       }),
-      invalidatesTags: (result, error, arg) => ['Blogs', { type: 'Blogs', id: arg.id }],
+      invalidatesTags: (result, error, arg) => [{ type: 'Blogs', id: arg.id }, { type: 'Blogs', id: 'LIST' }],
     }),
     deleteBlog: builder.mutation({
       query: (id) => ({
-        url: `api/blog/${id}`,
+        url: `blog/${id}`,
         method: 'DELETE',
       }),
-      invalidatesTags: ['Blogs'],
+      invalidatesTags: [{ type: 'Blogs', id: 'LIST' }],
     }),
     uploadBlogImage: builder.mutation({
       query: (formData) => ({
-        url: 'api/blog/upload', // Assuming this endpoint exists based on previous code usage
+        url: 'blog/upload-content-image',
         method: 'POST',
         body: formData,
       }),

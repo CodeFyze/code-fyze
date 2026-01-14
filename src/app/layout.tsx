@@ -6,6 +6,7 @@ import StoreProvider from "../lib/StoreProvider";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Socials from "../components/Socials";
+import HideOnAdmin from "../components/HideOnAdmin";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -31,10 +32,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
         <StoreProvider>
-          <Navbar />
+          <HideOnAdmin>
+            <Navbar />
+          </HideOnAdmin>
           {children}
-          <Socials />
-          <Footer />
+          <HideOnAdmin>
+            <Socials />
+            <Footer />
+          </HideOnAdmin>
           <ToastContainer />
         </StoreProvider>
       </body>
