@@ -36,6 +36,14 @@ export const apiSlice = createApi({
       query: (id) => `blog/id/${id}`,
       providesTags: (result, error, id) => [{ type: 'Blogs', id }],
     }),
+    getBlogBySlug: builder.query({
+      query: (slug) => `blog/${slug}`,
+      providesTags: (result, error, slug) => [{ type: 'Blogs', id: slug }],
+    }),
+    getRecentBlogs: builder.query({
+      query: () => 'blog/recent',
+      providesTags: [{ type: 'Blogs', id: 'RECENT' }],
+    }),
     createBlog: builder.mutation({
       query: (formData) => ({
         url: 'blog',
@@ -73,6 +81,8 @@ export const {
   useLoginMutation,
   useGetBlogsQuery,
   useGetBlogQuery,
+  useGetBlogBySlugQuery,
+  useGetRecentBlogsQuery,
   useCreateBlogMutation,
   useUpdateBlogMutation,
   useDeleteBlogMutation,

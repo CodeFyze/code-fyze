@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogClient from "./BlogClient";
+import { makeStore } from "@/lib/store";
+import { apiSlice } from "@/lib/features/api/apiSlice";
 
 /* ================= TYPES ================= */
 
@@ -31,19 +33,16 @@ interface PageProps {
 export async function generateMetadata(
   { params }: PageProps
 ): Promise<Metadata> {
-  const { slug } = await params; // ✅ FIX
+  const { slug } = await params;
 
-  const apiUrl = process.env.API_BASE_URL;
-  if (!apiUrl) return {};
+  const store = makeStore();
+  const result = await store.dispatch(
+    apiSlice.endpoints.getBlogBySlug.initiate(slug)
+  );
 
-  const res = await fetch(`${apiUrl}blog/${slug}`, {
-    cache: "no-store",
-  });
+  const blog = result.data?.data?.blogPost;
 
-  if (!res.ok) return {};
-
-  const data = await res.json();
-  const blog: BlogPost = data.data.blogPost;
+  if (!blog) return {};
 
   return {
     title: blog.metaTitle || blog.title,
@@ -55,25 +54,8 @@ export async function generateMetadata(
 /* ================= PAGE ================= */
 
 export default async function BlogSlugPage({ params }: PageProps) {
-  const { slug } = await params; // ✅ FIX
+  const { slug } = await params;
 
-  const apiUrl = process.env.API_BASE_URL;
-  if (!apiUrl) throw new Error("API_BASE_URL not set");
-
-  const [blogRes, recentRes] = await Promise.all([
-    fetch(`${apiUrl}blog/${slug}`, { cache: "no-store" }),
-    fetch(`${apiUrl}blog/recent`, { cache: "no-store" }),
-  ]);
-
-  if (!blogRes.ok) notFound();
-
-  const blogData = await blogRes.json();
-  const recentData = await recentRes.json();
-
-  return (
-    <BlogClient
-      blog={blogData.data.blogPost}
-      recent={recentData.data.recentPosts || []}
-    />
-  );
+  return <BlogClient slug={slug} />;
 }
+

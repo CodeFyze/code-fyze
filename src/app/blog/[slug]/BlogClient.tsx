@@ -1,6 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { notFound } from "next/navigation";
+import {
+  useGetBlogBySlugQuery,
+  useGetRecentBlogsQuery,
+} from "@/lib/features/api/apiSlice";
 
 /* ================= TYPES ================= */
 
@@ -22,17 +27,28 @@ interface RecentPost {
 
 /* ================= COMPONENT ================= */
 
-export default function BlogClient({
-  blog,
-  recent,
-}: {
-  blog: BlogPost;
-  recent: RecentPost[];
-}) {
+export default function BlogClient({ slug }: { slug: string }) {
   const contentRef = useRef<HTMLDivElement>(null);
 
+  // Fetch blog data
+  const {
+    data: blogData,
+    isLoading: isBlogLoading,
+    isError: isBlogError,
+  } = useGetBlogBySlugQuery(slug);
+
+  // Fetch recent blogs
+  const {
+    data: recentData,
+    isLoading: isRecentLoading,
+  } = useGetRecentBlogsQuery(undefined);
+
+  const blog: BlogPost | undefined = blogData?.data?.blogPost;
+  const recent: RecentPost[] = recentData?.data?.recentPosts || [];
+
   useEffect(() => {
-    if (!contentRef.current) return;
+    if (isBlogLoading || !blog || !contentRef.current) return;
+
     const container = contentRef.current;
 
     // Images
@@ -93,7 +109,7 @@ export default function BlogClient({
         );
       });
     });
-  }, []);
+  }, [blog, isBlogLoading]);
 
   const formatDate = (dateString: string) =>
     new Date(dateString).toLocaleDateString("en-US", {
@@ -101,6 +117,48 @@ export default function BlogClient({
       month: "long",
       day: "numeric",
     });
+
+  if (isBlogLoading) {
+    return (
+      <div className="font-sans">
+        <header className="relative text-center py-20 bg-gray-100 animate-pulse">
+          <div className="h-10 bg-gray-300 w-1/2 mx-auto rounded mb-4"></div>
+          <div className="h-4 bg-gray-300 w-1/4 mx-auto rounded"></div>
+        </header>
+
+        <section className="py-10 px-4 max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+          <div className="md:col-span-3">
+            <div className="w-full h-[400px] bg-gray-200 rounded-xl mb-8 animate-pulse"></div>
+            <div className="space-y-4">
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+            </div>
+          </div>
+          <div className="md:col-span-1">
+            <div className="h-6 bg-gray-200 rounded w-1/2 mb-6"></div>
+            <div className="space-y-6">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="flex gap-4 animate-pulse">
+                  <div className="w-16 h-16 bg-gray-200 rounded-lg"></div>
+                  <div className="flex-1 h-4 bg-gray-200 rounded mt-2"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  if (isBlogError || !blog) {
+    return (
+      <div className="font-sans py-20 text-center">
+        <h1 className="text-3xl font-bold text-gray-800">Blog not found</h1>
+        <p className="text-gray-500 mt-2">The blog you are looking for does not exist.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="font-sans">
@@ -117,9 +175,7 @@ export default function BlogClient({
           <h1 className="text-4xl sm:text-5xl font-extrabold">
             {blog.title}
           </h1>
-          <p className="text-sm mt-4">
-            {formatDate(blog.createdAt)}
-          </p>
+          <p className="text-sm mt-4">{formatDate(blog.createdAt)}</p>
         </div>
       </header>
 
@@ -141,27 +197,35 @@ export default function BlogClient({
 
         {/* Sidebar */}
         <aside className="md:col-span-1 sticky top-24">
-          <h3 className="font-semibold mb-6 border-b pb-2">
-            Recent Posts
-          </h3>
-          <ul className="space-y-6">
-            {recent.map((post) => (
-              <li key={post._id}>
-                <a href={`/blog/${post.slug}`} className="flex gap-4">
-                  <img
-                    src={post.featuredImage?.url}
-                    alt={post.title}
-                    className="w-16 h-16 object-cover rounded-lg"
-                  />
-                  <span className="text-sm font-medium">
-                    {post.title}
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <h3 className="font-semibold mb-6 border-b pb-2">Recent Posts</h3>
+          {isRecentLoading ? (
+            <div className="space-y-6">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="flex gap-4 animate-pulse">
+                  <div className="w-16 h-16 bg-gray-200 rounded-lg"></div>
+                  <div className="flex-1 h-4 bg-gray-200 rounded mt-2"></div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <ul className="space-y-6">
+              {recent.map((post) => (
+                <li key={post._id}>
+                  <a href={`/blog/${post.slug}`} className="flex gap-4">
+                    <img
+                      src={post.featuredImage?.url}
+                      alt={post.title}
+                      className="w-16 h-16 object-cover rounded-lg"
+                    />
+                    <span className="text-sm font-medium">{post.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </aside>
       </section>
     </div>
   );
 }
+
