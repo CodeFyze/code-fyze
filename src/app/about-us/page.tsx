@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const AboutUS: React.FC = () => {
   return (
     <div className="font-sans ">
-      <div className='bg-contain bg-y-repeat bg-topServicesBg xl:bg-cover'>
+      <div className='bg-contain bg-y-repeat xl:bg-cover' style={{ backgroundImage: 'url(/top-services-bg.png)' }}>
         {/* Header Section */}
         <header className="relative text-center py-4">
           <h1 className="text-5xl font-bold">About Us</h1>

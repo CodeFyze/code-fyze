@@ -84,7 +84,7 @@ export default function Footer() {
                 Empowering Your Business with Innovative IT Solutions
               </p>
               <p className="text-sm sm:text-base md:text-xl">
-                CODEFYZE © 2025 || All Rights are Reserved
+                CODEFYZE © {new Date().getFullYear()} || All Rights are Reserved
               </p>
             </div>
           </div>

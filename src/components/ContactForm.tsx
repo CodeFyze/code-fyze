@@ -43,7 +43,7 @@ export default function ContactForm({ apiUrl }: { apiUrl?: string }) {
     <div className="font-sans ">
       <VisitorLogger apiUrl={apiUrl} path="/contact us" />
 
-      <div className="bg-contain bg-y-repeat bg-topServicesBg lg:bg-cover">
+      <div className="bg-contain bg-y-repeat lg:bg-cover" style={{ backgroundImage: 'url(/top-services-bg.png)' }}>
         {/* Toast Container */}
         <ToastContainer
           position="top-right"
@@ -129,14 +129,14 @@ export default function ContactForm({ apiUrl }: { apiUrl?: string }) {
                 type="text"
                 name="user_name"
                 placeholder="Name"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ring bg-white"
                 required
               />
               <input
                 type="email"
                 name="user_email"
                 placeholder="E-mail address"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ring bg-white"
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               />
@@ -144,7 +144,7 @@ export default function ContactForm({ apiUrl }: { apiUrl?: string }) {
                 name="message"
                 placeholder="Message"
                 rows={5}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ring bg-white"
                 required
               ></textarea>
               <button

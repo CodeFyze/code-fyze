@@ -3,6 +3,7 @@
 import CircleButton from "./CircleButton";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   const divVariant = {
@@ -22,7 +23,7 @@ export default function About() {
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row w-[95%] md:w-full px-11 lg:px-24 mt-11 relative pb-24" id="about-us"
+      className="flex flex-col md:flex-row w-[95%] md:w-full px-11 lg:px-24 mt-11 relative pb-28" id="about-us"
       variants={divVariant}
       initial="hidden"
       whileInView="visible"
@@ -43,9 +44,9 @@ export default function About() {
           Our team at CodeFyze, who bring creativity, experience, and dedication to every project. We work closely with you to understand your needs and deliver results that truly make a difference.
         </p>
       </div>
-      <span className="-rotate-45 aspect-square w-[5vw] lg:w-[3vw] absolute bottom-10 right-10 lg:right-20" onClick={handleRedirect}>
+      <Link href="/about-us" className="-rotate-45 aspect-square w-[5vw] lg:w-[3vw] absolute bottom-10 right-10 lg:right-20 z-[50]">
         <CircleButton className="w-full h-full" />
-      </span>
+      </Link>
     </motion.div>
   );
 }
