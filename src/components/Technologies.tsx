@@ -43,7 +43,7 @@ export default function Technologies() {
       </header>
 
       {/* Cards */}
-      <div className="w-full h-max md:h-max bg-blueBg bg-cover bg-center">
+      <div className="w-full h-max md:h-max bg-cover bg-center" style={{ backgroundImage: "url('/blue-background.png')" }}>
         <div className="w-full h-max flex flex-col justify-center items-center max-md:gap-[7vw] gap-[18vw] md:gap-30 xl:gap-[15vw]">
           <div className="~w-5/6/6/12 md:w-9/12 lg:w-4/6 xl:w-7/12 h-full grid md:grid-cols-3 gap-7 py-10">
             {/* Cards */}

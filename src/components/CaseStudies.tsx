@@ -14,26 +14,53 @@ export default function CaseStudies() {
   };
   const [carouselItem, setCarouselItem] = useState(1);
   const [fadeIn, setFadeIn] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const CASE_STUDIES = [
+    { src: "/Web-Development.jpg", alt: "Web Development" },
+    { src: "/App-Development.jpg", alt: "App Development" },
+    { src: "/UI-UX-design.png", alt: "UI UX Design" },
+    { src: "/Panel-Development.png", alt: "Panel Development" },
+  ];
 
   useEffect(() => {
     setFadeIn(true);
   }, [carouselItem]);
 
   const handlePrevious = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+
     setFadeIn(false);
     setTimeout(() => {
       setCarouselItem((prev) => (prev === 1 ? 4 : prev - 1));
       setFadeIn(true);
-    }, 500);
+      setIsAnimating(false);
+    }, 300);
   };
 
+
   const handleNext = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+
     setFadeIn(false);
     setTimeout(() => {
       setCarouselItem((prev) => (prev === 4 ? 1 : prev + 1));
       setFadeIn(true);
-    }, 500);
+      setIsAnimating(false);
+    }, 300);
   };
+
+  const getRelativePosition = (index: number) => {
+    const total = CASE_STUDIES.length;
+    const diff = index + 1 - carouselItem;
+
+    if (diff === 0) return "active";
+    if (diff === -1 || diff === total - 1) return "prev";
+    if (diff === 1 || diff === -(total - 1)) return "next";
+    return "far";
+  };
+
 
   return (
     <motion.div
@@ -58,59 +85,45 @@ export default function CaseStudies() {
       {/* Carousel */}
       <div className="w-full flex items-center justify-around px-3">
         <div
-          className="rotate-180 cursor-pointer max-sm:top-[17.5vw] max-sm:relative"
+          className="relative z-20 rotate-180 cursor-pointer max-sm:top-[17.5vw]"
           onClick={handlePrevious}
         >
           <CircleButton />
         </div>
+
         <div className="w-[80%] flex gap-2 [&>*]:max-sm:h-[35vw] [&>*]:h-[20vw] [&>*]:object-cover relative">
-          <img
-            src="/Web-Development.jpg"
-            alt="Web-Development"
-            className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${carouselItem === 1
-              ? "max-sm:opacity-100 max-sm:scale-100"
-              : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
-              } ${carouselItem === 1
-                ? "w-[44%] rounded-lg"
-                : carouselItem === 4
-                  ? "w-[11%] sm:rounded-full"
-                  : "w-[22%] rounded-lg"
-              }`}
-          />
+          {CASE_STUDIES.map((item, index) => {
+            const pos = getRelativePosition(index);
 
-          <img
-            src="/App-Development.jpg"
-            alt="App-Development"
-            className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${carouselItem === 2
-              ? "max-sm:opacity-100 max-sm:scale-100"
-              : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
-              } ${carouselItem === 2 ? "w-[44%]" : "w-[22%]"} rounded-lg`}
-          />
+            const widthClass =
+              pos === "active"
+                ? "w-[44%]"
+                : pos === "prev" || pos === "next"
+                  ? "w-[22%]"
+                  : "w-[11%] sm:rounded-full";
 
-          <img
-            src="/UI-UX-design.png"
-            alt="UI-UX-design"
-            className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${carouselItem === 3
-              ? "max-sm:opacity-100 max-sm:scale-100"
-              : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
-              } ${carouselItem === 3 ? "w-[44%]" : "w-[22%]"} rounded-lg`}
-          />
-
-          <img
-            src="/Panel-Development.png"
-            alt="Panel-Development"
-            className={`max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 transition-all duration-300 ${carouselItem === 4
-              ? "max-sm:opacity-100 max-sm:scale-100"
-              : "max-sm:opacity-0 max-sm:scale-90 max-sm:z-0"
-              } ${carouselItem === 4
-                ? "w-[44%] rounded-lg"
-                : "w-[11%] sm:rounded-full"
-              }`}
-          />
+            return (
+              <img
+                key={item.src}
+                src={item.src}
+                alt={item.alt}
+                className={`
+          transition-all duration-300 rounded-lg
+          h-[20vw] object-cover
+          max-sm:absolute max-sm:top-0 max-sm:left-0 max-sm:w-full max-sm:h-[35vw]
+          ${pos === "active"
+                    ? "max-sm:opacity-100 max-sm:scale-100 z-10"
+                    : "max-sm:opacity-0 max-sm:scale-90 z-0"}
+          ${widthClass}
+        `}
+              />
+            );
+          })}
         </div>
+
         <div
+          className="relative z-20 cursor-pointer max-sm:top-[17.5vw]"
           onClick={handleNext}
-          className="max-sm:top-[17.5vw] max-sm:relative"
         >
           <CircleButton />
         </div>

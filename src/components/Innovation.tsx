@@ -11,7 +11,7 @@ export default function Innovation() {
   };
 
   return (
-    <div className="flex w-screen h-full px-10 lg:px-[10vw] py-11 md:py-36 lg:py-[15vw] lg:pb-[18vw] mt-11 bg-contain bg-no-repeat bg-innovationBgVertical max-sm:bg-left sm:bg-innovationBg sm:bg-cover bg-center">
+    <div className="flex w-screen h-full px-10 lg:px-[10vw] py-11 md:py-36 lg:py-[15vw] lg:pb-[18vw] mt-11 bg-contain bg-no-repeat bg-[url('/innovation-bg-vertical.png')] max-sm:bg-left sm:bg-[url('/innovation-bg.png')] sm:bg-cover bg-center">
       <motion.div
         className="flex flex-col gap-y-7 items-center justify-around md:flex-row xl:justify-center w-full text-white bg-black/30 transparent backdrop-blur-xl py-11 px-11 lg:px-24 rounded-md border-slate-200 border-[3px]"
         variants={divVariant}

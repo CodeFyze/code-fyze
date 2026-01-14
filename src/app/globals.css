@@ -165,4 +165,21 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  button,
+  a {
+    cursor: pointer !important;
+  }
+
+  .msg {
+    @apply bg-[#CCE1F7] w-[80%] md:w-[50%] absolute rounded shadow p-2 sm:p-2 max-md:static hover:scale-105 transition-transform duration-300
+  }
+
+  .msg h1 {
+    @apply text-[#0E3172] font-bold max-md:text-[3.5vw] md:text-[2vw] lg:text-sm
+  }
+
+  .msg p {
+    @apply text-[2.7vw] md:text-[1.1vw]
+  }
 }

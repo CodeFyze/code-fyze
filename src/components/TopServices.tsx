@@ -16,7 +16,7 @@ export default function TopServices() {
 
   return (
     <div
-      className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:pt-72 max-md:mt-11 bg-cover bg-no-repeat bg-topServicesBgVertical md:bg-topServicesBg md:bg-contain xl:bg-cover bg-center relative lg:-top-20 xl:-top-28"
+      className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:pt-72 max-md:mt-11 bg-cover bg-no-repeat bg-[url('/top-services-bg-vertical.png')] md:bg-[url('/top-services-bg.png')] md:bg-contain xl:bg-cover bg-center relative lg:-top-20 xl:-top-28"
       id="services"
     >
       <motion.div

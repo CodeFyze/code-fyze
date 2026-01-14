@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { CodeFyzeMarquee } from "./CodeFyzeMarquee";
+import Link from "next/link";
 
 export default function Hero() {
   const divVariant = {
@@ -14,12 +15,6 @@ export default function Hero() {
       y: 0,
       transition: { duration: 0.5, ease: "easeOut" } as const,
     },
-  };
-
-  const router = useRouter();
-  //Redirect to contact
-  const handleRedirect = () => {
-    router.push("/contact-us");
   };
 
   return (
@@ -53,20 +48,20 @@ export default function Hero() {
             Delivering Digital Solutions{" "}
             <span className="text-[#0E3172]">Worldwide.</span>
           </p>
-          <div className="max-md:px-[10vw] ~h-6/14 flex space-x-4 max-lg:justify-center w-full">
-            <button
+          <div className="max-md:px-[10vw] h-6/14 flex space-x-4 max-lg:justify-center w-full">
+            <Link
+              href="/contact-us"
               className="flex items-center md:px-6 md:py-3 p-3 bg-black text-white text-[3vw] sm:text-base rounded-full hover:bg-gray-800 transition duration-300"
-              onClick={handleRedirect}
             >
               Get a Free Consultation
-            </button>
+            </Link>
 
-            <span
-              className="-rotate-45 aspect-square h-full"
-              onClick={handleRedirect}
+            <Link
+              href="/contact-us"
+              className="-rotate-45 aspect-square w-[3.7vw] h-full"
             >
               <CircleButton className="w-full h-full" />
-            </span>
+            </Link>
           </div>
         </div>
 

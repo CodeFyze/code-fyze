@@ -28,7 +28,7 @@ export default function About() {
       whileInView="visible"
       viewport={{ once: false, amount: 0.4 }}
     >
-      <div className="w-full md:w-2/5 bg-womanWithLaptop bg-contain bg-center h-full aspect-[2/3] bg-no-repeat"></div>
+      <div className="w-full md:w-2/5 bg-contain bg-center h-full aspect-[2/3] bg-no-repeat" style={{ backgroundImage: "url('/women-with-laptop.png')" }}></div>
       <div className="w-full md:w-3/5 flex flex-col h-auto justify-evenly gap-y-8 xl:justify-center">
         <h2 className="font-bold text-4xl md:text-start lg:text-6xl text-[#0E3172]">
           About Us
