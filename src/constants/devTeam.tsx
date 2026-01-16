@@ -5,12 +5,12 @@ const devTeam = [
     role: "Visionary behind product innovation",
     social: "https://www.linkedin.com/in/kashifmahar/"
   },
-  {
-    roleimage: "/devTeam/hussain.png",
-    name: "Hussain Ali",
-    role: "Architect of backend & tech strategy",
-    social: "https://www.linkedin.com/in/kashifmahar/"
-  },
+  // {
+  //   roleimage: "/devTeam/hussain.png",
+  //   name: "Hussain Ali",
+  //   role: "Architect of backend & tech strategy",
+  //   social: "https://www.linkedin.com/in/kashifmahar/"
+  // },
   {
     roleimage: "/devTeam/areeza.png",
     name: "Areeza",
