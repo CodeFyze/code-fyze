@@ -16,10 +16,10 @@ export default function Team() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {founders.map((member, index) => (
           <div key={index} className="flex justify-center">
-            <Card className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md border-none bg-cover bg-left-top bg-no-repeat"
+            <Card className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md border-none bg-cover bg-no-repeat"
                style={{
                 backgroundImage: `url(${index % 2 === 0 ? 'circleDevBg.png' : 'circleDevBgRotate.png'})`,
               }}
@@ -32,11 +32,11 @@ export default function Team() {
                 />
               </div>
               <CardContent className="p-2 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 ">
                   {member.name}
                 </h3>
+                <h4 className="text-lg font-bold text-gray-600 mb-2">Founder</h4>
                 <p className="text-lg text-gray-600 mb-2">{member.role}</p>
-
                 
               </CardContent>
             </Card>

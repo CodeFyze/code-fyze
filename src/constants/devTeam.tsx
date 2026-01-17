@@ -13,7 +13,7 @@ const devTeam = [
   // },
   {
     roleimage: "/devTeam/areeza.png",
-    name: "Areeza",
+    name: "Areeza Bhanbhro",
     role: "Brand storyteller & growth enabler",
     social: "https://www.linkedin.com/in/kashifmahar/"
   },
