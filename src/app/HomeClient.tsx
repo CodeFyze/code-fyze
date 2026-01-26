@@ -13,6 +13,7 @@ import FAQ from "../components/FAQ";
 import { homeFAQs } from "../constants/faqs";
 import Portfolio from "../components/Portfolio";
 import VisitorLogger from "../components/VisitorLogger";
+import Testimonials from "@/components/Testimonial";
 
 export default function HomeClient({ apiUrl }: { apiUrl?: string }) {
   return (
@@ -30,23 +31,24 @@ export default function HomeClient({ apiUrl }: { apiUrl?: string }) {
           <About />
           {/* Top Services Section */}
           <TopServices />
-          {/* Team */}
+          {/* Team 
           <Team />
-          <div className="py-10"></div>
           <Portfolio title="Website Projects" />
           <Portfolio title="Mobile App Projects" />
-          <Portfolio title="Wordpress Projects" />
+          <Portfolio title="Wordpress Projects" />*/}
         </div>
+         
 
-        <div className="lg:relative lg:-top-24 xl:-top-48">
-          {/* Technologies Section */}
-          <Technologies />
+        <div className="lg:relative ">
+          {/* Technologies Section 
+          <Technologies />*/}
 
-          {/* Case Studies Component */}
-          <CaseStudies />
+          {/* Case Studies Component 
+          <CaseStudies />*/}
 
-          {/* Development Process Component */}
-          <DevelopmentProcess />
+          {/* Development Process Component 
+          <DevelopmentProcess />*/}
+          <Testimonials/>
 
           {/* Contact Component */}
           <Contact />

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 export default function Innovation() {
@@ -11,34 +13,60 @@ export default function Innovation() {
   };
 
   return (
-    <div className="flex w-screen h-full px-10 lg:px-[10vw] py-11 md:py-36 lg:py-[15vw] lg:pb-[18vw] mt-11 bg-contain bg-no-repeat bg-[url('/innovation-bg-vertical.png')] max-sm:bg-left sm:bg-[url('/innovation-bg.png')] sm:bg-cover bg-center">
-      <motion.div
-        className="flex flex-col gap-y-7 items-center justify-around md:flex-row xl:justify-center w-full text-white bg-black/30 transparent backdrop-blur-xl py-11 px-11 lg:px-24 rounded-md border-slate-200 border-[3px]"
-        variants={divVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.4 }}
-      >
-        <div className="w-full md:w-[40%] text-center">
-          <h2 className="font-bold text-xl md:text-2xl md:text-start lg:text-2xl">
-            Innovation at Work
-          </h2>
-          <p className="font-medium text-sm md:text-lg md:text-start md:w-60">
-            Innovative technology to transform your operations and drive growth.
-          </p>
-        </div>
-        <div className="flex flex-col justify-around sm:flex-row gap-y-7">
-          <div className="w-full md:w-[29%] flex flex-col items-center justify-center">
-            <h2 className="text-2xl md:text-5xl font-black">1000+</h2>
-            <p className="text-center">Success Projects</p>
+    <div
+      className="
+        w-full 
+        min-h-[520px]
+        py-16 md:py-28 lg:py-36
+        bg-cover bg-center bg-no-repeat
+        max-sm:bg-[url('/innovation-bg-vertical.png')]
+        sm:bg-[url('/innovation-bg.png')]
+      "
+    >
+      {/* Max width container */}
+      <div className="max-w-[1300px] mx-auto px-4">
+        <motion.div
+          className="
+            flex flex-col gap-y-7 items-center justify-around 
+            md:flex-row xl:justify-center 
+            w-full text-white 
+            bg-black/40 backdrop-blur-xl 
+            py-10 px-6 md:px-14 lg:px-20 
+            rounded-xl border border-white/30
+          "
+          variants={divVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Left Column */}
+          <div className="w-full md:w-[40%] text-center md:text-left space-y-2">
+            <h2 className="font-bold text-xl md:text-2xl lg:text-3xl">
+              Innovation at Work
+            </h2>
+            <p className="font-medium text-sm md:text-lg max-w-[320px] mx-auto md:mx-0">
+              Innovative technology to transform your operations and drive growth.
+            </p>
           </div>
-          <div className="w-full h-[2px] sm:h-full sm:w-[2px] md:w-10 bg-white/70 backdrop-blur-md"></div>
-          <div className="w-full md:w-[29%] flex flex-col items-center justify-center">
-            <h2 className="text-2xl md:text-4xl font-black">500+</h2>
-            <p className="text-center">Happy Clients</p>
+
+          {/* Divider */}
+          <div className="hidden sm:block w-[2px] h-[80px] bg-white/40 mx-8"></div>
+
+          {/* Right Column */}
+          <div className="flex flex-col sm:flex-row justify-around gap-y-7 w-full md:w-[55%]">
+            <div className="w-full md:w-[29%] flex flex-col items-center justify-center">
+              <h2 className="text-3xl md:text-5xl font-black">1000+</h2>
+              <p className="text-center text-sm md:text-base">Success Projects</p>
+            </div>
+
+            <div className="w-full h-[2px] sm:h-auto sm:w-[2px] bg-white/40"></div>
+
+            <div className="w-full md:w-[29%] flex flex-col items-center justify-center">
+              <h2 className="text-3xl md:text-5xl font-black">500+</h2>
+              <p className="text-center text-sm md:text-base">Happy Clients</p>
+            </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }

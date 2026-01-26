@@ -19,7 +19,7 @@ export default function Socials(): JSX.Element {
           title="Send via Gmail"
           className="relative z-10 bg-white rounded-full p-2 m-2 text-[#0E3172] transition-colors duration-300"
         >
-          <SiGmail className="text-4xl md:text-5xl" />
+          <SiGmail className="text-lg md:text-3xl" />
         </a>
 
         {/* Pulse animation */}
@@ -37,7 +37,7 @@ export default function Socials(): JSX.Element {
         }
       >
         <div className="relative z-10 bg-white rounded-full p-2 m-2 text-[#0E3172]">
-          <FaLinkedin className="text-4xl md:text-5xl" />
+          <FaLinkedin className="text-lg md:text-3xl" />
         </div>
 
         <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -52,7 +52,7 @@ export default function Socials(): JSX.Element {
         onClick={() => openInNewTab('https://wa.me/971552654401')}
       >
         <div className="relative z-10 bg-white rounded-full p-2 m-2 text-[#0E3172]">
-          <FaWhatsapp className="text-4xl md:text-5xl" />
+          <FaWhatsapp className="text-lg md:text-3xl" />
         </div>
 
         <span className="pointer-events-none absolute inset-0 flex items-center justify-center">

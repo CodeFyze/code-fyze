@@ -22,6 +22,7 @@ export default function Contact() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.4 }}
+         animate="visible"
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <h3 className="text-xl sm:text-3xl max-lg:text-center lg:text-5xl font-bold text-[#0E3172]">

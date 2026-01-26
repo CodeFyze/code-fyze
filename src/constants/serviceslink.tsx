@@ -61,28 +61,28 @@ const Serviceslink: Service[] = [
       },
     ],
   },
-  {
-    icon: "/services/graphics.png",
-    title: "Graphic Designing Services ",
-    technologies: [
-      {
-        text: "UI/UX Design",
-        link: "/services/ui-ux-design",
-      },
-      {
-        text: "Logo Design",
-        link: "/services/logo-design",
-      },
-      {
-        text: "Poster Design",
-        link: "/services/poster-design",
-      },
-      {
-        text: "Social Media Post Design",
-        link: "/services/social-media-post-design",
-      },
-    ],
-  },
+  // {
+  //   icon: "/services/graphics.png",
+  //   title: "Graphic Designing Services ",
+  //   technologies: [
+  //     {
+  //       text: "UI/UX Design",
+  //       link: "/services/ui-ux-design",
+  //     },
+  //     {
+  //       text: "Logo Design",
+  //       link: "/services/logo-design",
+  //     },
+  //     {
+  //       text: "Poster Design",
+  //       link: "/services/poster-design",
+  //     },
+  //     {
+  //       text: "Social Media Post Design",
+  //       link: "/services/social-media-post-design",
+  //     },
+  //   ],
+  // },
 ];
 
 export default Serviceslink;

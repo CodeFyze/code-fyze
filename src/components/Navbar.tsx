@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
 import Services from "../constants/serviceslink";
@@ -31,7 +31,6 @@ export default function Navbar() {
   const handleRedirect = () => {
     router.push("/contact-us");
   };
-
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -67,8 +66,9 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > 100) { // Only start hiding after scrolling 100px
+    if (typeof window !== "undefined") {
+      if (window.scrollY > 100) {
+        // Only start hiding after scrolling 100px
         if (window.scrollY > lastScrollY) {
           setIsVisible(false);
         } else {
@@ -83,54 +83,59 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`py-4 px-6 flex items-center justify-between sticky top-0 transition-transform duration-300 bg-white/30 transparent backdrop-blur-xl z-50 ${isVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+      className={`w-full py-4 transition-transform duration-300 sticky top-0 bg-white/30 backdrop-blur-xl z-50 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <Link href="/" className="flex items-center justify-center space-x-2">
-        <img src="/logo.png" alt="Logo" className="w-40" />
-      </Link>
-      <div className="hidden text-sm font-bold lg:text-base lg:flex space-x-6 text-gray-700">
-        <Link
-          href="/"
-          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
-        >
-          Home
+      {/* Container to keep content centered */}
+      <div className="max-w-[1200px] mx-auto  flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
+          <img src="/logo.png" alt="Logo" className="w-40" />
         </Link>
-        <Link
-          href="/about-us"
-          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
-        >
-          About US
-        </Link>
-        {/* <span className="hover:scale-105 transition-transform ease-in-out">
-          <Dropdown title="About US" variant="about" />
-        </span> */}
-        <span className="hover:scale-105 transition-transform ease-in-out">
+
+        {/* Desktop links */}
+        <div className="hidden lg:flex space-x-6 text-gray-700 text-sm font-bold lg:text-base">
+          <Link
+            href="/"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
+          >
+            Home
+          </Link>
+          <Link
+            href="/about-us"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
+          >
+            About Us
+          </Link>
           <Dropdown title="Services" variant="services" />
-        </span>
-        <Link
-          href="/portfolio"
-          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
-        >
-          Portfolio
-        </Link>
-        <Link
-          href="/blogs"
-          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
-        >
-          Blogs
-        </Link>
-        <Link
-          href="/contact-us"
-          className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
-        >
-          Contact US
-        </Link>
-      </div>
-      <div className="hidden lg:flex space-x-4 items-center">
-        <button className="bg-[#3B3B3B] text-white px-4 py-2 rounded-full" onClick={handleRedirect}>
-          Free Consultation
-        </button>
+          {/* <Link
+            href="/portfolio"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
+          >
+            Portfolio
+          </Link> */}
+          <Link
+            href="/blogs"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
+          >
+            Blogs
+          </Link>
+          <Link
+            href="/contact-us"
+            className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out"
+          >
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Desktop button */}
+        <div className="hidden lg:flex">
+          <button
+            className="bg-[#3B3B3B] text-white px-4 py-2 rounded-full"
+            onClick={handleRedirect}
+          >
+            Book a Call
+          </button>
+        </div>
       </div>
       <div className="lg:hidden flex items-center">
         <button
@@ -170,7 +175,7 @@ export default function Navbar() {
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
-            About US
+            About Us
           </Link>
           {/* <div>
             <p
@@ -216,8 +221,9 @@ export default function Navbar() {
               </span>
             </p>
             <div
-              className={`transition-max-height duration-300 ease-in-out overflow-hidden w-full ${servicesOpen ? "max-h-[34rem]" : "max-h-0"
-                }`}
+              className={`transition-max-height duration-300 ease-in-out overflow-hidden w-full ${
+                servicesOpen ? "max-h-[34rem]" : "max-h-0"
+              }`}
             >
               {Services.map((service, index) => (
                 <div
@@ -229,22 +235,28 @@ export default function Navbar() {
                   </h2>
                   <ul className="">
                     {service.technologies.map((tech, techIndex) => (
-                      <Link key={techIndex} onClick={handleLinkClick} href={tech.link}><li className="text-[#7D8D9A] font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800 origin-left">
-                        {tech.text}
-                      </li></Link>
+                      <Link
+                        key={techIndex}
+                        onClick={handleLinkClick}
+                        href={tech.link}
+                      >
+                        <li className="text-[#7D8D9A] font-medium cursor-pointer hover:scale-105 transition-transform ease-in-out duration-300 hover:text-blue-800 origin-left">
+                          {tech.text}
+                        </li>
+                      </Link>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
           </div>
-          <Link
+          {/* <Link
             href="/portfolio"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
             Portfolio
-          </Link>
+          </Link> */}
           <Link
             href="/blogs"
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
@@ -257,11 +269,10 @@ export default function Navbar() {
             className="hover:text-blue-800 hover:scale-105 transition-transform ease-in-out font-bold text-[#0E3172]"
             onClick={handleLinkClick}
           >
-            Contact US
+            Contact Us
           </Link>
         </div>
       )}
     </nav>
   );
 }
-

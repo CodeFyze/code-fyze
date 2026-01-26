@@ -1,34 +1,47 @@
-import React from 'react';
-import Contact from '../../components/Contact';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from "react";
+import Contact from "../../components/Contact";
+import Link from "next/link";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us | Software Development Agency | CodeFyze",
-  description: "CodeFyze is one of the top software development agencies delivering scalable, custom solutions for global businesses. Call +971 55 265 4401 for a free consultation.",
+  description:
+    "CodeFyze is one of the top software development agencies delivering scalable, custom solutions for global businesses. Call +971 55 265 4401 for a free consultation.",
   robots: "index, follow",
 };
 
 const AboutUS: React.FC = () => {
   return (
-    <div className="font-sans ">
-      <div className='bg-contain bg-y-repeat xl:bg-cover' style={{ backgroundImage: 'url(/top-services-bg.png)' }}>
+    <div className="font-sans">
+      <div
+        className="bg-contain bg-no-repeat xl:bg-cover"
+        style={{ backgroundImage: "url(/top-services-bg.png)" }}
+      >
         {/* Header Section */}
-        <header className="relative text-center py-4">
-          <h1 className="text-5xl font-bold">About Us</h1>
-          <p className="text-gray-400 mt-2">Home / About Us</p>
+        <header className="relative text-center py-8">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <h1 className="text-5xl font-bold">About Us</h1>
+            <p className="text-gray-400 mt-2">Home / About Us</p>
+          </div>
         </header>
 
         {/* About Section */}
-        <section className="py-16 px-4 md:px-16 lg:px-32 lg:py-4 flex justify-center">
-          <div className="grid grid-cols-1 gap-8 w-3/5 lg:w-2/3">
+        <section className="py-16 px-4 md:px-16  lg:py-4 flex justify-center">
+          <div className="max-w-[1200px] w-3xl grid grid-cols-1 gap-8 lg:grid-cols-1">
             {/* Content */}
-            <div className=''>
-              <h2 className="text-3xl font-bold mb-4">We Always Make The Best</h2>
+            <div className="">
+              <h2 className="text-3xl font-bold mb-4">
+                We Always Make The Best
+              </h2>
               <p className="text-gray-400 mb-6">
-                At CodeFyze, as one of the top software companies in the world, we blend innovation, strategy, and technology to accelerate your business growth.
+                At CodeFyze, as one of the top software companies in the world,
+                we blend innovation, strategy, and technology to accelerate your
+                business growth.
               </p>
-              <Link href="/contact-us" className="inline-flex items-center px-5 py-2 md:px-6 md:py-3 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300">
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center px-5 py-2 md:px-6 md:py-3 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300"
+              >
                 Contact Us
               </Link>
             </div>
@@ -36,13 +49,15 @@ const AboutUS: React.FC = () => {
         </section>
 
         {/* Skills Section */}
-        <section className='flex items-center justify-center mt-10'>
-          <div className="w-[80%] py-16 px-4 md:px-16 text-white bg-black/30 transparent backdrop-blur-xl lg:px-24 rounded-md border-slate-200 border-[3px]">
+        <section className="flex items-center justify-center mt-10">
+          <div className="max-w-[1200px] w-full py-16 px-4 md:px-16 text-white bg-black/30 transparent backdrop-blur-xl lg:px-24 rounded-md border-slate-200 border-[3px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Left Content */}
               <div>
                 <p className="mb-4">
-                  Our expertise spans Frontend Development, Backend Systems, Databases, Frameworks, Designing, and SEO Optimization, ensuring a perfect blend of functionality and aesthetics.
+                  Our expertise spans Frontend Development, Backend Systems,
+                  Databases, Frameworks, Designing, and SEO Optimization,
+                  ensuring a perfect blend of functionality and aesthetics.
                 </p>
                 {/* Skill Bars */}
                 <div className="mb-6">
@@ -90,7 +105,7 @@ const AboutUS: React.FC = () => {
       </div>
 
       {/* Contact Component */}
-      <div className='py-24'>
+      <div className="py-10">
         <Contact />
       </div>
     </div>

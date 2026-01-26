@@ -31,7 +31,9 @@ const FAQ: React.FC<FAQProps> = ({ faq }) => {
   };
 
   return (
-    <div className="bg-gray-100 border bg-[url('/Ellipse237.png')] bg-cover bg-center py-10 px-6 sm:px-12 md:px-20">
+    <div className="bg-gray-100 border bg-[url('/Ellipse237.png')] bg-cover bg-center py-10 px-6 sm:px-12 md:px-20"
+    id="FAQ"
+    >
       <motion.div
         variants={divVariant}
         initial="hidden"

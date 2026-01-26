@@ -21,6 +21,7 @@ export default function Technologies() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.4 }}
+          animate="visible"
         >
           <p className=" font-extrabold sm:font-bold text-[#0E3172] text-center text-[6vw] md:text-3xl">
             Technologies We Use
@@ -52,7 +53,7 @@ export default function Technologies() {
                 key={index}
                 className="p-4 border rounded-xl shadow-lg bg-white space-y-2 hover:scale-105 transition-transform duration-300"
                 variants={divVariant}
-                initial="hidden"
+                animate="visible"
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.4 }}
               >

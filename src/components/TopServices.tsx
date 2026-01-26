@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -16,60 +16,87 @@ export default function TopServices() {
 
   return (
     <div
-      className="flex w-screen h-full px-5 sm:px-10 lg:px-[3vw] py-11 lg:py-40 xl:pt-72 max-md:mt-11 bg-cover bg-no-repeat bg-[url('/top-services-bg-vertical.png')] md:bg-[url('/top-services-bg.png')] md:bg-contain xl:bg-cover bg-center relative lg:-top-10 xl:-top-16"
       id="services"
+      className="
+        w-full 
+        min-h-[600px]
+        py-16 md:py-28 lg:py-36
+        bg-cover bg-center bg-no-repeat
+        max-md:bg-[url('/top-services-bg-vertical.png')]
+        md:bg-[url('/top-services-bg.png')]
+        mt-0 md:-mt-10
+        
+      "
     >
-      <motion.div
-        className="flex flex-col gap-y-7 items-center justify-around w-full text-white bg-black/30 transparent backdrop-blur-xl py-16 px-5 lg:px-2 rounded-md border-slate-200 border-[3px]"
-        id="about-us"
-        variants={divVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.4 }}
-      >
-        <div className="[&>*]:text-center">
-          <h2 className="font-bold text-2xl md:text-3xl md:text-start lg:text-3xl">
-            Our Top Services
-          </h2>
-          <p className="font-medium text-base md:text-lg md:text-start">
-            We provide top IT services & consulting to help businesses grow, and stay ahead in the digital world.
-          </p>
-        </div>
-        <div className="~w-5/6/6/12 md:w-11/12 h-full grid md:grid-cols-2 lg:grid-cols-4 gap-7">
-          {/* Top Services */}
-          {serviceslink.map((service, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.02 }}
-              className="p-4 lg:p-7 border rounded-xl shadow-lg bg-white space-y-2 transition-transform duration-300 ease-in-out"
-            >
-              <div className="w-full">
+      <div className="max-w-[1300px] mx-auto px-4">
+        <motion.div
+          className="
+            flex flex-col gap-y-10 items-center 
+            w-full text-white 
+            bg-black/40 backdrop-blur-xl 
+            py-12 px-6 md:px-14 lg:px-20 
+            rounded-xl border border-white/30
+          "
+          variants={divVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.4 }}
+           animate="visible"
+        >
+          {/* Header */}
+          <div className="text-center max-w-[760px] space-y-2">
+            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl">
+              Our Top Services
+            </h2>
+            <p className="font-medium text-sm md:text-lg text-white/80">
+              We provide top IT services & consulting to help businesses grow and stay ahead in the digital world.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceslink.map((service, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.04 }}
+                
+                className="
+                  p-5 lg:p-7 
+                  border border-gray-200/40 
+                  rounded-xl shadow-lg 
+                  bg-white 
+                  space-y-3 
+                  transition-all duration-300
+                "
+              >
                 <img
                   src={service.icon}
                   alt={service.title}
                   className="w-12 h-12 mb-2"
                 />
-              </div>
-              <h2 className="text-lg font-semibold text-black">
-                {service.title}
-              </h2>
-              <ul className="w-4/5">
-                {service.technologies.map((tech, techIndex) => (
-                  <li key={techIndex} className="text-[#7D8D9A] hover:text-[#5a6b78]">
-                    <Link
-                      href={tech.link}
-                      className="block hover:underline cursor-pointer"
-                      prefetch={true}
-                    >
-                      {tech.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+
+                <h2 className="text-lg font-semibold text-black">
+                  {service.title}
+                </h2>
+
+                <ul className="space-y-1">
+                  {service.technologies.map((tech, techIndex) => (
+                    <li key={techIndex} className="text-[#7D8D9A] hover:text-[#5a6b78]">
+                      <Link
+                        href={tech.link}
+                        className="block hover:underline"
+                        prefetch
+                      >
+                        {tech.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }
