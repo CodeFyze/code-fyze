@@ -42,20 +42,35 @@ const authSlice = createSlice({
         sessionStorage.removeItem('user');
       }
     },
+    // initializeAuth: (state) => {
+    //   if (typeof window !== 'undefined') {
+    //     const token = sessionStorage.getItem('token');
+    //     const user = sessionStorage.getItem('user');
+    //     if (token && user) {
+    //       state.token = token;
+    //       try {
+    //         state.user = JSON.parse(user);
+    //       } catch (e) {
+    //         console.error("Failed to parse user from session storage");
+    //       }
+    //     }
+    //   }
+    // }
     initializeAuth: (state) => {
-      if (typeof window !== 'undefined') {
-        const token = sessionStorage.getItem('token');
-        const user = sessionStorage.getItem('user');
-        if (token && user) {
-          state.token = token;
-          try {
-            state.user = JSON.parse(user);
-          } catch (e) {
-            console.error("Failed to parse user from session storage");
-          }
-        }
-      }
+  if (typeof window !== "undefined") {
+    const token = sessionStorage.getItem("token");
+    const user = sessionStorage.getItem("user");
+
+    if (token) {
+      state.token = token;
     }
+
+    if (user) {
+      state.user = JSON.parse(user);
+    }
+  }
+}
+
   },
 });
 

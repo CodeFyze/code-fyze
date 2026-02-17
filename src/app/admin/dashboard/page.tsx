@@ -47,7 +47,7 @@ export default function DashboardPage() {
       // Check session storage
       const token = sessionStorage.getItem("token");
       const savedUser = sessionStorage.getItem("user");
-
+      console.log("Token: "+token);
       // Check if user data exists
       if (savedUser) {
         try {
